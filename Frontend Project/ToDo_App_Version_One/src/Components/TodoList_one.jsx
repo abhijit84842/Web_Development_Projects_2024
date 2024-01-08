@@ -3,12 +3,12 @@ function Todo1({ todoName, todoDate }) {
   //let todoName = "";
   //let todoDate = ;
   return (
-    <div class="container">
-      <div class="row custom_row">
-        <div class="col-4">{todoName}</div>
-        <div class="col-4">{todoDate}</div>
-        <div class="col-4">
-          <button type="button" class="btn btn-danger custom_button">
+    <div className="container">
+      <div className="row custom_row">
+        <div className="col-4">{todoName}</div>
+        <div className="col-4">{todoDate}</div>
+        <div className="col-4">
+          <button type="button" className="btn btn-danger custom_button">
             Delete
           </button>
         </div>
