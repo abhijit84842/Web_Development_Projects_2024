@@ -1,11 +1,4 @@
-/*element selector */
-h1{
-    font-weight: 800;      /* to bold the text */
-    font-size: 45px;
 
-    margin: 20px;   /* margin from top */
-    margin-bottom: 40px;
-}
 
 /*element selector */
 input{
@@ -18,10 +11,10 @@ input{
 }
 
 /* custom class and use in row class */
-.custom_row{
+.kgRow{
     margin: 10px 5px;
 }
 
-.custom_button{
+.kgButton{
     min-width: 100px;    /* to increase width of button */
 }

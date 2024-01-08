@@ -1,7 +1,7 @@
 function AddTodo() {
   return (
     <div className="container">
-      <div className="row custom_row">
+      <div className="row kgRow">
         <div className="col-4">
           <input type="text" placeholder="Enter Todo here.." />
         </div>
@@ -11,7 +11,7 @@ function AddTodo() {
         </div>
 
         <div className="col-4">
-          <button type="button" className="btn btn-success custom_button">
+          <button type="button" className="btn btn-success kgButton">
             Add
           </button>
         </div>
