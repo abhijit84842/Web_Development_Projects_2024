@@ -1,6 +1,7 @@
-function Todo1() {
-  let todoName = "Buy Milk";
-  let todoDate = "03/01/2024";
+function Todo1({ todoName, todoDate }) {
+  // destructring the data
+  //let todoName = "";
+  //let todoDate = ;
   return (
     <div class="container">
       <div class="row custom_row">

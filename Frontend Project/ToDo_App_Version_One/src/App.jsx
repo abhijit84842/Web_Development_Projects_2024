@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import AppName from "./Components/AppName";
 import AddTodo from "./Components/AddTodo";
 import Todo1 from "./Components/TodoList_one";
-import Todo2 from "./Components/TodoList_two";
+//import Todo2 from "./Components/TodoList_two";
 import "./App.css";
 
 function App() {
@@ -15,8 +15,8 @@ function App() {
       <AppName></AppName>
       <div className="items_container">
         <AddTodo></AddTodo>
-        <Todo1 />
-        <Todo2></Todo2>
+        <Todo1 todoName="Buy Milk" todoDate="03/01/2024" />
+        <Todo1 todoName="Go to college" todoDate="08/01/2024" />
       </div>
     </center>
   );
