@@ -13,7 +13,7 @@ import "./App.css";
 
 function App() {
   // create array object..
-  const todoItems = [
+  const initialtodoItems = [
     {
       name: "Buy Milk",
       dueDate: "10/01/2024",
@@ -27,11 +27,24 @@ function App() {
       dueDate: "10/01/2024",
     },
   ];
+
+  const [todoItems, setTodoItems] = useState(initialtodoItems);
+
+  const handleNewItem = (itemName, itemDueDate) => {
+    console.log(`New item added : ${itemName} Date is :  ${itemDueDate}`);
+
+    const newTodoItems = [
+      ...todoItems,
+      { name: itemName, dueDate: itemDueDate },
+    ];
+    setTodoItems(newTodoItems);
+  };
+
   return (
     <center className="todo-container">
       <AppName></AppName>
       <div className="items_container">
-        <AddTodo></AddTodo>
+        <AddTodo onNewItem={handleNewItem}></AddTodo>
         <TodoItems todoItems={todoItems}></TodoItems>
       </div>
     </center>
