@@ -1,9 +1,13 @@
 import Todo1 from "./TodoList_one";
-const TodoItems = ({ todoItems }) => {
+const TodoItems = ({ todoItems, onDeleteClick }) => {
   return (
     <>
       {todoItems.map((list) => (
-        <Todo1 todoName={list.name} todoDate={list.dueDate} />
+        <Todo1
+          todoName={list.name}
+          todoDate={list.dueDate}
+          onDeleteClick={onDeleteClick}
+        />
       ))}
     </>
   );

@@ -1,4 +1,4 @@
-function Todo1({ todoName, todoDate }) {
+function Todo1({ todoName, todoDate, onDeleteClick }) {
   // destructring the data
   //let todoName = "";
   //let todoDate = ;
@@ -8,7 +8,11 @@ function Todo1({ todoName, todoDate }) {
         <div className="col-4">{todoName}</div>
         <div className="col-4">{todoDate}</div>
         <div className="col-4">
-          <button type="button" className="btn btn-danger kgButton">
+          <button
+            type="button"
+            className="btn btn-danger kgButton"
+            onClick={() => onDeleteClick(todoName)}
+          >
             Delete
           </button>
         </div>
