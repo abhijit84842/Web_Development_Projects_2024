@@ -1,0 +1,20 @@
+
+
+/*element selector */
+input{
+    width: 100%;
+}
+
+/* use class element */
+.items_container{
+    text-align: left;
+}
+
+/* custom class and use in row class */
+.kgRow{
+    margin: 10px 5px;
+}
+
+.kgButton{
+    min-width: 100px;    /* to increase width of button */
+}
