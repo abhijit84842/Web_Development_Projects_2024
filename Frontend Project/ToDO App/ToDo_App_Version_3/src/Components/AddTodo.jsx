@@ -13,16 +13,18 @@ function AddTodo({ onNewItem }) {
     setDueDate(event.target.value);
   };
 
-  const handleAddButtonClicked = () => {
+  const handleAddButtonClicked = (event) => {
     onNewItem(todoName, dueDate);
-
     // blank the current value
     setTodoName("");
     setDueDate("");
+
+    event.preventDefault();
+    console.log(event);
   };
   return (
     <div className="container">
-      <div className="row kgRow">
+      <form className="row kgRow" onSubmit={handleAddButtonClicked}>
         <div className="col-4">
           <input
             type="text"
@@ -31,21 +33,15 @@ function AddTodo({ onNewItem }) {
             onChange={handleNameChange}
           />
         </div>
-
         <div className="col-4">
           <input type="date" value={dueDate} onChange={handleDateChange} />
         </div>
-
         <div className="col-4">
-          <button
-            type="button"
-            className="btn btn-success kgButton"
-            onClick={() => handleAddButtonClicked()}
-          >
+          <button type="submit" className="btn btn-success kgButton">
             <MdOutlineAddCircleOutline />
           </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 }
