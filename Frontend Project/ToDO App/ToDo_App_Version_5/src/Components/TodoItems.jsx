@@ -2,9 +2,11 @@ import { useContext } from "react";
 import Todo1 from "./TodoList_one";
 import { TodoItemsContext } from "../store/todo-items-store";
 
-const TodoItems = ({ onDeleteClick }) => {
-  const todoItems = useContext(TodoItemsContext);
-  console.log(todoItems);
+const TodoItems = () => {
+  const contextObj = useContext(TodoItemsContext);
+  const todoItems = contextObj.todoItems;
+  const deleteItem = contextObj.deleteItem;
+  //console.log(todoItems);
   return (
     <>
       {todoItems.map((list) => (
@@ -12,7 +14,7 @@ const TodoItems = ({ onDeleteClick }) => {
           key={list.name}
           todoName={list.name}
           todoDate={list.dueDate}
-          onDeleteClick={onDeleteClick}
+          onDeleteClick={deleteItem}
         />
       ))}
     </>

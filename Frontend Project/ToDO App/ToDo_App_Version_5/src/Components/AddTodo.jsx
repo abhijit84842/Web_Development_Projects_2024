@@ -1,7 +1,12 @@
+import { useContext } from "react";
 import { useState } from "react";
 import { MdOutlineAddCircleOutline } from "react-icons/md";
+import { TodoItemsContext } from "../store/todo-items-store";
 
-function AddTodo({ onNewItem }) {
+function AddTodo() {
+  const constextObj = useContext(TodoItemsContext);
+  const addNewItem = constextObj.addNewItem;
+
   const [todoName, setTodoName] = useState("");
   const [dueDate, setDueDate] = useState("");
 
@@ -14,7 +19,7 @@ function AddTodo({ onNewItem }) {
   };
 
   const handleAddButtonClicked = (event) => {
-    onNewItem(todoName, dueDate);
+    addNewItem(todoName, dueDate);
     // blank the current value
     setTodoName("");
     setDueDate("");

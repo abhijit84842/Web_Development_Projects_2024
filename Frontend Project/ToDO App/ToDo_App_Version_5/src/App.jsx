@@ -17,7 +17,7 @@ function App() {
 
   const [todoItems, setTodoItems] = useState(initialtodoItems);
 
-  const handleNewItem = (itemName, itemDueDate) => {
+  const addNewItem = (itemName, itemDueDate) => {
     console.log(`New item added : ${itemName} Date is :  ${itemDueDate}`);
 
     const newTodoItems = [
@@ -27,21 +27,28 @@ function App() {
     setTodoItems(newTodoItems);
   };
 
-  const handleDeleteItem = (todoItemName) => {
+  const deleteItem = (todoItemName) => {
     const newTodoItems = todoItems.filter((item) => item.name != todoItemName);
     setTodoItems(newTodoItems);
     console.log(`item deleted ${todoItemName}`);
   };
 
   return (
-    <TodoItemsContext.Provider value={todoItems}>
+    <TodoItemsContext.Provider
+      value={{
+        // i want to use this value as a object
+        todoItems: todoItems,
+        addNewItem: addNewItem,
+        deleteItem: deleteItem,
+      }}
+    >
       <center className="todo-container">
         <AppName></AppName>
         <div className="items_container">
-          <AddTodo onNewItem={handleNewItem}></AddTodo>
+          <AddTodo></AddTodo>
 
           <WelcomeMessagee></WelcomeMessagee>
-          <TodoItems onDeleteClick={handleDeleteItem}></TodoItems>
+          <TodoItems></TodoItems>
         </div>
       </center>
     </TodoItemsContext.Provider>
