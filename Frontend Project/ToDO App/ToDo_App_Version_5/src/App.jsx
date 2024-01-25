@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { TodoItemsContext } from "./store/todo-items-store";
 //import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import AppName from "./Components/AppName";
@@ -33,18 +34,17 @@ function App() {
   };
 
   return (
-    <center className="todo-container">
-      <AppName></AppName>
-      <div className="items_container">
-        <AddTodo onNewItem={handleNewItem}></AddTodo>
+    <TodoItemsContext.Provider value={todoItems}>
+      <center className="todo-container">
+        <AppName></AppName>
+        <div className="items_container">
+          <AddTodo onNewItem={handleNewItem}></AddTodo>
 
-        {todoItems.length === 0 && <WelcomeMessagee></WelcomeMessagee>}
-        <TodoItems
-          todoItems={todoItems}
-          onDeleteClick={handleDeleteItem}
-        ></TodoItems>
-      </div>
-    </center>
+          <WelcomeMessagee></WelcomeMessagee>
+          <TodoItems onDeleteClick={handleDeleteItem}></TodoItems>
+        </div>
+      </center>
+    </TodoItemsContext.Provider>
   );
 }
 
