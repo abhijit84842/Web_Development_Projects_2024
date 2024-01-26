@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useReducer } from "react";
 import { TodoItemsContext } from "./store/todo-items-store";
 //import './App.css'
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -11,26 +11,55 @@ import Todo1 from "./Components/TodoList_one";
 import "./App.css";
 import WelcomeMessagee from "./Components/WelcomeMessage";
 
+// Reducer=> its a pure function and it take action and current state and based on  return a new state..
+const todoReducer = (currTodoItems, action) => {
+  let newTodoItems = currTodoItems; // initial value
+
+  if (action.type === "NEW_ITEM") {
+    newTodoItems = [
+      ...currTodoItems,
+      { name: action.payload.itemName, dueDate: action.payload.itemDueDate },
+    ];
+  } else if (action.type === "DELETE_ITEM") {
+    newTodoItems = currTodoItems.filter(
+      (item) => item.name !== action.payload.itemName
+    );
+  }
+  return newTodoItems;
+};
 function App() {
   // create array object..
   const initialtodoItems = [];
 
-  const [todoItems, setTodoItems] = useState(initialtodoItems);
+  /*const [todoItems, setTodoItems] = useState(initialtodoItems);*/
+
+  // const[state , dispatch]=useReducer(reducer, initialState)
+  const [todoItems, dispatchTodoItems] = useReducer(todoReducer, []);
 
   const addNewItem = (itemName, itemDueDate) => {
-    console.log(`New item added : ${itemName} Date is :  ${itemDueDate}`);
+    // create an action object
+    const newItemAction = {
+      type: "NEW_ITEM",
+      payload: {
+        // object create by javascript shortcut..
+        itemName,
+        itemDueDate,
+      },
+    };
 
-    const newTodoItems = [
-      ...todoItems,
-      { name: itemName, dueDate: itemDueDate },
-    ];
-    setTodoItems(newTodoItems);
+    dispatchTodoItems(newItemAction);
   };
 
   const deleteItem = (todoItemName) => {
-    const newTodoItems = todoItems.filter((item) => item.name != todoItemName);
-    setTodoItems(newTodoItems);
-    console.log(`item deleted ${todoItemName}`);
+    // create an action object
+    const deleteItemAction = {
+      type: "DELETE_ITEM",
+      payload: {
+        // object create by javascript shortcut..
+        itemName: todoItemName,
+      },
+    };
+    dispatchTodoItems(deleteItemAction);
   };
 
   return (
