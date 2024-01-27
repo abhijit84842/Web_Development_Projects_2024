@@ -10,3 +10,16 @@
     min-height: 800px;
 }
 
+.post-card{
+    margin: 20px  50px ;
+  width: 50%;
+}
+
+
+.hashtag{
+    margin: 5px 3px ;   
+}
+
+.reactions{
+    margin: 5px;
+}
