@@ -21,7 +21,7 @@ const CreatePost = () => {
 
     addPost(userId, postTitle, postBody, reactions, tags);
 
-    // after post blank the all value...
+    // after post blank the all field value...
     userIdElement.current.value = "";
     postTitleElement.current.value = "";
     postBodyElement.current.value = "";
