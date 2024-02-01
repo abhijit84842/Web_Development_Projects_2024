@@ -22,10 +22,7 @@ const postListReducer = (currPostList, action) => {
 // it is a simple react component
 const PostListProvider = ({ children }) => {
   // USE useReducer Hoocks...
-  const [postList, dispatchPostList] = useReducer(
-    postListReducer,
-    DEFAULT_list
-  ); // []  initial value so, keep it blank
+  const [postList, dispatchPostList] = useReducer(postListReducer, []); // []  initial value so, keep it blank
 
   // declear the add method
   const addPost = (userId, postTitle, postBody, reactions, tags) => {
@@ -70,23 +67,4 @@ const PostListProvider = ({ children }) => {
   );
 };
 
-const DEFAULT_list = [
-  {
-    id: "1",
-    title: "Going To Mumbai",
-    body: "Hi friends i am going to mumbai",
-    reaction: 50,
-    userId: "user-9",
-    tags: ["vacation", "enjoy"],
-  },
-
-  {
-    id: "56",
-    title: "Pass College",
-    body: "hi i am passed from Techno",
-    reaction: 20,
-    userId: "user-12",
-    tags: ["enjoy"],
-  },
-];
 export default PostListProvider;
