@@ -3,6 +3,7 @@ import { createContext, useReducer } from "react";
 export const PostList = createContext({
   postList: [],
   addPost: () => {},
+  addInitialPosts: () => {},
   deletePost: () => {},
 });
 
@@ -13,6 +14,8 @@ const postListReducer = (currPostList, action) => {
     newPostList = currPostList.filter(
       (post) => post.id !== action.payload.postId
     );
+  } else if (action.type === "ADD_INITIAL_POSTS") {
+    newPostList = action.payload.posts;
   } else if (action.type == "ADD_POST") {
     newPostList = [action.payload, ...currPostList];
   }
@@ -43,6 +46,16 @@ const PostListProvider = ({ children }) => {
     });
   };
 
+  // add post method for API Data
+  const addInitialPosts = (posts) => {
+    dispatchPostList({
+      type: "ADD_INITIAL_POSTS",
+      payload: {
+        posts,
+      },
+    });
+  };
+
   const deletePost = (postId) => {
     // create actionm object..
     dispatchPostList({
@@ -59,6 +72,7 @@ const PostListProvider = ({ children }) => {
         // use this value as a object
         postList,
         addPost,
+        addInitialPosts,
         deletePost,
       }}
     >

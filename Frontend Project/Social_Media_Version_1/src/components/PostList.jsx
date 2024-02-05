@@ -3,13 +3,16 @@ import Post from "../components/Post";
 import { PostList as PostListData } from "../store/post-list-store";
 import WelcomeMessage from "./WelcomeMessage";
 const PostList = () => {
-  const { postList } = useContext(PostListData);
+  const { postList, addInitialPosts } = useContext(PostListData);
 
   // to get the data from fetch button
   const handleGetPostsClick = () => {
     fetch("https://dummyjson.com/posts") // use API
       .then((res) => res.json())
-      .then(console.log);
+      .then((data) => {
+        console.log(data);
+        addInitialPosts(data.posts);
+      });
   };
 
   return (
