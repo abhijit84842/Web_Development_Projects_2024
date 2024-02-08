@@ -11,13 +11,22 @@ const PostList = () => {
   // useEffect => we pass 2 parameter 1 ) anonymous function  ,
   useEffect(() => {
     setFetching(true);
-    fetch("https://dummyjson.com/posts") // use API
+    // AbortController() => it is use to cancel the api call
+    const controller = new AbortController();
+    const signal = controller.signal;
+
+    fetch("https://dummyjson.com/posts", { signal }) // use API
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         addInitialPosts(data.posts);
         setFetching(false);
       });
+
+    return () => {
+      console.log("Cleanup ..");
+      controller.abort();
+    };
   }, []);
 
   return (
