@@ -1,8 +1,11 @@
 import { useContext, useRef } from "react";
 import { PostList } from "../store/post-list-store";
+import { useNavigate } from "react-router-dom";
 
 const CreatePost = () => {
   const { addPost } = useContext(PostList);
+  // use navigate hooks to directly go to the another page or componenet..
+  const navigate = useNavigate();
 
   // here store the all field value using reference...
   const userIdElement = useRef();
@@ -44,6 +47,8 @@ const CreatePost = () => {
     postBodyElement.current.value = "";
     reactionsElement.current.value = "";
     tagsElement.current.value = "";
+
+    navigate("/"); // use home path go to the home page after submit..
   };
 
   return (
