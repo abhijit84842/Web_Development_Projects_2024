@@ -2,7 +2,7 @@ import { createContext, useEffect, useReducer, useState } from "react";
 export const PostList = createContext({
   postList: [],
   addPost: () => {},
-  //addInitialPosts: () => {},
+  addInitialPosts: () => {},
   fetching: false,
   deletePost: () => {},
 });
@@ -29,6 +29,7 @@ const PostListProvider = ({ children }) => {
 
   // declear the add method
   const addPost = (userId, postTitle, postBody, reactions, tags) => {
+    //console.log(`${userId} ,${postTitle} , ${postBody}, ${reactions},${tags}`);
     dispatchPostList({
       type: "ADD_POST",
       payload: {
@@ -61,7 +62,7 @@ const PostListProvider = ({ children }) => {
       },
     });
   };
-  /*
+
   // using for loading Spinner..
   const [fetching, setFetching] = useState(false);
 
@@ -83,14 +84,14 @@ const PostListProvider = ({ children }) => {
       console.log("Cleanup ..");
       controller.abort();
     };
-  }, []);*/
+  }, []);
 
   return (
     <PostList.Provider
       value={{
         // use this value as a object
         postList,
-        //fetching,
+        fetching,
         addPost,
         //addInitialPosts,
         deletePost,
