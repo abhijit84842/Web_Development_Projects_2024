@@ -61,7 +61,7 @@ const PostListProvider = ({ children }) => {
       },
     });
   };
-
+  /*
   // using for loading Spinner..
   const [fetching, setFetching] = useState(false);
 
@@ -83,14 +83,14 @@ const PostListProvider = ({ children }) => {
       console.log("Cleanup ..");
       controller.abort();
     };
-  }, []);
+  }, []);*/
 
   return (
     <PostList.Provider
       value={{
         // use this value as a object
         postList,
-        fetching,
+        //fetching,
         addPost,
         //addInitialPosts,
         deletePost,
