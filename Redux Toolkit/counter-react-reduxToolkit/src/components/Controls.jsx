@@ -36,13 +36,18 @@ const Controls = () => {
   };
 
   const handleSub = () => {
-    console.log("click sub");
-    dispatch({
+    /*dispatch({
       type: "SUB",
       payload: {
         num: subInputElement.current.value,
       },
-    });
+    });*/
+
+    dispatch(
+      counterActions.subtract({
+        num: subInputElement.current.value,
+      })
+    );
 
     subInputElement.current.value = "";
   };

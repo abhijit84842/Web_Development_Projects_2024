@@ -24,7 +24,9 @@ const counterSlice=createSlice({
              
         },
         subtract :(state , action)=>{
-            console.log(state , action)
+            //console.log(state , action)
+            state.counterVal -= Number(action.payload.num)
+
         }
     }
 })
