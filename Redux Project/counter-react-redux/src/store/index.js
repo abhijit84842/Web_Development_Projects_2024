@@ -1,5 +1,5 @@
 import {createStore} from "redux";
-
+//define initial value
 const INITIAL_VALUE ={
     counter : 0,
     privacy: false
