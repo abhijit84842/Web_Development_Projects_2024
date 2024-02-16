@@ -1,4 +1,4 @@
-const BagItem = () => {
+const BagItem = ({ item }) => {
   return (
     <div className="bag-item-container">
       <div className="item-left-part">
