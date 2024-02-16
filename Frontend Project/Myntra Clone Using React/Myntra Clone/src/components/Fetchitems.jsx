@@ -5,7 +5,7 @@ import { fetchStatusActions } from "../store/fetchStatusSlice";
 
 const FetchItems = () => {
   const fetchStatus = useSelector((store) => store.fetchStatus);
-  console.log(fetchStatus);
+  //console.log(fetchStatus);
 
   const dispatch = useDispatch();
 
