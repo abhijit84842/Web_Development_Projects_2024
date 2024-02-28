@@ -1,16 +1,14 @@
 
 .items-container{
     width: 80%;
-    margin: 40px 10%;
+    margin: 10% 10%;
     display: flex;
     flex-wrap: wrap; /****/
     justify-content: space-evenly;
+    gap: 5%;
     
 }
-.item-container{
-  
 
-}
 
 .item-image:hover{
     scale: 1.2;
