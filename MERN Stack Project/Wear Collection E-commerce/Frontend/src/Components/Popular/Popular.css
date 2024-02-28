@@ -8,5 +8,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 55;
+    gap: 25px;
+}
+
+.popular-heading h2{
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
