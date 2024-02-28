@@ -1,5 +1,17 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+.items-container{
+    width: 80%;
+    margin: 40px 10%;
+    display: flex;
+    flex-wrap: wrap; /****/
+    justify-content: space-evenly;
+    
+}
+.item-container{
+  
+
+}
+
+.item-image:hover{
+    scale: 1.2;
 }
