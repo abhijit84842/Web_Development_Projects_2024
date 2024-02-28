@@ -2,7 +2,10 @@ import logo from "../Assets/logo.png";
 import "./Header.css";
 import { IoPerson } from "react-icons/io5";
 import { FaShoppingCart } from "react-icons/fa";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 const Header = () => {
+  const [Menu, SetMenu] = useState([]);
   return (
     <div className="header">
       <div className="header-logo">
@@ -11,12 +14,25 @@ const Header = () => {
       </div>
       <ul className="header-menu">
         <li>
-          Shop
-          <hr />
+          <Link className="link" to="/">
+            Shop
+          </Link>
         </li>
-        <li>Men</li>
-        <li>Women</li>
-        <li>Kids</li>
+        <li>
+          <Link className="link" to="/men">
+            Men
+          </Link>
+        </li>
+        <li>
+          <Link className="link" to="/women">
+            Women
+          </Link>
+        </li>
+        <li>
+          <Link className="link" to="/kids">
+            Kids
+          </Link>
+        </li>
       </ul>
       <section className="profile-bag">
         <div className="profile-section">

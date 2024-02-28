@@ -30,10 +30,14 @@
     display: flex;
     align-items: center;
     list-style: none;
+ 
     gap: 100px;
     font-size: 20px;
     font-weight: 400;
     border-bottom: 5px solid #ffffff;
+}
+.link{
+    text-decoration: none;
 }
 .header-menu li:hover{
     border-bottom: 5px solid #eeb6b6;
@@ -64,6 +68,10 @@
 
 .profile-section{
     padding: 20px;
+    cursor: pointer;
+}
+.Bag-section{
+    cursor: pointer;
 }
 .header-login-cart{
     display: flex;
