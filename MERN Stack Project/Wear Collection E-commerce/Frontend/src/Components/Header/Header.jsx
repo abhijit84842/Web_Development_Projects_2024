@@ -36,16 +36,28 @@ const Header = () => {
       </ul>
       <section className="profile-bag">
         <div className="profile-section">
-          <IoPerson />
+          <span className="action_name">
+            <Link to="/profile">
+              <IoPerson />
+            </Link>
+          </span>
         </div>
         <div className="Bag-section">
-          <FaShoppingCart />
+          <span className="action_name">
+            <Link to="/bag">
+              <FaShoppingCart />
+            </Link>
+          </span>
         </div>
       </section>
 
       <div className="log-section">
         <div className="header-login-cart">
-          <button>Login</button>
+          <button>
+            <Link className="link" to="/login">
+              Login
+            </Link>
+          </button>
         </div>
         <div className="header-logout-cart">
           <button>Logout</button>

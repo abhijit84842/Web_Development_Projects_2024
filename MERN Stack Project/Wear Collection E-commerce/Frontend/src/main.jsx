@@ -6,6 +6,7 @@ import Bag from "./routes/Bag.jsx";
 import Home from "./routes/Home.jsx";
 import ShopCatagory from "./Pages/ShopCatagory.jsx";
 import LoginSignup from "./Pages/LoginSignup.jsx";
+import Profile from "./Pages/Profile.jsx";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
       { path: "/women", element: <ShopCatagory /> },
       { path: "/kids", element: <ShopCatagory /> },
       { path: "/login", element: <LoginSignup /> },
+      { path: "/profile", element: <Profile /> },
     ],
   },
 ]);

@@ -70,6 +70,9 @@
     padding: 20px;
     cursor: pointer;
 }
+.action_name{
+   text-decoration: none;
+}
 .Bag-section{
     cursor: pointer;
 }
