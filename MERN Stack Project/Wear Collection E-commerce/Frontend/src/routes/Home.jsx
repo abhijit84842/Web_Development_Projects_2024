@@ -1,4 +1,12 @@
+import Item from "../Components/Item/Item";
+
 const Home = () => {
-  return <></>;
+  return (
+    <main>
+      <div className="items-container">
+        <Item />
+      </div>
+    </main>
+  );
 };
 export default Home;

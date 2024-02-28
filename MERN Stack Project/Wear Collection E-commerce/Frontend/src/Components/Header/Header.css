@@ -6,11 +6,10 @@
 
 
 .header{
-    margin-top: 10px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-image: linear-gradient(120deg, #d4cbcb 0%, #ebedee 100%);
    
 }
 .header-logo{
@@ -34,13 +33,13 @@
     gap: 100px;
     font-size: 20px;
     font-weight: 400;
-    border-bottom: 5px solid #ffffff;
+    /*border-bottom: 5px solid #ffffff;*/
 }
 .link{
     text-decoration: none;
 }
 .header-menu li:hover{
-    border-bottom: 5px solid #eeb6b6;
+    border-bottom: 5px solid #db4747;
 }
 .header-menu li{
     display:flex ;
