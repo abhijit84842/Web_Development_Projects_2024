@@ -15,8 +15,9 @@ function App() {
       <Popular />
       <NewCollections />
       <Offers />
-      <NewsLetter />
+
       <Home />
+      <NewsLetter />
       <Footer />
     </>
   );
