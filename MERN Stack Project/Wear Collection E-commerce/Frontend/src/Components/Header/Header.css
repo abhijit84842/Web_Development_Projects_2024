@@ -2,14 +2,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 
 .header{
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-image: linear-gradient(120deg, #d4cbcb 0%, #ebedee 100%);
+    background-image: linear-gradient(120deg, #d4cbcb 0%, #0574ac 100%);
+    margin-bottom: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+    
    
 }
 .header-logo{
@@ -20,7 +27,7 @@
 }
 
 .header-logo p{
-    color: rgb(99, 126, 99);
+    color: rgb(212, 93, 93);
     font-size: 20px;
     font-weight: 600;
 }
@@ -37,6 +44,7 @@
 }
 .link{
     text-decoration: none;
+    color: #000000;
 }
 .header-menu li:hover{
     border-bottom: 5px solid #db4747;

@@ -5,7 +5,6 @@ import { FaShoppingCart } from "react-icons/fa";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 const Header = () => {
-  const [Menu, SetMenu] = useState([]);
   return (
     <div className="header">
       <div className="header-logo">

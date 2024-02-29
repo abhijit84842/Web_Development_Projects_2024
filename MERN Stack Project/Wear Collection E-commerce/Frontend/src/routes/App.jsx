@@ -15,7 +15,6 @@ function App() {
       <Popular />
       <NewCollections />
       <Offers />
-
       <Home />
       <NewsLetter />
       <Footer />
