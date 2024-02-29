@@ -32,23 +32,43 @@ box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0
 }
 
 .check-offers{
-    width: 60%;
+    /*width: 60%;
     border: 2px solid rgb(73, 70, 70);
     border-radius: 20px;
     background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
-    cursor: pointer;
+    cursor: pointer;*/
+
+    background-image: linear-gradient(to right, #FC354C 0%, #0ABFBC  51%, #FC354C  100%);
+    margin: 20px;
+    margin-left: 5px;
+    padding: 10px 20px;
+    transition: 0.7s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 20px;
+    display: block;
    
    
 }
-.check-offers:hover{
-    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
-    box-shadow: 0px 0px 40px 2px #db2696;
+
  
+.check-offers:hover{ 
+   /* background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);*/
+    box-shadow: 0px 0px 40px 2px #db2696;
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+}
+.check-offers:active{
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
 }
 
 .check-now{
-    color: rgb(247, 247, 247);
+    color: rgb(238, 233, 233);
     padding-left: 40px;
+    font-size: 20px;
+    font-weight: 600;
 }
 .offers-right{
     display: flex;
@@ -56,6 +76,6 @@ box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0
     align-items: center;
 }
 
-.offers-right img{
+.offers-right img{  
     width: 60%;
 }
