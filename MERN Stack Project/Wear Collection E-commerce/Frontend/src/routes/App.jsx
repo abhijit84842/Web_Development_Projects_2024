@@ -5,6 +5,7 @@ import Offers from "../Components/Offers/Offers";
 import Popular from "../Components/Popular/Popular";
 import Home from "./Home";
 import NewCollections from "../Components/NewCollections/NewCollections";
+import NewsLetter from "../Components/NewsLetter.jsx/NewsLetter";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Popular />
       <NewCollections />
       <Offers />
+      <NewsLetter />
       <Home />
       <Footer />
     </>
