@@ -1,25 +1,27 @@
-import Footer from "../Components/Footer/Footer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "../Components/Header/Header";
-import Hero from "../Components/Hero/Hero";
-import Offers from "../Components/Offers/Offers";
-import Popular from "../Components/Popular/Popular";
-import Home from "./Home";
-import NewCollections from "../Components/NewCollections/NewCollections";
-import NewsLetter from "../Components/NewsLetter.jsx/NewsLetter";
-import ShopConextProvider from "../Context/ShopContext";
+import ShopMain from "../Pages/ShopMain";
+import Footer from "../Components/Footer/Footer";
+import ShopCatagory from "../Pages/ShopCatagory";
+import Cart from "../Pages/Cart";
+import LoginSignup from "../Pages/LoginSignup";
 
 function App() {
   return (
-    <ShopConextProvider>
-      <Header />
-      <Hero />
-      <Popular />
-      <NewCollections />
-      <Offers />
-      <Home />
-      <NewsLetter />
-      <Footer />
-    </ShopConextProvider>
+    <div>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<ShopMain />} />
+          <Route path="/men" element={<ShopCatagory category="men" />} />
+          <Route path="/women" element={<ShopCatagory category="women" />} />
+          <Route path="/kids" element={<ShopCatagory category="kid" />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/login" element={<LoginSignup />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 }
 

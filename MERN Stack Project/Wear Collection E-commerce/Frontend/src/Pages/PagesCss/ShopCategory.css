@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+
+.shop-category div {
+    margin-left: 10%;
+    margin-bottom: 15px;
+}
+
+.shop-category img{
+   margin-top: 10%;
+   width: 90%;
+   border-radius: 20px;
+
+}

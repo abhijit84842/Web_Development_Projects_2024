@@ -1,2 +1,4 @@
-const LoginSignup = () => {};
+const LoginSignup = () => {
+  return;
+};
 export default LoginSignup;
