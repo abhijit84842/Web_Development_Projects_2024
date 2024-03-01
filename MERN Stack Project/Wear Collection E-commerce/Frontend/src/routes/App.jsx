@@ -6,10 +6,11 @@ import Popular from "../Components/Popular/Popular";
 import Home from "./Home";
 import NewCollections from "../Components/NewCollections/NewCollections";
 import NewsLetter from "../Components/NewsLetter.jsx/NewsLetter";
+import ShopConextProvider from "../Context/ShopContext";
 
 function App() {
   return (
-    <>
+    <ShopConextProvider>
       <Header />
       <Hero />
       <Popular />
@@ -18,7 +19,7 @@ function App() {
       <Home />
       <NewsLetter />
       <Footer />
-    </>
+    </ShopConextProvider>
   );
 }
 
