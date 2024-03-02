@@ -3,6 +3,7 @@ import new_collections from "../Assets/new_collections";
 import NewCollectionsItems from "../Item/NewCollectionsItems";
 
 const NewCollections = () => {
+  console.log(new_collections);
   return (
     <main>
       <div className="new-collections-container">
