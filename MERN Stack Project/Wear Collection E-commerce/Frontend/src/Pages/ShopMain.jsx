@@ -11,7 +11,7 @@ const ShopMain = () => {
   return (
     <div>
       <Hero />
-      <Header />
+
       <Popular />
       <NewCollections />
       <Offers />
