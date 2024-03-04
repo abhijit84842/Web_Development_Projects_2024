@@ -13,16 +13,17 @@ const ShopCatagory = (props) => {
   //console.log(props);
   return (
     <div className="shop-category">
-      <div>
+      <div className="banner">
         <img src={props.banner} alt="" />
       </div>
       <div className="shopcategory-indexSort">
         <p>
           <span>Showing 1-12</span> out of 36 Products
         </p>
-      </div>
-      <div className="shopcategory-sort">
-        Sort by <img src={dropdown_icon} alt="" />
+        <div className="shopcategory-short">
+          <span className="sortby"> Sort by</span>
+          <img src={dropdown_icon} alt="" />
+        </div>
       </div>
       <div className="shopcategory-products">
         {products.map((list) => {
