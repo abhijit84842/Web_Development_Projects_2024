@@ -1,0 +1,142 @@
+.productdisplay{
+    display: flex;
+   /* background-color: aquamarine; */
+   margin: 40px 40px;
+}
+
+.productdisplay-left{
+    margin-top: 20px;
+    display: flex;
+    gap: 17px;
+    
+   
+}
+
+.productdisplay-img-list{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.productdisplay-img-list img{
+    width: 100px;
+
+}
+
+.productdisplay-main-img{
+    width: 400px;
+
+}
+
+.productdisplay-right{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.productdisplay-right-star{
+    padding: 10px 0;
+
+}
+.productdisplay-right-ratings{
+    padding: 5px 0px;
+    font-weight: 600;
+}
+
+.productdisplay-right-emptydiv{
+    width: 500px;
+    border: 2px solid rgb(139, 125, 125);
+}
+.productdisplay-right-emptydiv:hover{
+
+    width: 800px;
+    transition: 0.2s;
+    box-shadow: rgba(200, 20, 0, 0.2) 0px 7px 29px 0px;
+}
+
+.productdisplay-right-prices-orginal-price{
+    font-size: 17px;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+.productdisplay-right-prices-current-price{
+    font-size: 20px;
+    font-weight: 700;
+}
+.productdisplay-right-star-description{
+
+    font-size: 15px;
+}
+
+.productdisplay-right-size h1{
+    font-size: 25px;
+    color: #656565;
+}
+.productdisplay-right-sizes{
+    margin-top: 10px;
+    display: flex;
+    justify-content:left;
+    align-items: left;
+    gap: 50px;
+}
+
+.productdisplay-right-sizes div{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgb(71, 65, 65);
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.productdisplay-right button{
+    padding:20px 40px ;
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background: #FF4141;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.productdisplay-right-category{
+    margin-top: 10px;
+    
+}
+.productdisplay-right-category span{
+    font-weight: 600;
+}
+
+.productdisplay-right-deliveryoptions{
+    margin-top: 30px;
+}
+
+.productdisplay-right-deliveryoptions-pincode input{
+width: 250px;
+height: 50px;
+border: 3px solid rgb(156, 33, 33);
+border-radius: 10px;
+
+}
+
+.productdisplay-right-deliveryoptions-pincode-check{
+    padding-left: 20px;
+    color: #FF4141;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.productdisplay-right-deliveryoptions-pincode p{
+    padding-top: 5px;
+    font-size: 10px;
+    padding-bottom: 40px;
+}
