@@ -1,9 +1,13 @@
+import { Link } from "react-router-dom";
 import "./Item.css";
 const Item = ({ item }) => {
   // console.log(item);
   return (
     <div className="item-container">
-      <img className="item-image" src={item.image} alt="" />
+      <Link to={`/Product/${item.id}`}>
+        <img className="item-image" src={item.image} alt="" />
+      </Link>
+
       <div className="rating">
         {item.stars} ⭐ || {item.rating.count}
       </div>
