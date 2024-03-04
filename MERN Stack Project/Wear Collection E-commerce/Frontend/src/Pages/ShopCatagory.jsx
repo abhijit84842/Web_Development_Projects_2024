@@ -32,6 +32,8 @@ const ShopCatagory = (props) => {
           }
         })}
       </div>
+
+      <div className="load-more">See More...</div>
     </div>
   );
 };

@@ -53,5 +53,20 @@
     gap: 20px;
 }
 
+.load-more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px auto;
+    width: 220px;
+    height: 59px;
+    border-radius: 75px;
+    background: #fafafa;
+    color: #787878;
+    font: 18px;
+    font-weight: 500;
+
+}
+
 
 
