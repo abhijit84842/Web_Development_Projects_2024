@@ -47,6 +47,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -63,6 +65,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -80,6 +84,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -96,6 +102,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -112,6 +120,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -128,6 +138,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -144,6 +156,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -160,6 +174,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -176,6 +192,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -192,6 +210,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -208,6 +228,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -224,6 +246,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -240,6 +264,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -256,6 +282,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -272,6 +300,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -288,6 +318,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -304,6 +336,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -320,6 +354,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -336,6 +372,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -352,6 +390,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -368,6 +408,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -384,6 +426,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -400,6 +444,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -416,6 +462,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -432,6 +480,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -448,6 +498,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -464,6 +516,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -480,6 +534,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -496,6 +552,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -512,6 +570,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -528,6 +588,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -544,6 +606,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -560,6 +624,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -576,6 +642,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -592,6 +660,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400
@@ -608,6 +678,8 @@ let all_product = [
     discount_percentage: 42,
     return_period: 14,
     delivery_date: "10 Oct 2023",
+    description: 
+    "A white color shirt for men is a classic and versatile piece of clothing that is a staple in any wardrobe. Typically made from cotton or a cotton blend, it features a crisp and clean appearance, making it suitable for a wide range of occasions and settings. The white color exudes a sense of elegance and sophistication, while its simplicity allows it to be paired effortlessly with various outfits.",
     rating: {
       stars: 4.5,
       count: 1400

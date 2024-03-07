@@ -37,10 +37,10 @@ const ProductDisplay = ({ product }) => {
             Rs {product.current_price}
           </div>
         </div>
-        <div className="productdisplay-right-star-description">
+        {/* <div className="productdisplay-right-star-description">
           Green floral print gown dress V-neck Long, regular sleeves Layered
           detail Maxi length in flared hem Georgette fabric
-        </div>
+        </div> */}
         <div className="productdisplay-right-size">
           <h1>Select Size</h1>
           <div className="productdisplay-right-sizes">

@@ -1,0 +1,46 @@
+.descriptionsbox{
+    width: 70%;
+    margin: 50px;
+}
+
+.descriptionsbox-navigator{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+ 
+}
+
+.descriptionsbox-nav-box{
+    width:15%;
+    height: 40px;
+    border: 1px solid rgb(107, 103, 103);
+    padding-left: 30px;
+    padding-top: 5px;
+    font-size: 17px;
+    font-weight: 600;
+
+}
+
+.descriptionsbox-nav-fade{
+    width:15%;
+    height: 40px;
+    border: 1px solid rgb(107, 103, 103);
+    background: #978f8f;
+    padding-left: 30px;
+    padding-top: 5px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.descriptonsbox-description{
+    margin-top: 10px;
+    border: 1px solid rgb(107, 103, 103);
+    border-radius: 10px;
+    line-height: 2;
+    letter-spacing: 1px;
+    
+}
+
+.descriptonsbox-description p{
+   padding: 40px;
+}
