@@ -1,4 +1,3 @@
-import Header from "../Components/Header/Header";
 import NewCollections from "../Components/NewCollections/NewCollections";
 import NewsLetter from "../Components/NewsLetter.jsx/NewsLetter";
 import Offers from "../Components/Offers/Offers";

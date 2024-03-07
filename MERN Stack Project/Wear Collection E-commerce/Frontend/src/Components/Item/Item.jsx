@@ -5,7 +5,12 @@ const Item = ({ item }) => {
   return (
     <div className="item-container">
       <Link to={`/Product/${item.id}`}>
-        <img className="item-image" src={item.image} alt="" />
+        <img
+          onClick={window.scrollTo(0, 0)}
+          className="item-image"
+          src={item.image}
+          alt=""
+        />
       </Link>
 
       <div className="rating">
