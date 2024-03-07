@@ -1,0 +1,17 @@
+.relatedProducts{
+   margin-top: 70px;
+   margin-bottom: 70px;
+}
+
+.relatedProducts h1{
+display: flex;
+justify-content: center;
+align-items: center;
+padding-bottom: 50px;
+}
+
+.relatedproducts-item{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}

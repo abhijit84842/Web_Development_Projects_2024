@@ -1,6 +1,5 @@
 import "./DescriptionsBox.css";
 const DescriptionsBox = ({ product }) => {
-  console.log(product);
   return (
     <div className="descriptionsbox">
       <div className="descriptionsbox-navigator">
