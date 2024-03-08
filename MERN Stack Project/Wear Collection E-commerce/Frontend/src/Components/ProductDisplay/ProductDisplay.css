@@ -91,9 +91,24 @@
     border-radius: 50px;
     font-size: 15px;
     font-weight: 600;
+    cursor: pointer;
 }
 
-.productdisplay-right button{
+ .productdisplay-right-addbutton{
+    padding:20px 20px ;
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background: #0eaa09;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    /* /* cursor: pointer;  */
+    border-radius: 5px;
+} 
+
+.productdisplay-right-removebutton{
     padding:20px 40px ;
     width: 200px;
     font-size: 16px;
@@ -103,9 +118,17 @@
     margin-bottom: 20px;
     border: none;
     outline: none;
-    cursor: pointer;
+    /* /* cursor: pointer;  */
     border-radius: 5px;
+} 
+
+.add-icon{
+    padding-right: 10px;
+    color: #FF4141;
 }
+
+
+
 
 .productdisplay-right-category{
     margin-top: 10px;

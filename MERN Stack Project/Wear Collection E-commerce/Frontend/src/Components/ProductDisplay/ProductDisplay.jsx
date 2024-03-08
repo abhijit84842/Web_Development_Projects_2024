@@ -1,8 +1,33 @@
 import "./ProductDisplay.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import star_icon from "../Assets/star_icon.png";
 import star_dull_icon from "../Assets/star_dull_icon.png";
 
+import { useDispatch, useSelector } from "react-redux";
+import { bagSliceActions } from "../../Store/bagSlice";
+
+import { IoMdAddCircle } from "react-icons/io";
+import { MdDeleteForever } from "react-icons/md";
+
 const ProductDisplay = ({ product }) => {
+  // console.log(product.id);
+  // dispatching the actions
+  const dispatch = useDispatch();
+
+  const bagItem = useSelector((store) => store.bag);
+  const elementFound = bagItem.indexOf(product.id) > 0;
+
+  // handle add button
+  const handleAddToBag = () => {
+    // console.log("add click..");
+    dispatch(bagSliceActions.addTobag(product.id));
+  };
+
+  const handleRemove = () => {
+    // console.log("remove click..");
+    dispatch(bagSliceActions.revomeFromBag(product.id));
+  };
+
   return (
     <div className="productdisplay">
       <div className="productdisplay-left">
@@ -51,8 +76,26 @@ const ProductDisplay = ({ product }) => {
             <div>XXL</div>
           </div>
         </div>
+        {elementFound ? (
+          <button
+            type="button"
+            className=" productdisplay-right-removebutton"
+            onClick={handleRemove}
+          >
+            <MdDeleteForever size="2rem" />
+            Remove
+          </button>
+        ) : (
+          <button
+            type="button"
+            className=" productdisplay-right-addbutton"
+            onClick={handleAddToBag}
+          >
+            <IoMdAddCircle size="2rem" />
+            Add to Bag
+          </button>
+        )}
 
-        <button>ADD TO CART</button>
         <div className="productdisplay-right-emptydiv"></div>
         <p className="productdisplay-right-category">
           <span>Category : {product.category}, </span>

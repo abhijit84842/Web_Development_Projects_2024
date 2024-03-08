@@ -5,7 +5,6 @@ import Header from "../Components/Header/Header";
 import ShopMain from "../Pages/ShopMain";
 import Footer from "../Components/Footer/Footer";
 import ShopCatagory from "../Pages/ShopCatagory";
-import Cart from "../Pages/Cart";
 import LoginSignup from "../Pages/LoginSignup";
 
 // banner images import
@@ -13,6 +12,7 @@ import men_banner from "../Components/Assets/banner_mens.png";
 import women_banner from "../Components/Assets/banner_women.png";
 import kid_banner from "../Components/Assets/banner_kids.png";
 import Product from "../Pages/Product";
+import Bag from "../Pages/Bag";
 
 function App() {
   return (
@@ -38,7 +38,7 @@ function App() {
             <Route path=":productId" element={<Product />}></Route>
           </Route>
 
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/bag" element={<Bag />} />
           <Route path="/login" element={<LoginSignup />} />
         </Routes>
         <Footer />
