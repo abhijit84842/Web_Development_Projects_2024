@@ -37,14 +37,14 @@ const Header = () => {
         <div className="profile-section">
           <span className="action_name">
             <Link to="/profile">
-              <IoPerson />
+              <IoPerson size="2rem" color="black" />
             </Link>
           </span>
         </div>
         <div className="Bag-section">
           <span className="action_name">
             <Link to="/bag">
-              <FaShoppingCart />
+              <FaShoppingCart size="2rem" color="black" />
             </Link>
           </span>
         </div>
