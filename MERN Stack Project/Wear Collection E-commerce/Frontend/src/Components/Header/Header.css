@@ -83,6 +83,26 @@
 .Bag-section{
     cursor: pointer;
 }
+
+.bag-item-count{
+    background-color: #d34521;
+    white-space: nowrap;
+    text-align: center;
+    text-decoration: none;
+    line-height: 18px;
+    padding: 0 6px;
+    height: 25px;
+    position: relative;
+    border-radius: 50%;
+    font-size: 12px;
+    color: #fff;
+    left: 2px;
+    top: -15px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+
+}
 .header-login-cart{
     display: flex;
     align-items: center;

@@ -37,20 +37,18 @@ const Header = () => {
       </ul>
       <section className="profile-bag">
         <div className="profile-section">
-          <span className="action_name">
-            <Link to="/profile">
-              <IoPerson size="2rem" color="black" />
-            </Link>
-          </span>
+          <Link to="/profile">
+            <IoPerson size="1.9rem" color="black" />
+          </Link>
+          <div className="action_name">Profile</div>
         </div>
         <div className="Bag-section">
-          <span className="action_name">
-            <Link to="/bag">
-              <FaShoppingCart size="2rem" color="black" />
-              <span className="action_name">Bag</span>
-              <span className="bag-item-count">{bag.length}</span>
-            </Link>
-          </span>
+          <Link className="link" to="/bag">
+            <FaShoppingCart size="1.9rem" color="black" />
+            <span className="bag-item-count">{bag.length}</span>
+          </Link>
+
+          <div className="action_name">Bag</div>
         </div>
       </section>
 

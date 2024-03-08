@@ -3,6 +3,7 @@
    
     width: 75%;
     height: auto;
+    min-height: 100vh;
     margin-left: 12.5%;
     position: relative;
     border-top: 1px solid rgb(61, 59, 59);
