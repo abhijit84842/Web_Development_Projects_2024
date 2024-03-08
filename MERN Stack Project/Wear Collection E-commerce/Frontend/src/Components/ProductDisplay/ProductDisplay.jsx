@@ -92,7 +92,7 @@ const ProductDisplay = ({ product }) => {
             onClick={handleAddToBag}
           >
             <IoMdAddCircle size="2rem" />
-            Add to Bag
+            Add to Cart
           </button>
         )}
 
