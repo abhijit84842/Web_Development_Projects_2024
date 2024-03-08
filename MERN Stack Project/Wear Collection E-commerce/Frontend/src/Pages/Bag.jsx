@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { useSelector } from "react-redux";
 import { ShopContext } from "../Context/ShopContext";
 import BagItem from "../Components/BagItem/BagItem";
+import "../Components/BagItem/BagItem.css";
+import BagSummary from "../Components/BagSummary/BagSummary";
 
 const Bag = () => {
   const { contextValue } = useContext(ShopContext);
@@ -18,9 +20,12 @@ const Bag = () => {
   //   console.log(finalItems);
   return (
     <div className="bag-page">
-      {finalItems.map((list) => (
-        <BagItem key={list.id} item={list} />
-      ))}
+      <div className="bag-items-container">
+        {finalItems.map((list) => (
+          <BagItem key={list.id} item={list} />
+        ))}
+      </div>
+      <BagSummary />
     </div>
   );
 };

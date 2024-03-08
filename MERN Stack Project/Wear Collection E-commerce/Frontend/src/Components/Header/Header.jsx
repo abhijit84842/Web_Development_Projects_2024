@@ -4,7 +4,9 @@ import { IoPerson } from "react-icons/io5";
 import { FaShoppingCart } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 const Header = () => {
+  const bag = useSelector((store) => store.bag);
   return (
     <div className="header">
       <div className="header-logo">
@@ -45,6 +47,8 @@ const Header = () => {
           <span className="action_name">
             <Link to="/bag">
               <FaShoppingCart size="2rem" color="black" />
+              <span className="action_name">Bag</span>
+              <span className="bag-item-count">{bag.length}</span>
             </Link>
           </span>
         </div>
