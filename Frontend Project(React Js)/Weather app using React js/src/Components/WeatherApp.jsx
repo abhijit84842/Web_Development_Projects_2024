@@ -5,7 +5,7 @@ const WeatherApp = () => {
   return (
     <div className="weather-container">
       <div className="input-field">
-        <input type="text" required />
+        <input type="text" placeholder="Enter your city" required />
         <div className="search-icon">
           <GoSearch size="2rem" />
         </div>

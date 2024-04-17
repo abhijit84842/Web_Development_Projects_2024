@@ -4,7 +4,10 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: rgb(83, 83, 241);
+    background: rgb(184,206,230);
+    background: linear-gradient(180deg, rgba(184,206,230,1) 0%, rgba(88,127,252,1) 0%, rgba(63,64,93,1) 93%);
+    border-radius: 10px;
+   
 
 }
 
@@ -17,7 +20,14 @@
 
 input{
     padding: 10px;
+    padding-left: 20px;
     border-radius: 20px;
+  
+}
+input::placeholder{
+font-size: 17px;
+font-weight: 300;
+
 }
 
 .search-icon{
