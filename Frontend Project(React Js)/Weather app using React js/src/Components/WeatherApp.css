@@ -1,0 +1,26 @@
+.weather-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(83, 83, 241);
+
+}
+
+
+.input-field{
+    padding-top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+input{
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.search-icon{
+ 
+    padding: 5px;
+}
