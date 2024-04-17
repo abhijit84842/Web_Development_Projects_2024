@@ -7,21 +7,31 @@
     background: rgb(184,206,230);
     background: linear-gradient(180deg, rgba(184,206,230,1) 0%, rgba(88,127,252,1) 0%, rgba(63,64,93,1) 93%);
     border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+
    
 
 }
 
 
 .input-field{
+    /* background-color: aqua; */
+    width: 50%;
     padding-top: 10px;
     display: flex;
     gap: 20px;
+    padding-bottom: 10px;
+
 }
 
 input{
+    width: 100%;
     padding: 10px;
-    padding-left: 20px;
+    padding-left: 50px;
+    border: 2px solid black;
     border-radius: 20px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
   
 }
 input::placeholder{
@@ -33,4 +43,88 @@ font-weight: 300;
 .search-icon{
  
     padding: 5px;
+}
+
+
+.weather-img img{
+    width: 70%;
+    padding-top: 20px;
+
+}
+
+.weather-temp{
+    font-size: 30px;
+    font-weight: 600;
+    color: azure;
+    padding-right: 80px;
+    padding-top: 5px;
+}
+
+.location{
+    font-size: 30px;
+    font-weight: 600;
+    color: azure;
+    padding-top: 5px;
+    padding-right: 70px;
+}
+
+
+
+.data-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+    gap: 140px;
+}
+
+.humidity{
+    width: 50%;
+    margin-left: 10px;
+    /* background-color: aquamarine; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+ 
+}
+
+.humidity span{
+    color: azure;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+
+.humidity-name{
+    display: inline;
+    /* background-color: aqua; */
+    color: azure;
+    font-size: 20px;
+
+    margin-left: 50px;
+    padding-top: 10px;
+}
+
+
+.wind{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.wind span {
+    color: azure;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.wind-name{
+    display: inline;
+    /* background-color: aquamarine; */
+    font-size: 20px;
+    margin-left: 60px;
+    color: azure;
 }
