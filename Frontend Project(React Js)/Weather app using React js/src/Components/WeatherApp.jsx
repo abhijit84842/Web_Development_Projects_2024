@@ -1,12 +1,25 @@
 import "./WeatherApp.css";
 import { GoSearch } from "react-icons/go";
 import cloud_icon from "../assets/cloud.png";
+import rain_icon from "../assets/rain.png";
+import clear_icon from "../assets/clear.png";
+import showerRain_icon from "../assets/showerRain.png";
+import snow_icon from "../assets/snow.png";
+import mist_icon from "../assets/mist.png";
+import scattered_clods_icon from "../assets/scattered clouds.png";
+import broken_cloud_icon from "../assets/BrokenCloud.png";
+import thunderStrom_icon from "../assets/thunderstorm.png";
+
 import humidity from "../assets/humidity.png";
 import wind from "../assets/wind.png";
+import { useState } from "react";
 
 const WeatherApp = () => {
   // API Use...
   let api_key = "29d264dc25d43fed56ad3fa0f447e26f";
+
+  // useState for day icons update ..
+  const [icons, setIcons] = useState(clear_icon);
 
   const search = async () => {
     const element = document.getElementsByClassName("cityInput");
@@ -20,7 +33,7 @@ const WeatherApp = () => {
 
     let reponse = await fetch(url);
     let data = await reponse.json();
-    // console.log(data);
+    console.log(data);
 
     const temprature = document.getElementsByClassName("weather-temp");
     const location = document.getElementsByClassName("location");
@@ -28,10 +41,32 @@ const WeatherApp = () => {
     const wind = document.getElementsByClassName("wind-speed");
 
     // update innerHtml
-    temprature[0].innerHTML = data.main.temp + "°C";
+    temprature[0].innerHTML = data.main.temp + " °C";
     location[0].innerHTML = data.name;
-    humidity[0].innerHTML = data.main.humidity + "%";
-    wind[0].innerHTML = data.wind.speed + "km/h";
+    humidity[0].innerHTML = data.main.humidity + " %";
+    wind[0].innerHTML = data.wind.speed + " km/h";
+
+    // icon update according to weather condition..
+    const icon_value = data.weather[0].icon;
+    if (icon_value === "01d") {
+      setIcons(clear_icon);
+    } else if (icon_value === "02d") {
+      setIcons(cloud_icon);
+    } else if (icon_value === "03d") {
+      setIcons(scattered_clods_icon);
+    } else if (icon_value === "04d") {
+      setIcons(broken_cloud_icon);
+    } else if (icon_value === "09d") {
+      setIcons(showerRain_icon);
+    } else if (icon_value === "10d") {
+      setIcons(rain_icon);
+    } else if (icon_value === "11d") {
+      setIcons(thunderStrom_icon);
+    } else if (icon_value === "13d") {
+      setIcons(snow_icon);
+    } else if (icon_value === "50d") {
+      setIcons(mist_icon);
+    }
   };
 
   return (
@@ -53,7 +88,7 @@ const WeatherApp = () => {
         </div>
       </div>
       <div className="weather-img">
-        <img src={cloud_icon} alt="loading..." />
+        <img src={icons} className="weather-icon" alt="loading..." />
       </div>
       <div className="weather-temp">24°C</div>
       <div className="location">Kolkata</div>
