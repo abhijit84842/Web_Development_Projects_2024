@@ -14,6 +14,11 @@ import humidity from "../assets/humidity.png";
 import wind from "../assets/wind.png";
 import { useState } from "react";
 
+// night  icoons  ..
+import clear_night_icon from "../assets/night icons/clearNight.png";
+import few_cloud_icon from "../assets/night icons/few_cloud.png";
+import night_rain from "../assets/night icons/rain_night.png";
+
 const WeatherApp = () => {
   // API Use...
   let api_key = "29d264dc25d43fed56ad3fa0f447e26f";
@@ -46,26 +51,35 @@ const WeatherApp = () => {
     humidity[0].innerHTML = data.main.humidity + " %";
     wind[0].innerHTML = data.wind.speed + " km/h";
 
-    // icon update according to weather condition..
+    // icon update according to weather condition.. in Day
     const icon_value = data.weather[0].icon;
     if (icon_value === "01d") {
       setIcons(clear_icon);
     } else if (icon_value === "02d") {
       setIcons(cloud_icon);
-    } else if (icon_value === "03d") {
+    } else if (icon_value === "03d" || icon_value === "03n") {
       setIcons(scattered_clods_icon);
-    } else if (icon_value === "04d") {
+    } else if (icon_value === "04d" || icon_value === "04n") {
       setIcons(broken_cloud_icon);
-    } else if (icon_value === "09d") {
+    } else if (icon_value === "09d" || icon_value === "09n") {
       setIcons(showerRain_icon);
     } else if (icon_value === "10d") {
       setIcons(rain_icon);
-    } else if (icon_value === "11d") {
+    } else if (icon_value === "11d" || icon_value === "11n") {
       setIcons(thunderStrom_icon);
-    } else if (icon_value === "13d") {
+    } else if (icon_value === "13d" || icon_value === "13n") {
       setIcons(snow_icon);
-    } else if (icon_value === "50d") {
+    } else if (icon_value === "50d" || icon_value === "50n") {
       setIcons(mist_icon);
+    }
+
+    //night icons update....
+    if (icon_value === "01n") {
+      setIcons(clear_night_icon);
+    } else if (icon_value === "02n") {
+      setIcons(few_cloud_icon);
+    } else if (icon_value === "10n") {
+      setIcons(night_rain);
     }
   };
 
