@@ -1,0 +1,39 @@
+.container{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img{
+    margin-bottom: 30px;
+}
+
+.input-section{
+    height: 6vh;
+    width: 100%;
+    border-radius: 20px;
+    background-color:#1F3540;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+input{
+    width: 100%;
+   
+    margin-left: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: aliceblue;
+}
+
+.button{
+    margin-right: 2px;
+    border-radius: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    cursor: pointer;
+}
