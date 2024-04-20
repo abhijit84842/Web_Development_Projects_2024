@@ -13,7 +13,7 @@
 
 .input-section{
     height: 6vh;
-    width: 100%;
+    width: 30vw;
     border-radius: 20px;
     background-color:#1F3540;
     display: flex;
@@ -37,7 +37,7 @@ input::placeholder{
 
 .button{
     background-color: #F52549;
-    margin-right: 2px;
+ 
     border-radius: 20px;
     padding-right: 30px;
     padding-left: 30px;
