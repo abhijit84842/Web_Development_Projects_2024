@@ -1,15 +1,55 @@
 import "./ImageGenerator.css";
-import aiImage from "../Assests/aiimage.png";
+import defaultImage from "../Assests/defaultImage.png";
+import { useRef, useState } from "react";
 
 const ImageGenerator = () => {
+  const [image, setImage] = useState(defaultImage);
+  const userPrompt = useRef();
+  // const currPrompt = userPrompt.current.value;
+  // console.log(currPrompt);
+
+  const handleGenerator = async () => {
+    if (userPrompt.current.value === "") {
+      return 0;
+    }
+
+    const response = await fetch(
+      "https://api.openai.com/v1/images/generations",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization:
+            "Bearer sk-proj-FCtfNQmmJpTgbiITq1zWT3BlbkFJmzlLnkVVaGBklr3zeMXc",
+          "User-Agent": "Chrome",
+        },
+        body: JSON.stringify({
+          prompt: `${userPrompt.current.value}`,
+          n: 1,
+          size: "512x512",
+        }),
+      }
+    );
+
+    let data = await response.json();
+    console.log(data);
+    setImage(data);
+  };
   return (
     <div className="container">
       <div className="img">
-        <img src={aiImage} alt="Loading.." />
+        <img src={image} alt="Loading.." />
       </div>
       <div className="input-section">
-        <input type="text" placeholder="image description.." />
-        <button className="button">Generate</button>
+        <input type="text" ref={userPrompt} placeholder="image description.." />
+        <button
+          className="button"
+          onClick={() => {
+            handleGenerator();
+          }}
+        >
+          Generate
+        </button>
       </div>
     </div>
   );
