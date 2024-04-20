@@ -30,10 +30,18 @@ input{
     color: aliceblue;
 }
 
+input::placeholder{
+    color: rgb(178, 182, 185);
+    font-size: 15px;
+}
+
 .button{
+    background-color: #F52549;
     margin-right: 2px;
     border-radius: 20px;
     padding-right: 30px;
     padding-left: 30px;
     cursor: pointer;
+    border: none;
+   
 }
