@@ -4,6 +4,10 @@ import { useRef, useState } from "react";
 
 const ImageGenerator = () => {
   const [image, setImage] = useState(defaultImage);
+
+  // useState for loading bar.....
+  const [loading, setLoading] = useState(false);
+
   const userPrompt = useRef();
   // const currPrompt = userPrompt.current.value;
   // console.log(currPrompt);
@@ -32,8 +36,8 @@ const ImageGenerator = () => {
     );
 
     let data = await response.json();
-    console.log(data);
-    setImage(data);
+    let data_array = data.data;
+    setImage(data_array[0].url);
   };
   return (
     <div className="container">
