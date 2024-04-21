@@ -1,6 +1,7 @@
 import "./ImageGenerator.css";
 import defaultImage from "../Assests/defaultImage.png";
 import { useRef, useState } from "react";
+import Loading from "../LoadingBar/Loading";
 
 const ImageGenerator = () => {
   const [image, setImage] = useState(defaultImage);
@@ -17,6 +18,9 @@ const ImageGenerator = () => {
       return 0;
     }
 
+    // Show Loading Bar
+    setLoading(true);
+
     const response = await fetch(
       "https://api.openai.com/v1/images/generations",
       {
@@ -24,7 +28,7 @@ const ImageGenerator = () => {
         headers: {
           "Content-Type": "application/json",
           Authorization:
-            "Bearer sk-proj-FCtfNQmmJpTgbiITq1zWT3BlbkFJmzlLnkVVaGBklr3zeMXc",
+            "Bearer sk-proj-9XT1feVToLiDXFcFhMx0T3BlbkFJofuxxiGVl6Eb6gymoba0",
           "User-Agent": "Chrome",
         },
         body: JSON.stringify({
@@ -36,14 +40,19 @@ const ImageGenerator = () => {
     );
 
     let data = await response.json();
+    console.log(data);
     let data_array = data.data;
     setImage(data_array[0].url);
+
+    // off loading bar
+    setLoading(false);
   };
   return (
     <div className="container">
-      <div className="img">
-        <img src={image} alt="Loading.." />
+      <div className="loadingbar">
+        {loading ? <Loading /> : <img src={image} alt="Loading.." />}
       </div>
+
       <div className="input-section">
         <input type="text" ref={userPrompt} placeholder="image description.." />
         <button

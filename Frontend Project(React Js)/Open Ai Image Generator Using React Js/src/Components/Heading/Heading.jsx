@@ -1,7 +1,7 @@
 import "./Heading.css";
 const Heading = () => {
   return (
-    <h1>
+    <h1 className="heading">
       Ai Image <span>Generator</span>
     </h1>
   );

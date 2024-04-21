@@ -3,3 +3,9 @@
    height: 5rem;
    background-color: rgb(218, 102, 170);
 }
+
+.loading-text{
+   color: rgb(245, 245, 245);
+   padding-top: 10px;
+ 
+}
