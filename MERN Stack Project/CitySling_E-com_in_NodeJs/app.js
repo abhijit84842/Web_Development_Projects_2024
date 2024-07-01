@@ -1,6 +1,8 @@
 const express = require("express")
 const path = require("path")
 
+const db= require("./config/mongoose-connection")
+
 const app = express()
 
 // to read the json data
