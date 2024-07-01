@@ -1,7 +1,14 @@
 const express = require("express")
 const path = require("path")
 
+// MongoDB config require
 const db= require("./config/mongoose-connection")
+
+// Router require
+const ownersRouter = require("./routes/ownersRouter")
+const usersRouter= require("./routes/usersRouter")
+const productsRouter= require("./routes/productsRouter")
+
 
 const app = express()
 
