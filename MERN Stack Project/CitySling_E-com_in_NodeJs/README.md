@@ -21,6 +21,12 @@
 - product model
 - Owner/Admin model
 
-// config
+// config -> Naming convention follow -> Kabab Case
 
 - mongoDB connection create..
+
+// Route Create -> Naming convention follow -> Camel Case
+
+- ownersRouter-> for admin
+- productsRouter
+- usersRouter

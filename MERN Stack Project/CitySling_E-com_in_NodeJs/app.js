@@ -17,9 +17,12 @@ app.use(express.static(path.join(__dirname , "public")))
 // setup view engine for EJS 
 app.set("view engine" , "ejs")
 
-app.get("/", (req,res)=>{
-    res.send("server is running..")
-})
+
+// Route setup
+app.use("/owners", ownersRouter)
+app.use("/users" , usersRouter)
+app.use("/products", productsRouter)
+
 
 
 app.listen(3000 , ()=>{
