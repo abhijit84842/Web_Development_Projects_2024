@@ -13,3 +13,9 @@
 - nodemon from npm
 - EJS from npm => for server side rendring
 - mongoose from npm
+- cookie-parser from npm
+
+// Models Create
+
+- User model
+- product model
