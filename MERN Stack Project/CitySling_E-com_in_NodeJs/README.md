@@ -14,6 +14,7 @@
 - EJS from npm => for server side rendring
 - mongoose from npm
 - cookie-parser from npm
+- debug from npm -> print data insted of console.
 
 // Models Create
 
@@ -30,3 +31,5 @@
 - ownersRouter-> for admin
 - productsRouter
 - usersRouter
+
+// Use POSTMAN for API Testing
