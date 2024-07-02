@@ -2,7 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 
-//* * Development Base routing in top...* *//
+//* * Only Development Base routing in top...* *//
 
 // conditional routing..
 if (process.env.NODE_ENV === "development") {
@@ -12,9 +12,12 @@ if (process.env.NODE_ENV === "development") {
   });
 }
 
+//* * Both Enviourment Base routing in middle...* *//
 router.get("/", (req, res) => {
   res.send("hi ");
 });
+
+//* *Only Production Enviourment Base routing in Buttom...* *//
 
 console.log(process.env.NODE_ENV); // first  we have to set Node enviroment
 
