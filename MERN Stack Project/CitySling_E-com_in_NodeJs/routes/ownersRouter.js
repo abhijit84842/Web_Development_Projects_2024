@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === "development") {
   router.post("/create", async(req, res) => {
    let owner= await OwnerModel.find()
    if(owner.length > 0){
-    return res.send("You don't have permission to create a new owner").status(503)
+    return res.status(401).send("You don't have permission to create a new owner")
    }else{
     let result=await ownerModel.create({
       fullname:"Abhijit Das",
@@ -23,7 +23,7 @@ if (process.env.NODE_ENV === "development") {
       gstin:"GSTN1203145SGV",
      
     })
-    res.send("Owner Created Successfully..").status(200)
+    res.status(201).send("Owner Created Successfully..")
    }
    
    
