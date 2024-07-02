@@ -7,7 +7,7 @@
 <p>Database -> MongoDB Atlas</p>
  </div>
 
-// Package Install
+<h3> Package Install </h3>
 
 - express from npm
 - nodemon from npm
@@ -17,20 +17,22 @@
 - debug from npm -> print data insted of console.
 - config from npm -> its took up the value which enviouremnt is running current(development or production)
 
-// Models Create
+<h3> Models Create</h3>
 
 - User model
 - product model
 - Owner/Admin model
 
-// config -> Naming convention follow -> Kabab Case
+<h3>config -> Naming convention follow -> Kabab Case</h3>
 
 - mongoDB connection create..
 
-// Route Create -> Naming convention follow -> Camel Case
+<h3> Route Create -> Naming convention follow -> Camel Case </h3>
 
 - ownersRouter-> for admin
 - productsRouter
 - usersRouter
 
-// Use POSTMAN for API Testing
+<h3> Use POSTMAN for API Testing </h3>
+
+<h3>User Authetication & Functionality </h3>
