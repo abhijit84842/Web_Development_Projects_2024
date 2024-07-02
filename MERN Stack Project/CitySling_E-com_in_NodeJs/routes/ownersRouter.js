@@ -16,14 +16,15 @@ if (process.env.NODE_ENV === "development") {
    if(owner.length > 0){
     return res.status(401).send("You don't have permission to create a new owner")
    }else{
+    let {fullname , email, password , gstin}=req.body
     let result=await ownerModel.create({
-      fullname:"Abhijit Das",
-      email:"abhijit721201@gmail.com",
-      password:"123",
-      gstin:"GSTN1203145SGV",
+      fullname,
+      email,
+      password,
+      gstin,
      
     })
-    res.status(201).send("Owner Created Successfully..")
+    res.status(201).send("Owner Created Successfully.." + result)
    }
    
    
