@@ -1,15 +1,39 @@
 const { default: mongoose } = require("mongoose");
 
 const UserSchema = mongoose.Schema({
-    username:String,
-    fullname:String,
+    username:{
+        type:String,
+        unic:true,
+        required:true,
+        lowercase:true,
+    },
+    fullname:{
+        type:String,
+        trim:true,
+        required:true,
+    },
     age:String,
-    email:String,
-    password:String,
-    phno:Number,
+    email:{
+        type:String,
+        unic:true,
+        required:true,
+        lowercase:true,
+    },
+    password:{
+        type:String,
+        required:true,
+    },
+    phno:{
+        type:Number,
+        required:true,
+        unic:true,
+    },
     isadmin:Boolean,
     picture:String,
-    address:String,
+    address:{
+        type:String,
+        required:true,
+    },
     cart:{
         type:Array,
         default:[]

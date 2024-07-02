@@ -1,9 +1,19 @@
 const { default: mongoose } = require("mongoose");
 
 ProductSchema = mongoose.Schema({
-  proname: String,
-  company: String,
-  price: Number,
+  proname: {
+    type:String,
+    trim:true,
+    required:true,
+  },
+  company: {
+    type:String,
+    required:true,
+  },
+  price:{
+    type:Number,
+    required:true,
+  },
   image: String,
   description: String,
   bgcolor: String,
