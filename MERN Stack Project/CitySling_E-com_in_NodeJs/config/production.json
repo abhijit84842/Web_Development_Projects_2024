@@ -1,0 +1,3 @@
+{
+    "MONGODB_URL_PRODUCTION":"mongodb+srv://CitySlingAdmin:Admin123@cluster0.l4vqt9f.mongodb.net/CitySling-E-com-Web?retryWrites=true&w=majority&appName=Cluster0"
+}

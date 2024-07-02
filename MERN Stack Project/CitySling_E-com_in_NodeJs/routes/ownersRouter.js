@@ -1,10 +1,21 @@
-const express = require("express")
+const express = require("express");
 
-const router = express.Router()
+const router = express.Router();
 
-router.get("/", (req,res)=>{
-    res.send("hi ")
-   
-})
+//* * Development Base routing in top...* *//
 
-module.exports = router
+// conditional routing..
+if (process.env.NODE_ENV === "development") {
+  // this route only show in dev mode not production mode
+  router.post("/create", (req, res) => {
+    res.send("create");
+  });
+}
+
+router.get("/", (req, res) => {
+  res.send("hi ");
+});
+
+console.log(process.env.NODE_ENV); // first  we have to set Node enviroment
+
+module.exports = router;
