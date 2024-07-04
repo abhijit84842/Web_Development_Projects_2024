@@ -4,8 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div>This is home Page</div>
+  <body class="body bg-zinc-900 w-full h-screen">
+    <div>
+      <nav class="nav bg-zinc-800 flex justify-center justify-between p-5">
+        <div
+          class="left flex justify-center gap-10 p-2 inline-block ml-[7rem] text-white font-semibold text-xl"
+        >
+          <div>Home</div>
+          <div>Shop</div>
+          <div>Women</div>
+          <div>Men</div>
+          <div>Kids</div>
+        </div>
+        <div class="right flex justify-end gap-10 mr-20 p-2">
+          <div class="profile text-lime-500 text-xl font-semibold">Profile</div>
+          <div class="cart text-yellow-500 text-xl font-semibold">Cart</div>
+          <div class="login text-blue-700 text-xl font-semibold">Login</div>
+        </div>
+      </nav>
+      <div class="banner bg-red-800 flex justify-center">
+        <img
+          src="/images/banner/CitySling New hand bag this season..png"
+          alt="loading..."
+        />
+      </div>
+    </div>
   </body>
 </html>

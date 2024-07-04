@@ -6,6 +6,8 @@ const ownerModel = require("../models/ownerModel");
 
 const router = express.Router();
 
+// console.log(process.env)
+
 //* * Only Development Base routing in top...* *//
 
 // conditional routing..
