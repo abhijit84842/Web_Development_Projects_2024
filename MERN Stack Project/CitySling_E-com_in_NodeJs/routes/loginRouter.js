@@ -4,7 +4,13 @@ const router = express.Router()
 
 // render the login page...
 router.get("/", (req,res)=>{
-    res.send("login hi")
+    res.render("login")
+})
+
+// post request
+router.post("/success" , (req,res)=>{
+    console.log(req.body)
+    res.send("login successfully")
 })
 
 module.exports=router
