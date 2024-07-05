@@ -10,7 +10,7 @@ router.get("/", (req,res)=>{
 // post request
 router.post("/success" , (req,res)=>{
     console.log(req.body)
-    res.send("login successfully")
+    res.redirect("/")
 })
 
 module.exports=router
