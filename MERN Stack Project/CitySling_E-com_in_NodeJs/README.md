@@ -3,6 +3,7 @@
 <h2> Follow Industrial Base code and Folder Structure </h2>
 <div>
 <p> Frontend -> EJS</p>
+<p>Styling -> Tailwind CSS & BootStrap
 <p>Backend -> Node Js</p>
 <p>Database -> MongoDB Atlas</p>
  </div>
