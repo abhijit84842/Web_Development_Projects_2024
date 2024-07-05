@@ -32,6 +32,7 @@
 - ownersRouter-> for admin
 - productsRouter
 - usersRouter
+- loginRouter
 
 <h3> Use POSTMAN for API Testing </h3>
 
