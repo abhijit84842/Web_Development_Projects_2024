@@ -11,7 +11,7 @@ const dbgr = require("debug")("development:mongoose");
 
 const DbConnection = async () => {
   try {
-    await mongoose.connect(config.get("MONGODB_URL")); // GET connection string by config
+    await mongoose.connect(config.get("DEV_MONGODB_URL")); // GET connection string by config
     dbgr("DB Connected Successfully...");
     // dbgrp("DB Connected Successfully...")
   } catch (err) {
