@@ -11,7 +11,7 @@
       <h1
         class="text-white font-semibold text-5xl flex justify-center items-center mt-10"
       >
-        Login Your Account
+        Create Owner Account
       </h1>
       <div class="flex justify-center items-center">
         <div
@@ -19,9 +19,16 @@
         >
           <form
             class="w-full bg-neutral-800 flex justify-center items-center gap-5 flex-col p-10 rounded-md"
-            action="/login/success"
+            action="/owners/create"
             method="post"
           >
+            <input
+              class="p-2 w-full rounded-full outline-none text-lg"
+              type="text"
+              name="fullname"
+              placeholder="enter your full name"
+              required
+            />
             <input
               class="p-2 w-full rounded-full outline-none text-lg"
               type="text"
@@ -30,17 +37,22 @@
               required
             />
             <input
-              class="p-2 w-full rounded-full outline-none text-lg"
+              class="p-2 , w-full , rounded-full ,outline-none , text-lg"
               type="text"
               name="password"
-              placeholder="enter your password"
-              required
+              placeholder="enter a strong password"
+            />
+            <input
+              class="p-2 , w-full , rounded-full ,outline-none , text-lg"
+              type="text"
+              name="gstin"
+              placeholder="enter your GST number"
             />
             <button
               class="w-1/2 bg-green-600 p-2 text-xl font-semibold text-white rounded-full"
               type="submit"
             >
-              Login
+              Create
             </button>
           </form>
         </div>
