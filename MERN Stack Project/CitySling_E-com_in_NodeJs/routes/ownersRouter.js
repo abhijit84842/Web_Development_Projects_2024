@@ -34,10 +34,12 @@ if (process.env.NODE_ENV === "development") {
   });
 }
 
-//* * Both Enviourment Base routing in middle...* *//
-router.get("/", (req, res) => {
-  res.render("createowner");
-});
+if(process.env.NODE_ENV=="development"){
+  router.get("/", (req, res) => {
+    res.render("createowner");
+  });
+}
+
 
 //* *Only Production Enviourment Base routing in Buttom...* *//
 
