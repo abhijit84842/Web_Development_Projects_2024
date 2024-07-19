@@ -32,7 +32,7 @@ const UserSchema = mongoose.Schema({
     picture:String,
     address:{
         type:String,
-        required:true,
+        // required:true,
     },
     cart:{
         type:Array,
