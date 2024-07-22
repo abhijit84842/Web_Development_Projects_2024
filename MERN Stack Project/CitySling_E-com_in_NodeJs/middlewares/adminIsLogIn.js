@@ -6,7 +6,7 @@ const adminIsLoggedIn =function(req,res,next){
         return res.redirect("/login/adminlogin")
     }
     let cookiedata= jwt.verify(req.cookies.token , "secrect")
-    console.log(cookiedata)
+    // console.log(cookiedata)
     req.user1=cookiedata
     next()
 }
