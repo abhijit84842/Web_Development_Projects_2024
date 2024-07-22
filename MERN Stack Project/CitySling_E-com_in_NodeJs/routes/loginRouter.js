@@ -4,6 +4,7 @@ const jwt= require("jsonwebtoken")
 
 // Model require
 const UserModel = require("../models/userModel");
+const OwnerModel= require("../models/ownerModel")
 const router = express.Router();
 
 // render the login page...
@@ -14,6 +15,19 @@ router.get("/", (req, res) => {
 // post request
 router.post("/success", async (req, res) => {
   let { email, password } = req.body;
+
+  // owner loging Authentication Check...
+  let owner = await OwnerModel.findOne({email:req.body.email})
+  if(!owner){
+    return res.status(401).send("Owner not found..")
+  }else{
+    res.redirect("/addproduct")
+  }
+
+
+
+
+  // user loging Authentication check..
   let user = await UserModel.findOne({ email: email });
   if (!user) {
     return res.status(401).send("incorrect email id...");
