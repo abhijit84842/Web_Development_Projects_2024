@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const bcrypt = require("bcrypt");
 
 // model require
 const UserModel = require("../models/userModel");
@@ -14,7 +15,12 @@ router.post("/create", async (req, res) => {
 
   let { username, fullname, age, email, password, phno } = req.body;
 
-  // check Database empty or not
+  // PASSWORD ENCRYPTION BY bcrypt
+  bcrypt.genSalt(10, function (err, salt) {
+    bcrypt.hash(password, salt, async function(err, hash) {
+      // Store hash in your password DB.
+
+       // check Database empty or not
   let usercheck = await UserModel.find();
   if (usercheck.length == 0) {
     let result = await UserModel.create({
@@ -22,7 +28,7 @@ router.post("/create", async (req, res) => {
       fullname,
       age,
       email,
-      password,
+      password:hash,
       phno,
     });
     res.status(201).send("user created Successfully..");
@@ -35,7 +41,7 @@ router.post("/create", async (req, res) => {
         fullname,
         age,
         email,
-        password,
+        password:hash,
         phno,
       });
 
@@ -44,6 +50,11 @@ router.post("/create", async (req, res) => {
       return res.send("User already exists..");
     }
   }
+
+    });
+  });
+
+ 
 });
 
 module.exports = router;
