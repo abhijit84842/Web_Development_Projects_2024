@@ -53,12 +53,6 @@ if (process.env.NODE_ENV == "development") {
 }
 
 
-if(process.env.NODE_ENV=="development"){
-  router.get("/adminlogin", (req,res)=>{
-    res.render("adminlogin")
-  })
-}
-
 //* *Only Production Enviourment Base routing in Buttom...* *//
 
 console.log(process.env.NODE_ENV); // first  we have to set Node enviroment

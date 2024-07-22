@@ -1,9 +1,9 @@
 const jwt= require("jsonwebtoken")
 
-const isLoggedIn =function(req,res,next){
+const adminIsLoggedIn =function(req,res,next){
     // console.log(req.cookies.token)
     if(req.cookies.token ===""){
-        return res.redirect("/login")
+        return res.redirect("/login/adminlogin")
     }
     let cookiedata= jwt.verify(req.cookies.token , "secrect")
     console.log(cookiedata)
@@ -11,4 +11,4 @@ const isLoggedIn =function(req,res,next){
     next()
 }
 
-module.exports = isLoggedIn
+module.exports = adminIsLoggedIn
