@@ -33,7 +33,7 @@ if (process.env.NODE_ENV === "development") {
             password: hash,
             gstin,
           });
-          res.status(201).send("Owner Created Successfully.." + result);
+          res.status(201).redirect("/owners/adminlogin");
         });
       });
     }
@@ -44,6 +44,13 @@ if (process.env.NODE_ENV == "development") {
   router.get("/", (req, res) => {
     res.render("createowner");
   });
+}
+
+
+if(process.env.NODE_ENV=="development"){
+  router.get("/adminlogin", (req,res)=>{
+    res.render("adminlogin")
+  })
 }
 
 //* *Only Production Enviourment Base routing in Buttom...* *//
