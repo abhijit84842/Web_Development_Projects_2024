@@ -33,7 +33,7 @@ if (process.env.NODE_ENV === "development") {
             password: hash,
             gstin,
           });
-          res.status(201).redirect("/owners/adminlogin");
+          res.status(201).redirect("/owners");
         });
       });
     }

@@ -72,7 +72,7 @@ router.post("/adminlogin",async (req,res)=>{
         let token = jwt.sign({email:email},"ownerkey")
         res.cookie("token",token)
         // res.redirect("/products/addproducts")
-        res.redirect("/products/addproducts")
+        res.redirect("/owners")
       }
   });
   }
