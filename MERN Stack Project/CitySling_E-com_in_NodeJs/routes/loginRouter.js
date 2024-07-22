@@ -1,5 +1,6 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
+const jwt= require("jsonwebtoken")
 
 // Model require
 const UserModel = require("../models/userModel");
@@ -15,14 +16,18 @@ router.post("/success", async (req, res) => {
   let { email, password } = req.body;
   let user = await UserModel.findOne({ email: email });
   if (!user) {
-    return res.status(404).send("incorrect email id...");
+    return res.status(401).send("incorrect email id...");
   } else {
     // compare with DB stored password...
     bcrypt.compare(password, user.password, function (err, result) {
       if (result==false) {
-       return res.send("incorrect password..")
+       return res.status(401).send("incorrect password..")
       } else {
-        res.send("login successfully..")
+        // set cookie by JWT
+        let token = jwt.sign({email:req.body.email}, "secrect")
+        res.cookie("token" , token)
+
+        res.status(200).redirect("/")
       }
     });
   }
