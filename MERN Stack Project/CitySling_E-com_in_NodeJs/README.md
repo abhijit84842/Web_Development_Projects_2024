@@ -38,6 +38,6 @@
 <h3> Use POSTMAN for API Testing </h3>
 
 <h3>User Authetication & Functionality </h3>
-- Encrypted the password by bcrypt
-- Cookie set using JWT
+* Encrypted the password by bcrypt
+* Set cookie using JWT
 <h3> User Veryfication in login </h3>
