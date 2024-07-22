@@ -19,6 +19,10 @@ ProductSchema = mongoose.Schema({
   bgcolor: String,
   panelcolor: String,
   textcolor: String,
+  category:{
+    type:String,
+    required:true,
+  },
   discount: {
     type: Number,
     default: 0,
