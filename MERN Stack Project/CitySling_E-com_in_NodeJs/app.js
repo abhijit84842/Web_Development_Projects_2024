@@ -1,5 +1,6 @@
 const express = require("express")
 const path = require("path")
+const cookieParser = require("cookie-parser")
 
 // MongoDB config require
 const db= require("./config/mongoose-connection")
@@ -11,6 +12,9 @@ const usersRouter= require("./routes/usersRouter")
 const productsRouter= require("./routes/productsRouter")
 const loginRouter = require("./routes/loginRouter")
 const logoutRouter= require("./routes/logoutRouter")
+
+
+
 
 const app = express()
 
@@ -26,6 +30,8 @@ app.use(express.static(path.join(__dirname , "public")))
 // setup view engine for EJS 
 app.set("view engine" , "ejs")
 
+// to read the cookies in console
+app.use(cookieParser())
 
 
 // Route setup

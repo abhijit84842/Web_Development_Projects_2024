@@ -1,13 +1,16 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/", (req, res) => {
+const isLoggedIn= require("../middlewares/isLogin")
+
+// protected route..
+router.get("/", isLoggedIn, (req, res) => {
   res.send("All Products...")
 
 });
 
 
-router.get("/women" ,(req,res)=>{
+router.get("/women", isLoggedIn, (req,res)=>{
   res.render("womenproducts")
 })
 

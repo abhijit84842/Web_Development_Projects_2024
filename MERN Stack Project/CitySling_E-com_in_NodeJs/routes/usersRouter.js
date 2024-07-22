@@ -33,9 +33,9 @@ router.post("/create", async (req, res) => {
           phno,
         });
 
-        // cookie set using jwt
-        let token = jwt.sign({ email: email }, "secrect");
-        res.cookie("token", token);
+        // // cookie set using jwt
+        // let token = jwt.sign({ email: email }, "secrect");
+        // res.cookie("token", token);
 
         res.status(201).send("user created Successfully..");
       } else {
@@ -51,9 +51,9 @@ router.post("/create", async (req, res) => {
             phno,
           });
 
-          // cookie set using jwt
-          let token = jwt.sign({ email: email }, "secrect");
-          res.cookie("token", token);
+          // // cookie set using jwt
+          // let token = jwt.sign({ email: email }, "secrect");
+          // res.cookie("token", token);
 
           res.status(201).send("User Created Successfully.. ");
         } else {
