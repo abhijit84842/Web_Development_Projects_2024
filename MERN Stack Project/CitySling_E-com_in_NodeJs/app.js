@@ -10,6 +10,7 @@ const ownersRouter = require("./routes/ownersRouter")
 const usersRouter= require("./routes/usersRouter")
 const productsRouter= require("./routes/productsRouter")
 const loginRouter = require("./routes/loginRouter")
+const logoutRouter= require("./routes/logoutRouter")
 
 const app = express()
 
@@ -33,6 +34,7 @@ app.use("/owners", ownersRouter)
 app.use("/users" , usersRouter)
 app.use("/products", productsRouter)
 app.use("/login",loginRouter )
+app.use("/logout",logoutRouter)
 
 
 
