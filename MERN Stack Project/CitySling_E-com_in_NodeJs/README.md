@@ -35,12 +35,9 @@
 - usersRouter
 - loginRouter
 
-* check
-* check
-
 <h3> Use POSTMAN for API Testing </h3>
 
 <h3>User Authetication & Functionality </h3>
-* Encrypted the password by bcrypt
-* Set cookie using JWT
+<p>Encrypted the password by bcrypt </p>
+<p> Set cookie using JWT </p>
 <h3> User Veryfication in login </h3>
