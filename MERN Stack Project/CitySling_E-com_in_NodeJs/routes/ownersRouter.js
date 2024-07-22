@@ -46,6 +46,12 @@ if (process.env.NODE_ENV == "development") {
   });
 }
 
+if (process.env.NODE_ENV == "development") {
+  router.get("/createowner", (req, res) => {
+    res.render("createowner");
+  });
+}
+
 
 if(process.env.NODE_ENV=="development"){
   router.get("/adminlogin", (req,res)=>{
