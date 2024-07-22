@@ -12,7 +12,7 @@ router.get("/", (req, res) => {
   res.render("login");
 });
 
-// post request
+// post request for user login
 router.post("/userlogin", async (req, res) => {
   let { email, password } = req.body;
 
@@ -54,5 +54,28 @@ router.post("/userlogin", async (req, res) => {
     });
   }
 });
+
+
+
+// post request for Owner login
+router.post("/adminlogin",async (req,res)=>{
+  let {email, password}= req.body
+  let owner=await OwnerModel.findOne({email:email})
+  if(!owner){
+    return res.status(401).send("Owner not found..")
+  }else{
+    bcrypt.compare(password, owner.password, function(err, result) {
+      // result == true
+      if(result==false){
+        return res.status(401).send("Password is incorrect...")
+      }else{
+        let token = jwt.sign({email:email},"ownerkey")
+        res.cookie("token",token)
+        // res.redirect("/products/addproducts")
+        res.redirect("/products/addproducts")
+      }
+  });
+  }
+})
 
 module.exports = router;

@@ -9,6 +9,10 @@ router.get("/", isLoggedIn, (req, res) => {
 
 });
 
+router.get("/addproducts", (req,res)=>{
+  res.render("addproduct")
+})
+
 
 router.get("/women", isLoggedIn, (req,res)=>{
   res.render("womenproducts")
