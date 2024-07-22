@@ -16,25 +16,6 @@ router.get("/", (req, res) => {
 router.post("/userlogin", async (req, res) => {
   let { email, password } = req.body;
 
-  // // owner loging Authentication Check...
-  // let owner = await OwnerModel.findOne({email:req.body.email})
-  // if(!owner){
-  //   return res.status(401).send("Owner not found..")
-  // }else{
-  //   bcrypt.compare(password, owner.password, function(err, result) {
-  //     // result == true
-  //     if(result==false){
-  //       return res.status(401).send("Owner password is incorrect..")
-  //     }else{
-  //       let token = jwt.sign({email:email},"ownerkey")
-  //       res.cookie("token" ,token)
-
-  //       return res.redirect("/addproducts")
-  //     }
-
-  // });
-  // }
-
   // user loging Authentication check..
   let user = await UserModel.findOne({ email: email });
   if (!user) {
@@ -69,7 +50,7 @@ router.post("/adminlogin",async (req,res)=>{
       if(result==false){
         return res.status(401).send("Password is incorrect...")
       }else{
-        let token = jwt.sign({email:email},"ownerkey")
+        let token = jwt.sign({email:email},"secrect")
         res.cookie("token",token)
         // res.redirect("/products/addproducts")
         res.redirect("/owners")
