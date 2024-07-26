@@ -8,6 +8,11 @@
 <p>Database -> MongoDB Atlas</p>
  </div>
 
+<div>
+<h2>Figma Design </h2>
+<a href="https://www.figma.com/design/3FH9gGvqy3SRoLwzIbTwlY/CitySling-Banner?node-id=27-3&t=nwKnXy5aOTgll4A2-0">See Design</a>
+</div>
+
 <h3> Package Install </h3>
 
 - express from npm
