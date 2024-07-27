@@ -21,6 +21,10 @@ router.get("/men",isLoggedIn , (req,res)=>{
   res.render("menproducts")
 })
 
+// Showing kids products
+router.get("/kids" , isLoggedIn ,(req,res)=>{
+  res.render("kidsproducts")
+})
 // showing trolley products.
 router.get("/trolley",isLoggedIn,(req,res)=>{
   res.render("trolleyproducts")
