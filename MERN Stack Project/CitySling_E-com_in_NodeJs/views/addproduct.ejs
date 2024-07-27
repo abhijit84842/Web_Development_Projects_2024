@@ -4,8 +4,97 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ADD PRODUCTS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <h1>ADD YOUR PRODUCTS</h1>
+  <body class="bg-zinc-900 w-full h-screen">
+    <h1
+      class="text-white text-5xl font-bold flex justify-center items-center my-10"
+    >
+      ADD YOUR PRODUCTS
+    </h1>
+    <div class="flex justify-center flex-col items-center">
+      <div
+        class="bg-stone-700 w-[70%] flex justify-center items-center p-10 rounded-lg"
+      >
+        <form
+          class="bg-neutral-800 w-[70%] p-10 rounded-lg flex justify-center flex-col items-center"
+          action=""
+        >
+          <input
+            class="text-lg text-white font-semibold my-3"
+            type="file"
+            name=""
+            required
+            placeholder="upload product image"
+          />
+          <input
+            class="w-[80%] rounded-lg outline-none p-2 my-3"
+            type="text"
+            name="name"
+            required
+            placeholder="enter product name"
+          />
+
+          <input
+            class="w-[80%] rounded-lg outline-none p-2 my-3"
+            type="text"
+            name="subname"
+            required
+            placeholder="enter product sub name"
+          />
+
+          <input
+            class="w-[80%] rounded-lg outline-none p-2 my-3"
+            type="text"
+            name="details"
+            required
+            placeholder="enter product details"
+          />
+          <input
+            class="w-[80%] rounded-lg outline-none p-2 my-3"
+            type="text"
+            name="price"
+            required
+            placeholder="enter product price"
+          />
+          <input
+            class="w-[80%] rounded-lg outline-none p-2 my-3"
+            type="text"
+            name="size"
+            placeholder="enter product size"
+          />
+          <input
+            class="w-[80%] rounded-lg outline-none p-2 my-3"
+            type="text"
+            name="color"
+            placeholder="enter product color"
+          />
+          <input
+            class="w-[80%] rounded-lg outline-none p-2 my-3"
+            type="text"
+            name="discount"
+            placeholder="enter product discount"
+          />
+          <input
+            class="w-[80%] rounded-lg outline-none p-2 my-3"
+            type="text"
+            name="features"
+            placeholder="enter product features"
+          />
+          <input
+            class="w-[80%] rounded-lg outline-none p-2 my-3"
+            type="text"
+            name="material"
+            placeholder="enter product material"
+          />
+          <button
+            class="w-[60%] bg-green-600 p-2 rounded-lg my-3"
+            type="submit"
+          >
+            ADD PRODUCT
+          </button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

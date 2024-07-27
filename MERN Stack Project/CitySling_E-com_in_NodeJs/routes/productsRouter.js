@@ -21,6 +21,7 @@ router.get("/trolley",isLoggedIn,(req,res)=>{
   res.render("trolleyproducts")
 })
 
+// Add your product
 router.get("/addproducts", adminLoggedIn , (req,res)=>{
   res.render("addproduct")
 })
