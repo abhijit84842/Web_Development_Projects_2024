@@ -11,14 +11,20 @@ router.get("/", isLoggedIn, (req, res) => {
 
 });
 
-
+// showing women products
 router.get("/women", isLoggedIn, (req,res)=>{
   res.render("womenproducts")
+})
+
+// showing trolley products.
+router.get("/trolley",isLoggedIn,(req,res)=>{
+  res.render("trolleyproducts")
 })
 
 router.get("/addproducts", adminLoggedIn , (req,res)=>{
   res.render("addproduct")
 })
+
 
 
 
