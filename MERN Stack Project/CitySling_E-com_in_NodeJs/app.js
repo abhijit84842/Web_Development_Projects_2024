@@ -12,6 +12,7 @@ const usersRouter= require("./routes/usersRouter")
 const productsRouter= require("./routes/productsRouter")
 const loginRouter = require("./routes/loginRouter")
 const logoutRouter= require("./routes/logoutRouter")
+const cartRouter=require("./routes/cartRouter")
 
 
 
@@ -39,6 +40,7 @@ app.use("/", homeRouter)
 app.use("/owners", ownersRouter)
 app.use("/users" , usersRouter)
 app.use("/products", productsRouter)
+app.use("/cart", cartRouter)
 app.use("/login",loginRouter )
 app.use("/logout",logoutRouter)
 
