@@ -2,8 +2,14 @@ const express = require('express')
 
 const router= express.Router()
 
-router.get("/", (req,res)=>{
-    res.cookie("token", "")
+router.get("/adminlogout", (req,res)=>{
+    res.cookie("atoken", "")
+    res.redirect("/")
+})
+
+// User logout
+router.get("/userlogout", (req,res)=>{
+    res.cookie("utoken","")
     res.redirect("/")
 })
 

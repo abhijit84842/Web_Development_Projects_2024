@@ -33,7 +33,7 @@ router.post("/userlogin", async (req, res) => {
       } else {
         // set cookie by JWT
         let token = jwt.sign({ email: req.body.email }, "secrect");
-        res.cookie("token", token);
+        res.cookie("utoken", token);
 
         res.status(200).redirect("/");
       }
@@ -56,7 +56,7 @@ router.post("/adminlogin",async (req,res)=>{
         return res.status(401).send("Password is incorrect...")
       }else{
         let token = jwt.sign({email:email},"secrect")
-        res.cookie("token",token)
+        res.cookie("atoken",token)
         // res.redirect("/products/addproducts")
         res.redirect("/owners")
       }
