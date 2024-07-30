@@ -41,6 +41,10 @@ ProductSchema = mongoose.Schema({
     type: Number,
     default: 0,
   },
+  material:{
+    type:String,
+    required:true,
+  }
 });
 
 
