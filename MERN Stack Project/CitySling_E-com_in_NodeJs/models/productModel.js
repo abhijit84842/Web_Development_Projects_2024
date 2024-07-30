@@ -1,9 +1,13 @@
 const { default: mongoose } = require("mongoose");
 
 ProductSchema = mongoose.Schema({
-  proname: {
+  name: {
     type:String,
     trim:true,
+    required:true,
+  },
+  subtitle:{
+    type:String,
     required:true,
   },
   company: {
@@ -15,10 +19,20 @@ ProductSchema = mongoose.Schema({
     required:true,
   },
   image: String,
-  description: String,
-  bgcolor: String,
-  panelcolor: String,
-  textcolor: String,
+  description:{
+    type:String,
+    required:true
+  },
+  size:{
+    type:String,
+    required:true,
+  },
+  color:{
+    type:String,
+  },
+  features:{
+    type:String,
+  },
   category:{
     type:String,
     required:true,

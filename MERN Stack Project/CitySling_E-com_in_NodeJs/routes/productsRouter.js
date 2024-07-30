@@ -30,9 +30,15 @@ router.get("/trolley",isUserLoggedIn, (req,res)=>{
   res.render("trolleyproducts")
 })
 
-// Add your product by Owner
+//Rendering the  Add your product by Owner
 router.get("/addproducts", isAdminLoggedIn , (req,res)=>{
   res.render("addproduct")
+})
+
+// POST req for add Products.
+router.post("/addproducts" , isAdminLoggedIn , (req,res)=>{
+  console.log(req.body)
+  res.send("Product added successfully..")
 })
 
 

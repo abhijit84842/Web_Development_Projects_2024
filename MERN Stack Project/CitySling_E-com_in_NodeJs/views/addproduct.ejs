@@ -12,87 +12,167 @@
     >
       ADD YOUR PRODUCTS
     </h1>
-    <div class="flex justify-center flex-col items-center">
-      <div
-        class="bg-stone-700 w-[70%] flex justify-center items-center p-10 rounded-lg"
-      >
+    <div class="bg-green-600 flex justify-center">
+      <div class="bg-stone-700 w-[95%] flex justify-center p-10 rounded-lg">
         <form
-          class="bg-neutral-800 w-[70%] p-10 rounded-lg flex justify-center flex-col items-center"
-          action=""
+          class="bg-neutral-800 w-[95%] p-10 rounded-lg"
+          action="/products/addproducts"
+          method="post"
         >
-          <input
+          <!-- <input
             class="text-lg text-white font-semibold my-3"
             type="file"
             name=""
             required
             placeholder="upload product image"
-          />
-          <input
-            class="w-[80%] rounded-lg outline-none p-2 my-3"
-            type="text"
-            name="name"
-            required
-            placeholder="enter product name"
-          />
+          /> -->
 
-          <input
-            class="w-[80%] rounded-lg outline-none p-2 my-3"
-            type="text"
-            name="subname"
-            required
-            placeholder="enter product sub name"
-          />
+          <div class="input-fields flex justify-between">
+            <!--INPUT-COL-1-->
+            <div class="input-col-1 w-[30%] flex flex-col">
+              <input
+                class="w-[100%] rounded-lg outline-none p-2 my-3"
+                type="text"
+                name="name"
+                required
+                placeholder="enter product name"
+              />
 
-          <input
-            class="w-[80%] rounded-lg outline-none p-2 my-3"
-            type="text"
-            name="details"
-            required
-            placeholder="enter product details"
-          />
-          <input
-            class="w-[80%] rounded-lg outline-none p-2 my-3"
-            type="text"
-            name="price"
-            required
-            placeholder="enter product price"
-          />
-          <input
-            class="w-[80%] rounded-lg outline-none p-2 my-3"
-            type="text"
-            name="size"
-            placeholder="enter product size"
-          />
-          <input
-            class="w-[80%] rounded-lg outline-none p-2 my-3"
-            type="text"
-            name="color"
-            placeholder="enter product color"
-          />
-          <input
-            class="w-[80%] rounded-lg outline-none p-2 my-3"
-            type="text"
-            name="discount"
-            placeholder="enter product discount"
-          />
-          <input
-            class="w-[80%] rounded-lg outline-none p-2 my-3"
-            type="text"
-            name="features"
-            placeholder="enter product features"
-          />
-          <input
-            class="w-[80%] rounded-lg outline-none p-2 my-3"
-            type="text"
-            name="material"
-            placeholder="enter product material"
-          />
-          <button
-            class="w-[60%] bg-green-600 p-2 rounded-lg my-3"
-            type="submit"
-          >
-            ADD PRODUCT
-          </button>
+              <input
+                class="w-[100%] rounded-lg outline-none p-2 my-3"
+                type="text"
+                name="subtitle"
+                required
+                placeholder="enter product sub name"
+              />
+
+              <input
+                class="w-[100%] rounded-lg outline-none p-2 my-3"
+                type="text"
+                name="company"
+                required
+                placeholder="enter product company name"
+              />
+
+              <!-- <input
+                class="w-[100%] rounded-lg outline-none p-2 my-3"
+                type="text"
+                name="description"
+                required
+                placeholder="enter product details"
+              /> -->
+              <textarea
+                class="h-[10rem] outline-none p-2 rounded-lg"
+                name="description"
+                id="description"
+                placeholder="enter product details..."
+                autofocus
+              >
+              </textarea>
+            </div>
+            <!--INPUT-COL-2-->
+            <div class="input-col-2 w-[30%] flex flex-col">
+              <input
+                class="w-[100%] rounded-lg outline-none p-2 my-3"
+                type="text"
+                name="price"
+                required
+                placeholder="enter product price"
+              />
+              <label class="text-lg text-white" for="sizes"
+                >Choose a Size: -</label
+              >
+              <select class="w-[50%] my-3" name="size" id="size">
+                <option value="small">Ragular</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+
+              <input
+                class="w-[100%] rounded-lg outline-none p-2 my-3"
+                type="text"
+                name="color"
+                placeholder="enter product color"
+              />
+              <div class="text-lg text-white flex justify-start">
+                <fieldset>
+                  <legend class="text-red-400">Choose the Category:-</legend>
+
+                  <div>
+                    <input
+                      type="radio"
+                      id="menid"
+                      name="choose"
+                      value="men"
+                      checked
+                    />
+                    <label for="menid">Men</label>
+                  </div>
+
+                  <div>
+                    <input
+                      type="radio"
+                      id="womenid"
+                      name="choose"
+                      value="women"
+                    />
+                    <label for="womenid">Women</label>
+                  </div>
+
+                  <div>
+                    <input
+                      type="radio"
+                      id="kidsid"
+                      name="choose"
+                      value="kids"
+                    />
+                    <label for="kidsid">Kids</label>
+                  </div>
+
+                  <div>
+                    <input
+                      type="radio"
+                      id="trolleyid"
+                      name="choose"
+                      value="trolley"
+                    />
+                    <label for="trolleyid">Trolley</label>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+
+            <!--INPUT-COL-3-->
+            <div class="input-col-3 w-[30%] flex flex-col">
+              <input
+                class="w-[100%] rounded-lg outline-none p-2 my-3"
+                type="text"
+                name="discount"
+                placeholder="enter product discount"
+              />
+              <input
+                class="w-[100%] rounded-lg outline-none p-2 my-3"
+                type="text"
+                name="features"
+                placeholder="enter product features"
+              />
+              <input
+                class="w-[100%] rounded-lg outline-none p-2 my-3"
+                type="text"
+                name="material"
+                placeholder="enter product material"
+              />
+            </div>
+          </div>
+
+          <div class="flex justify-center mt-10">
+            <button
+              class="w-[60%] bg-green-600 p-2 rounded-lg my-3"
+              type="submit"
+            >
+              ADD PRODUCT
+            </button>
+          </div>
         </form>
       </div>
     </div>

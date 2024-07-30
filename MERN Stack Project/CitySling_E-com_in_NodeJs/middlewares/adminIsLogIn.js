@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 
 const adminIsLoggedIn = function (req, res, next) {
-  console.log(req.cookies)
+  // console.log(req.cookies)
   if (req.cookies.atoken === "") {
     return res.redirect("/login/adminlogin");
   }
