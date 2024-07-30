@@ -4,7 +4,7 @@ const router= express.Router()
 
 router.get("/adminlogout", (req,res)=>{
     res.cookie("atoken", "")
-    res.redirect("/")
+    res.redirect("/owners")
 })
 
 // User logout
