@@ -8,6 +8,7 @@ const db= require("./config/mongoose-connection")
 // Router require
 const homeRouter= require("./routes/homeRouter")
 const ownersRouter = require("./routes/ownersRouter")
+
 const usersRouter= require("./routes/usersRouter")
 const productsRouter= require("./routes/productsRouter")
 const loginRouter = require("./routes/loginRouter")
@@ -38,6 +39,7 @@ app.use(cookieParser())
 // Route setup
 app.use("/", homeRouter)
 app.use("/owners", ownersRouter)
+
 app.use("/users" , usersRouter)
 app.use("/products", productsRouter)
 app.use("/cart", cartRouter)
