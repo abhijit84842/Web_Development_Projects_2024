@@ -4,6 +4,8 @@ const bcrypt = require("bcrypt");
 // model require
 const OwnerModel = require("../models/ownerModel");
 
+const isAdminLoggedIn=require("../middlewares/adminIsLogIn")
+
 const router = express.Router();
 
 // console.log(process.env)
@@ -47,7 +49,7 @@ if (process.env.NODE_ENV == "development") {
 }
 
 if (process.env.NODE_ENV == "development") {
-  router.get("/createowner", (req, res) => {
+  router.get("/createowner", isAdminLoggedIn, (req, res) => {
     res.render("createowner");
   });
 }

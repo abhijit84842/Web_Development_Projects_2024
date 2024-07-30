@@ -1,37 +1,37 @@
 const express = require("express");
 const router = express.Router();
 
-const isLoggedIn= require("../middlewares/isLogin")
+const isUserLoggedIn= require("../middlewares/isLogin")
 
-const adminLoggedIn=require("../middlewares/adminIsLogIn")
+const isAdminLoggedIn=require("../middlewares/adminIsLogIn")
 
 // protected route..
-router.get("/", isLoggedIn, (req, res) => {
+router.get("/", isUserLoggedIn, (req, res) => {
   res.render("allproducts")
 
 });
 
 // showing women products
-router.get("/women", isLoggedIn, (req,res)=>{
+router.get("/women", isUserLoggedIn, (req,res)=>{
   res.render("womenproducts")
 })
 
 // Showing Men products
-router.get("/men",isLoggedIn , (req,res)=>{
+router.get("/men",isUserLoggedIn , (req,res)=>{
   res.render("menproducts")
 })
 
 // Showing kids products
-router.get("/kids" , isLoggedIn ,(req,res)=>{
+router.get("/kids" , isUserLoggedIn ,(req,res)=>{
   res.render("kidsproducts")
 })
 // showing trolley products.
-router.get("/trolley",isLoggedIn,(req,res)=>{
+router.get("/trolley",isUserLoggedIn, (req,res)=>{
   res.render("trolleyproducts")
 })
 
-// Add your product
-router.get("/addproducts", adminLoggedIn , (req,res)=>{
+// Add your product by Owner
+router.get("/addproducts", isAdminLoggedIn , (req,res)=>{
   res.render("addproduct")
 })
 
