@@ -27,6 +27,7 @@ router.post("/create", async (req, res) => {
         let result = await UserModel.create({
           username,
           fullname,
+          usertype: "user",
           age,
           email,
           password: hash,
@@ -45,15 +46,12 @@ router.post("/create", async (req, res) => {
           let result = await UserModel.create({
             username,
             fullname,
+            usertype: "user",
             age,
             email,
             password: hash,
             phno,
           });
-
-          // // cookie set using jwt
-          // let token = jwt.sign({ email: email }, "secrect");
-          // res.cookie("token", token);
 
           res.status(201).send("User Created Successfully.. ");
         } else {

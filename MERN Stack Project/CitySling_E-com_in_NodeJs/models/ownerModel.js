@@ -7,6 +7,10 @@ const OwnerSchema = mongoose.Schema({
         trim:true,
         required:true,
     },
+    usertype:{
+        type:String,
+        required:true
+    },
     email:{
         type:String,
         lowercase:true,

@@ -31,6 +31,7 @@ if (process.env.NODE_ENV === "development") {
         bcrypt.hash(password, salt, async function (err, hash) {
           let result = await OwnerModel.create({
             fullname,
+            usertype: "owner",
             email,
             password: hash,
             gstin,
