@@ -5,7 +5,7 @@ const adminIsLoggedIn = function (req, res, next) {
   if (req.cookies.atoken === "") {
     return res.redirect("/login/adminlogin");
   }
-  let cookiedata = jwt.verify(req.cookies.atoken, "secrect");
+  let cookiedata = jwt.verify(req.cookies.atoken, process.env.JWT_KEY_OWNER);
   // console.log(cookiedata)
   req.user1 = cookiedata;
   next();

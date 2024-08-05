@@ -1,8 +1,9 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
 
-//importing generate token
-const GenerateToken = require("../utils/generateToken");
+//importing Generate Token method
+const UserGeneratedToken=require("../utils/generatetoken/userGeneratedToken")
+const AdminGeneratedToken=require("../utils/generatetoken/adminGeneratedToken")
 
 // Model require
 const UserModel = require("../models/userModel");
@@ -34,7 +35,7 @@ router.post("/userlogin", async (req, res) => {
         return res.status(401).send("incorrect password..");
       } else {
         // set cookie by JWT
-        let token=GenerateToken(user);
+        let token=UserGeneratedToken(user);
         res.cookie("utoken", token);
 
         res.status(200).redirect("/");
@@ -55,7 +56,7 @@ router.post("/adminlogin", async (req, res) => {
       if (result == false) {
         return res.status(401).send("Password is incorrect...");
       } else {
-        let token=GenerateToken(owner)
+        let token=AdminGeneratedToken(owner)
         // console.log(token)
         res.cookie("atoken", token);
         // res.redirect("/products/addproducts")
