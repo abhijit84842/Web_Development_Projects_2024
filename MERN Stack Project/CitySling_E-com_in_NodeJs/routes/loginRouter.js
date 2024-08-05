@@ -1,11 +1,11 @@
 const express = require("express");
-const bcrypt = require("bcrypt");
 
-//importing Generate Token method
-const GenerateToken = require('../utils/generateToken')
 
-// Model require
-const UserModel = require("../models/userModel");
+
+// importing Controler...
+const UserLogin= require("../controllers/authControler")
+
+
 const OwnerModel = require("../models/ownerModel");
 const router = express.Router();
 
@@ -20,28 +20,7 @@ router.get("/adminlogin", (req, res) => {
 });
 
 // post request for user login
-router.post("/userlogin", async (req, res) => {
-  let { email, password } = req.body;
-
-  // user loging Authentication check..
-  let user = await UserModel.findOne({ email: email });
-  if (!user) {
-    return res.status(401).send("incorrect email id...");
-  } else {
-    // compare with DB stored password...
-    bcrypt.compare(password, user.password, function (err, result) {
-      if (result == false) {
-        return res.status(401).send("incorrect password..");
-      } else {
-        // set cookie by JWT
-        let token=GenerateToken(user)
-        res.cookie("utoken", token);
-
-        res.status(200).redirect("/");
-      }
-    });
-  }
-});
+router.post("/userlogin", UserLogin );
 
 // post request for Owner login
 router.post("/adminlogin", async (req, res) => {
