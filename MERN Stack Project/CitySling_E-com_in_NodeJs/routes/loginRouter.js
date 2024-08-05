@@ -1,6 +1,8 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
+
+//importing generate token
+const GenerateToken = require("../utils/generateToken");
 
 // Model require
 const UserModel = require("../models/userModel");
@@ -13,9 +15,9 @@ router.get("/", (req, res) => {
 });
 
 // render the Admin login page
-router.get("/adminlogin",(req,res)=>{
-  res.render("adminlogin")
-})
+router.get("/adminlogin", (req, res) => {
+  res.render("adminlogin");
+});
 
 // post request for user login
 router.post("/userlogin", async (req, res) => {
@@ -32,7 +34,7 @@ router.post("/userlogin", async (req, res) => {
         return res.status(401).send("incorrect password..");
       } else {
         // set cookie by JWT
-        let token = jwt.sign({ email: req.body.email }, "secrect");
+        let token=GenerateToken(user);
         res.cookie("utoken", token);
 
         res.status(200).redirect("/");
@@ -41,27 +43,26 @@ router.post("/userlogin", async (req, res) => {
   }
 });
 
-
-
 // post request for Owner login
-router.post("/adminlogin",async (req,res)=>{
-  let {email, password}= req.body
-  let owner=await OwnerModel.findOne({email:email})
-  if(!owner){
-    return res.status(401).send("Owner not found..")
-  }else{
-    bcrypt.compare(password, owner.password, function(err, result) {
+router.post("/adminlogin", async (req, res) => {
+  let { email, password } = req.body;
+  let owner = await OwnerModel.findOne({ email: email });
+  if (!owner) {
+    return res.status(401).send("Owner not found..");
+  } else {
+    bcrypt.compare(password, owner.password, function (err, result) {
       // result == true
-      if(result==false){
-        return res.status(401).send("Password is incorrect...")
-      }else{
-        let token = jwt.sign({email:email},"secrect")
-        res.cookie("atoken",token)
+      if (result == false) {
+        return res.status(401).send("Password is incorrect...");
+      } else {
+        let token=GenerateToken(owner)
+        // console.log(token)
+        res.cookie("atoken", token);
         // res.redirect("/products/addproducts")
-        res.redirect("/owners")
+        res.redirect("/owners");
       }
-  });
+    });
   }
-})
+});
 
 module.exports = router;
