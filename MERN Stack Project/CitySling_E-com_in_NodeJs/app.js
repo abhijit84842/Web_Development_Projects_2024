@@ -15,7 +15,10 @@ const loginRouter = require("./routes/loginRouter")
 const logoutRouter= require("./routes/logoutRouter")
 const cartRouter=require("./routes/cartRouter")
 
+// to use dotenv
+require('dotenv').config();
 
+// console.log(process.env)
 
 
 const app = express()
