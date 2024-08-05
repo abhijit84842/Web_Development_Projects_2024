@@ -9,10 +9,11 @@ const GenerateToken = require('../utils/generateToken')
 
 // Model require
 const UserModel = require("../models/userModel");
+const OwnerModel=require("../models/ownerModel")
 
 
 // User Login Controller....
-const userLogin = async(req, res)=>{
+module.exports.userLogin = async function(req, res){
   let { email, password } = req.body;
 
   // user loging Authentication check..
@@ -34,6 +35,28 @@ const userLogin = async(req, res)=>{
     });
   }
 };
-module.exports=userLogin
 
+
+
+// Admin/Owner Login Controller....
+module.exports.ownerLogin =  async function(req, res){
+    let { email, password } = req.body;
+    let owner = await OwnerModel.findOne({ email: email });
+    if (!owner) {
+      return res.status(401).send("Owner not found..");
+    } else {
+      bcrypt.compare(password, owner.password, function (err, result) {
+        // result == true
+        if (result == false) {
+          return res.status(401).send("Password is incorrect...");
+        } else {
+          // set JWT TOKEN...
+         
+          let token = GenerateToken(owner)
+          res.cookie("atoken", token);
+          res.redirect("/owners");
+        }
+      });
+    }
+  }
 
