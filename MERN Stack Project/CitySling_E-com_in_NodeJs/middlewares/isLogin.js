@@ -6,7 +6,7 @@ const isLoggedIn =function(req,res,next){
         return res.redirect("/login")
     }
     let cookiedata= jwt.verify(req.cookies.utoken , process.env.JWT_KEY_USER)
-    // console.log(cookiedata)
+    console.log(cookiedata)
     req.user1=cookiedata
     next()
 }
