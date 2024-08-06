@@ -1,6 +1,9 @@
 const express = require("express")
 const path = require("path")
 const cookieParser = require("cookie-parser")
+const expressSession= require('express-session')
+const flash= require('connect-flash')
+
 
 // MongoDB config require
 const db= require("./config/mongoose-connection")
@@ -38,6 +41,15 @@ app.set("view engine" , "ejs")
 // to read the cookies in console
 app.use(cookieParser())
 
+// to create session
+app.use(expressSession({
+    resave:false,
+    saveUninitialized: false,
+    secret: process.env.EXPRESS_SESSION_SECRET,
+}))
+
+// setup flash  -> it use the express session
+app.use(flash())
 
 // Route setup
 app.use("/", homeRouter)

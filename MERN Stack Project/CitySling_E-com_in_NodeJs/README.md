@@ -22,6 +22,9 @@
 - cookie-parser from npm
 - debug from npm -> print data insted of console.
 - config from npm -> its took up the value which enviouremnt is running current(development or production)
+- dotenv -> to access the env file
+- express-session -> to create session
+- connect-flash -> flash message
 
 <h3> Models Create</h3>
 
