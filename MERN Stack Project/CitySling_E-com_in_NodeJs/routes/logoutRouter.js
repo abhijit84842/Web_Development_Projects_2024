@@ -10,6 +10,8 @@ router.get("/adminlogout", (req,res)=>{
 // User logout
 router.get("/userlogout", (req,res)=>{
     res.cookie("utoken","")
+
+    req.flash("userLogOutMsg",  "You are logout ...")
     res.redirect("/")
 })
 

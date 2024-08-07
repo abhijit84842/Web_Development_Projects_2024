@@ -10,7 +10,10 @@ router.get("/" , (req,res)=>{
     // Flash msg for userLogin Error..
     let successLoginMsg = req.flash("userLoginSuccess")
 
-    res.render("index" ,{flashmsg , successLoginMsg})
+    // Flash msg for user Logout...
+    let userLogOutMsg= req.flash("userLogOutMsg")
+
+    res.render("index" ,{flashmsg , successLoginMsg , userLogOutMsg})
 })
 
 

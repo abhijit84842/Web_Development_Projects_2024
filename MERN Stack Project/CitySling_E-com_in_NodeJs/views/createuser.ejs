@@ -8,6 +8,27 @@
   </head>
   <body class="w-full h-screen bg-zinc-800">
     <div>
+      <!----------------------------------Flash Message------------------->
+      <div>
+        <% if(userCreatedMsg.length >0 ){ %>
+        <div
+          class="absolute top-5 left-1/2 -translate-x-1/2 -translate-y-1/2 p-2 mt-1 rounded-md bg-green-500"
+        >
+          <span class="initial-block mt-1 mb-1 text-white">
+            <%= userCreatedMsg %>
+          </span>
+        </div>
+        <% } else if(userCreatedErrorMsg.length >0 ){ %>
+        <div
+          class="absolute top-5 left-1/2 -translate-x-1/2 -translate-y-1/2 p-2 mt-1 rounded-md bg-red-500"
+        >
+          <span class="initial-block mt-1 mb-1 text-white">
+            <%= userCreatedErrorMsg %>
+          </span>
+        </div>
+        <% } %>
+      </div>
+
       <h1
         class="text-white font-semibold text-5xl flex justify-center items-center mt-10"
       >

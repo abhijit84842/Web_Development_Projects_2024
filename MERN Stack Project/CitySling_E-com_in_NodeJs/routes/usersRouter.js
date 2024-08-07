@@ -7,7 +7,14 @@ const jwt = require("jsonwebtoken");
 const UserModel = require("../models/userModel");
 
 router.get("/", (req, res) => {
-  res.render("createuser");
+
+  // Flash msg
+  let userCreatedMsg = req.flash("success")
+ 
+  let userCreatedErrorMsg = req.flash("createdError")
+  console.log(userCreatedErrorMsg)
+ 
+  res.render("createuser" ,{userCreatedMsg , userCreatedErrorMsg});
 });
 
 // create a new user
@@ -38,7 +45,9 @@ router.post("/create", async (req, res) => {
         // let token = jwt.sign({ email: email }, "secrect");
         // res.cookie("token", token);
 
-        res.status(201).send("user created Successfully..");
+        req.flash("success" ,"Your account created successfully...")
+
+        res.status(201).redirect("/users");
       } else {
         // check user already exists or not in database
         let user = await UserModel.findOne({ email: req.body.email });
@@ -53,9 +62,12 @@ router.post("/create", async (req, res) => {
             phno,
           });
 
-          res.status(201).send("User Created Successfully.. ");
+          req.flash("success" , "Your account created successfully...")
+          res.status(201).redirect("/users");
         } else {
-          return res.send("User already exists..");
+
+          req.flash("createdError" , "You are already exists...")
+          return res.redirect("/users");
         }
       }
     });
