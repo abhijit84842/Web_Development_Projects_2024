@@ -1,6 +1,9 @@
 const { default: mongoose } = require("mongoose");
 
 ProductSchema = mongoose.Schema({
+  
+  image: Buffer,
+
   name: {
     type:String,
     trim:true,
@@ -18,7 +21,6 @@ ProductSchema = mongoose.Schema({
     type:Number,
     required:true,
   },
-  image: String,
   description:{
     type:String,
     required:true

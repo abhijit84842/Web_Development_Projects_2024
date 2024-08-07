@@ -6,6 +6,9 @@ const isUserLoggedIn= require("../middlewares/isLogin")
 
 const isAdminLoggedIn=require("../middlewares/adminIsLogIn");
 
+// Multer import..
+const upload= require("../config/multer-configuration")
+
 // model import..
 const ProductModel= require("../models/productModel")
 
@@ -42,28 +45,33 @@ router.get("/addproducts", isAdminLoggedIn , (req,res)=>{
 })
 
 // POST req for add Products.
-router.post("/addproducts" , isAdminLoggedIn ,async (req,res)=>{
-  console.log(req.body)
-  let {image, name , subtitle, company, description,price,size,color,category,discount,features,material}=req.body
-  let products= await ProductModel.create({
-    image,
-    name,
-    subtitle,
-    company,
-    description,
-    price,
-    size,
-    color,
-    category,
-    discount,
-    features,
-    material,
+router.post("/addproducts" , isAdminLoggedIn ,upload.single('image') ,async (req,res)=>{
+  // console.log(req.file.buffer)
+  try{
+    let { name , subtitle, company, description,price,size,color,category,discount,features,material}=req.body
+    let products= await ProductModel.create({
+      image: req.file.buffer,
+      name,
+      subtitle,
+      company,
+      description,
+      price,
+      size,
+      color,
+      category,
+      discount,
+      features,
+      material,
+  
+    })
+  
+    // flash msg
+    req.flash("success" , "Product added successfully...")
+    res.redirect("/products/addproducts")
+  }catch(err){
+    console.log(err.message)
+  }
 
-  })
-
-  // flash msg
-  req.flash("success" , "Product added successfully...")
-  res.redirect("/products/addproducts")
 })
 
 
