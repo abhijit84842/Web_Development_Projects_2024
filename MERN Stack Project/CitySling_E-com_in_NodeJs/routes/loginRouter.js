@@ -10,7 +10,14 @@ const router = express.Router();
 
 // render the user login page...
 router.get("/", (req, res) => {
-  res.render("login");
+
+  let flashMsgEmail = req.flash("userLoginFaild")
+  // console.log(flashMsgEmail);
+ 
+
+  let flashMsgPassword = req.flash("userLoginFaild")
+  
+  res.render("login" ,{flashMsgEmail , flashMsgPassword});
 });
 
 // render the Admin login page

@@ -19,20 +19,26 @@ module.exports.userLogin = async function(req, res){
   // user loging Authentication check..
   let user = await UserModel.findOne({ email: email });
   if (!user) {
-    return res.status(401).send("incorrect email id...");
+    
+    req.flash("userLoginFaild" ,"Some thing went wrong , plz try again..")
+
+    return res.status(401).redirect("/login");
   } else {
     // compare with DB stored password...
     bcrypt.compare(password, user.password, function (err, result) {
       if (result == false) {
-        return res.status(401).send("incorrect password..");
+
+        req.flash("userLoginFaild" ,"Incorrect password , plz check..")
+
+        return res.status(401).redirect("/login");
       } else {
         // set cookie by JWT
         let token = GenerateToken(user);
         res.cookie("utoken", token);
 
         // flash msg
-        req.flash("userLoginSuccess" ,"You are Successfully login..")
-        
+        req.flash("userLoginSuccess" ,"You are Successfully login....")
+
         res.status(200).redirect("/");
       }
     });
