@@ -24,7 +24,7 @@ if (process.env.NODE_ENV === "development") {
     if (owner.length > 0) {
 
       // flash msg
-      req.flash("error" , "You don't have permission to create a new owner...")
+      req.flash("error" , "You already have an account, please login ...")
 
 
       return res
