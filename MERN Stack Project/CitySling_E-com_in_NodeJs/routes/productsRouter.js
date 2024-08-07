@@ -36,7 +36,9 @@ router.get("/trolley",isUserLoggedIn, (req,res)=>{
 
 //Rendering the  Add your product by Owner
 router.get("/addproducts", isAdminLoggedIn , (req,res)=>{
-  res.render("addproduct")
+
+  let addProductMsg=req.flash("success")
+  res.render("addproduct", {addProductMsg})
 })
 
 // POST req for add Products.
@@ -59,8 +61,9 @@ router.post("/addproducts" , isAdminLoggedIn ,async (req,res)=>{
 
   })
 
-
-  res.send("Product added successfully.." + products)
+  // flash msg
+  req.flash("success" , "Product added successfully...")
+  res.redirect("/products/addproducts")
 })
 
 
