@@ -22,7 +22,16 @@ router.get("/", (req, res) => {
 
 // render the Admin login page
 router.get("/adminlogin", (req, res) => {
-  res.render("adminlogin");
+
+  let adminLoginEmailMsg =req.flash("error")
+
+
+  let adminLoginPassMsg = req.flash("error")
+
+
+ 
+
+  res.render("adminlogin" , {adminLoginEmailMsg , adminLoginPassMsg});
 });
 
 // Post request for USER login

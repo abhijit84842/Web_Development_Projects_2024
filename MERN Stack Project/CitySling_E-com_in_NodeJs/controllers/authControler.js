@@ -52,17 +52,26 @@ module.exports.ownerLogin =  async function(req, res){
     let { email, password } = req.body;
     let owner = await OwnerModel.findOne({ email: email });
     if (!owner) {
-      return res.status(401).send("Owner not found..");
+
+      // flash msg
+      req.flash("error" , "Your account not found...")
+
+      return res.status(401).redirect("/login/adminlogin");
     } else {
       bcrypt.compare(password, owner.password, function (err, result) {
         // result == true
         if (result == false) {
-          return res.status(401).send("Password is incorrect...");
+
+          req.flash("error", "Incorrect password ,plz check...")
+
+          return res.status(401).redirect("/login/adminlogin");
         } else {
           // set JWT TOKEN...
-         
           let token = GenerateToken(owner)
           res.cookie("atoken", token);
+
+          req.flash("AdminSuccessMsg" , "You are successfully login...")
+
           res.redirect("/owners");
         }
       });

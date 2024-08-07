@@ -2,8 +2,11 @@ const express = require('express')
 
 const router= express.Router()
 
+// Admin Logout..
 router.get("/adminlogout", (req,res)=>{
     res.cookie("atoken", "")
+
+    req.flash("adminLogout" , "You are logout...")
     res.redirect("/owners")
 })
 

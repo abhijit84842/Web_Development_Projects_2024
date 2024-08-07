@@ -44,11 +44,20 @@ if (process.env.NODE_ENV === "development") {
 }
 
 if (process.env.NODE_ENV == "development") {
+  
+  // Rendering the owner page..
   router.get("/", (req, res) => {
     
     // Flash Messages...
     let flashmsg=req.flash("adminIsLoginError")
-    res.render("ownerpage" , {flashmsg});
+
+    let adminLoginSuccessMsg= req.flash("AdminSuccessMsg")
+    
+
+    let adminLogout=req.flash("adminLogout")
+    
+
+    res.render("ownerpage",{adminLoginSuccessMsg , flashmsg ,adminLogout});
   });
 }
 
