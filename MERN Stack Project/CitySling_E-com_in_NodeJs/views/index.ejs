@@ -16,6 +16,19 @@
   </head>
   <body class="body bg-zinc-900 w-full h-screen">
     <div>
+      <div>
+        <!----------------------------------Flash Message------------------->
+        <% if(flashmsg.length >0 ){ %>
+        <div
+          class="absolute top-5 left-1/2 -translate-x-1/2 -translate-y-1/2 p-2 mt-1 rounded-md bg-red-500"
+        >
+          <span class="initial-block mt-1 mb-1 text-white">
+            <%= flashmsg %>
+          </span>
+        </div>
+        <% } %>
+      </div>
+
       <nav class="nav bg-zinc-800 flex justify-center justify-between p-2">
         <div
           class="left flex justify-center gap-10 p-2 inline-block ml-[7rem] text-white font-semibold text-xl"

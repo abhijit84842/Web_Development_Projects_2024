@@ -47,7 +47,7 @@ if (process.env.NODE_ENV == "development") {
   router.get("/", (req, res) => {
     
     // Flash Messages...
-    let flashmsg=req.flash("error")
+    let flashmsg=req.flash("adminIsLoginError")
     res.render("ownerpage" , {flashmsg});
   });
 }
