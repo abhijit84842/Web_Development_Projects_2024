@@ -45,7 +45,10 @@ if (process.env.NODE_ENV === "development") {
 
 if (process.env.NODE_ENV == "development") {
   router.get("/", (req, res) => {
-    res.render("ownerpage");
+    
+    // Flash Messages...
+    let flashmsg=req.flash("error")
+    res.render("ownerpage" , {flashmsg});
   });
 }
 

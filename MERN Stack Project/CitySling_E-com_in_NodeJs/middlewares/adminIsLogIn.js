@@ -4,7 +4,8 @@ const adminIsLoggedIn = function (req, res, next) {
   // console.log(req.cookies)
   try{
     if (req.cookies.atoken === "") {
-      return res.redirect("/login/adminlogin");
+      req.flash("error", "You need to login first...")
+      return res.redirect("/owners");
     }
     let cookiedata = jwt.verify(req.cookies.atoken, process.env.JWT_KEY_OWNER);
     // console.log(cookiedata)
