@@ -22,9 +22,14 @@ if (process.env.NODE_ENV === "development") {
 
     let owner = await OwnerModel.find();
     if (owner.length > 0) {
+
+      // flash msg
+      req.flash("error" , "You don't have permission to create a new owner...")
+
+
       return res
         .status(401)
-        .send("You don't have permission to create a new owner");
+        .redirect("/owners/createowner");
     } else {
       // encrypted password....using bcrypt
       bcrypt.genSalt(10, function (err, salt) {
@@ -36,6 +41,9 @@ if (process.env.NODE_ENV === "development") {
             password: hash,
             gstin,
           });
+
+          // flash msg
+          req.flash("success" , "Your account created successfully...")
           res.status(201).redirect("/owners");
         });
       });
@@ -55,15 +63,20 @@ if (process.env.NODE_ENV == "development") {
     
 
     let adminLogout=req.flash("adminLogout")
+
+    let adminCreatedSuccessMsg= req.flash("success")
     
 
-    res.render("ownerpage",{adminLoginSuccessMsg , flashmsg ,adminLogout});
+    res.render("ownerpage",{adminLoginSuccessMsg , flashmsg ,adminLogout , adminCreatedSuccessMsg});
   });
 }
 
 if (process.env.NODE_ENV == "development") {
-  router.get("/createowner", isAdminLoggedIn, (req, res) => {
-    res.render("createowner");
+  router.get("/createowner", (req, res) => {
+
+    let ownerCreateErr= req.flash("error")
+    
+    res.render("createowner" , {ownerCreateErr});
   });
 }
 

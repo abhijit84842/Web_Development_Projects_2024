@@ -33,6 +33,14 @@
           <%= flashmsg %>
         </span>
       </div>
+      <% } else if(adminCreatedSuccessMsg.length >0 ){ %>
+      <div
+        class="absolute top-5 left-1/2 -translate-x-1/2 -translate-y-1/2 p-2 mt-1 rounded-md bg-green-500"
+      >
+        <span class="initial-block mt-1 mb-1 text-white font-semibold">
+          <%= adminCreatedSuccessMsg %>
+        </span>
+      </div>
       <% } %>
     </div>
 
