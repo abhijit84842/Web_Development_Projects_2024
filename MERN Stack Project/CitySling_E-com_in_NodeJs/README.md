@@ -49,3 +49,5 @@
 <p>Encrypted the password by bcrypt </p>
 <p> Set cookie using JWT </p>
 <h3> User Veryfication in login </h3>
+
+<h3>Express-Session and Flash Message setup</h3>

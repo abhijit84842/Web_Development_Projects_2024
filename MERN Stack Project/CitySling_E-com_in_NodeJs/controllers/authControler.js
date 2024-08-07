@@ -30,6 +30,9 @@ module.exports.userLogin = async function(req, res){
         let token = GenerateToken(user);
         res.cookie("utoken", token);
 
+        // flash msg
+        req.flash("userLoginSuccess" ,"You are Successfully login..")
+        
         res.status(200).redirect("/");
       }
     });
