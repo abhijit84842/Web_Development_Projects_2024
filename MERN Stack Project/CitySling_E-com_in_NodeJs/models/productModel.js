@@ -2,7 +2,7 @@ const { default: mongoose } = require("mongoose");
 
 ProductSchema = mongoose.Schema({
   
-  image: Buffer,
+  image:Buffer,
 
   name: {
     type:String,

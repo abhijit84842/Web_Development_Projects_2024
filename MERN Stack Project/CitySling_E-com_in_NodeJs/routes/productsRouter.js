@@ -12,9 +12,13 @@ const upload= require("../config/multer-configuration")
 // model import..
 const ProductModel= require("../models/productModel")
 
-// protected route..
-router.get("/", isUserLoggedIn, (req, res) => {
-  res.render("allproducts")
+// Show all Products...
+router.get("/", isUserLoggedIn, async(req, res) => {
+
+  let products= await ProductModel.find()
+  console.log(products)
+  
+  res.render("allproducts",{products})
 
 });
 
@@ -46,7 +50,7 @@ router.get("/addproducts", isAdminLoggedIn , (req,res)=>{
 
 // POST req for add Products.
 router.post("/addproducts" , isAdminLoggedIn ,upload.single('image') ,async (req,res)=>{
-  // console.log(req.file.buffer)
+  // console.log(req.file)
   try{
     let { name , subtitle, company, description,price,size,color,category,discount,features,material}=req.body
     let products= await ProductModel.create({

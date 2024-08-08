@@ -6,7 +6,7 @@
     <title>ALL PRODUCTS</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="w-full h-screen bg-zinc-900">
+  <body class="w-full h-screen bg-zinc-900 text-white">
     <!--Our Colections...-->
     <div>
       <h1
@@ -19,173 +19,28 @@
         class="bagcard bg-zinc-800 mx-10 h-auto p-10 flex justify-center gap-10 flex-wrap rounded-md"
       >
         <!-----------------------------------------------------------------------------------------------Rendering bags START------------------->
+        <% products.forEach(function(product){ %>
         <div
           class="womenbag bg-slate-700 pt-3 px-3 w-[16rem] h-[24rem] rounded-md"
         >
           <img
             class="w-[15rem] h-[16rem] object-cover rounded-md"
-            src="/images/bag pic/handbag.jpg"
-            alt="loading..."
+            src=""
+            alt="Product Image"
           />
 
           <div class="text-xs mt-2 flex flex-col text-white">
-            <span class="font-semibold">AMERICAL TOURRISTER</span>
+            <span class="font-semibold"><%= product.name %></span>
             <span class="text-[10px] text-green-500 tracking-wider"
-              >AMERICAN TOURITER ARICONIC LAPTOP STROLLY BALCK 55CM</span
+              ><%=product.subtitle %></span
             >
-            <span class="text-[12px]">MRP : 2000</span>
             <span class="text-lg font-semibold"
-              >$ <span class="text-red-500">1500</span></span
+              >$ <span class="text-red-500"><%= product.price %></span></span
             >
           </div>
         </div>
+        <% }) %>
 
-        <div
-          class="womenbag bg-slate-700 pt-3 px-3 w-[16rem] h-[24rem] rounded-md"
-        >
-          <img
-            class="w-[15rem] h-[16rem] object-cover rounded-md"
-            src="/images/bag pic/handbag.jpg"
-            alt="loading..."
-          />
-
-          <div class="text-xs mt-2 flex flex-col text-white">
-            <span class="font-semibold">AMERICAL TOURRISTER</span>
-            <span class="text-[10px] text-green-500 tracking-wider"
-              >AMERICAN TOURITER ARICONIC LAPTOP STROLLY BALCK 55CM</span
-            >
-            <span class="text-[12px]">MRP : 2000</span>
-            <span class="text-lg font-semibold"
-              >$ <span class="text-red-500">1500</span></span
-            >
-          </div>
-        </div>
-
-        <div
-          class="womenbag bg-slate-700 pt-3 px-3 w-[16rem] h-[24rem] rounded-md"
-        >
-          <img
-            class="w-[15rem] h-[16rem] object-cover rounded-md"
-            src="/images/bag pic/handbag.jpg"
-            alt="loading..."
-          />
-
-          <div class="text-xs mt-2 flex flex-col text-white">
-            <span class="font-semibold">AMERICAL TOURRISTER</span>
-            <span class="text-[10px] text-green-500 tracking-wider"
-              >AMERICAN TOURITER ARICONIC LAPTOP STROLLY BALCK 55CM</span
-            >
-            <span class="text-[12px]">MRP : 2000</span>
-            <span class="text-lg font-semibold"
-              >$ <span class="text-red-500">1500</span></span
-            >
-          </div>
-        </div>
-
-        <div
-          class="womenbag bg-slate-700 pt-3 px-3 w-[16rem] h-[24rem] rounded-md"
-        >
-          <img
-            class="w-[15rem] h-[16rem] object-cover rounded-md"
-            src="/images/bag pic/handbag.jpg"
-            alt="loading..."
-          />
-
-          <div class="text-xs mt-2 flex flex-col text-white">
-            <span class="font-semibold">AMERICAL TOURRISTER</span>
-            <span class="text-[10px] text-green-500 tracking-wider"
-              >AMERICAN TOURITER ARICONIC LAPTOP STROLLY BALCK 55CM</span
-            >
-            <span class="text-[12px]">MRP : 2000</span>
-            <span class="text-lg font-semibold"
-              >$ <span class="text-red-500">1500</span></span
-            >
-          </div>
-        </div>
-
-        <div
-          class="womenbag bg-slate-700 pt-3 px-3 w-[16rem] h-[24rem] rounded-md"
-        >
-          <img
-            class="w-[15rem] h-[16rem] object-cover rounded-md"
-            src="/images/bag pic/handbag.jpg"
-            alt="loading..."
-          />
-
-          <div class="text-xs mt-2 flex flex-col text-white">
-            <span class="font-semibold">AMERICAL TOURRISTER</span>
-            <span class="text-[10px] text-green-500 tracking-wider"
-              >AMERICAN TOURITER ARICONIC LAPTOP STROLLY BALCK 55CM</span
-            >
-            <span class="text-[12px]">MRP : 2000</span>
-            <span class="text-lg font-semibold"
-              >$ <span class="text-red-500">1500</span></span
-            >
-          </div>
-        </div>
-
-        <div
-          class="womenbag bg-slate-700 pt-3 px-3 w-[16rem] h-[24rem] rounded-md"
-        >
-          <img
-            class="w-[15rem] h-[16rem] object-cover rounded-md"
-            src="/images/bag pic/handbag.jpg"
-            alt="loading..."
-          />
-
-          <div class="text-xs mt-2 flex flex-col text-white">
-            <span class="font-semibold">AMERICAL TOURRISTER</span>
-            <span class="text-[10px] text-green-500 tracking-wider"
-              >AMERICAN TOURITER ARICONIC LAPTOP STROLLY BALCK 55CM</span
-            >
-            <span class="text-[12px]">MRP : 2000</span>
-            <span class="text-lg font-semibold"
-              >$ <span class="text-red-500">1500</span></span
-            >
-          </div>
-        </div>
-
-        <div
-          class="womenbag bg-slate-700 pt-3 px-3 w-[16rem] h-[24rem] rounded-md"
-        >
-          <img
-            class="w-[15rem] h-[16rem] object-cover rounded-md"
-            src="/images/bag pic/handbag.jpg"
-            alt="loading..."
-          />
-
-          <div class="text-xs mt-2 flex flex-col text-white">
-            <span class="font-semibold">AMERICAL TOURRISTER</span>
-            <span class="text-[10px] text-green-500 tracking-wider"
-              >AMERICAN TOURITER ARICONIC LAPTOP STROLLY BALCK 55CM</span
-            >
-            <span class="text-[12px]">MRP : 2000</span>
-            <span class="text-lg font-semibold"
-              >$ <span class="text-red-500">1500</span></span
-            >
-          </div>
-        </div>
-
-        <div
-          class="womenbag bg-slate-700 pt-3 px-3 w-[16rem] h-[24rem] rounded-md"
-        >
-          <img
-            class="w-[15rem] h-[16rem] object-cover rounded-md"
-            src="/images/bag pic/handbag.jpg"
-            alt="loading..."
-          />
-
-          <div class="text-xs mt-2 flex flex-col text-white">
-            <span class="font-semibold">AMERICAL TOURRISTER</span>
-            <span class="text-[10px] text-green-500 tracking-wider"
-              >AMERICAN TOURITER ARICONIC LAPTOP STROLLY BALCK 55CM</span
-            >
-            <span class="text-[12px]">MRP : 2000</span>
-            <span class="text-lg font-semibold"
-              >$ <span class="text-red-500">1500</span></span
-            >
-          </div>
-        </div>
         <!-----------------------------------------------------------------------------------------Rendering Bags END------------>
       </div>
     </div>
