@@ -23,11 +23,13 @@
         <div
           class="womenbag bg-slate-700 pt-3 px-3 w-[16rem] h-[24rem] rounded-md"
         >
-          <img
-            class="w-[15rem] h-[16rem] object-cover rounded-md"
-            src="data:image/jpeg;base64,<%=product.image.toString('base64') %>"
-            alt="Product Image"
-          />
+          <a href="/products/productonly">
+            <img
+              class="w-[15rem] h-[16rem] object-cover rounded-md"
+              src="data:image/jpeg;base64,<%=product.image.toString('base64') %>"
+              alt="Product Image"
+            />
+          </a>
 
           <div class="text-xs mt-2 flex flex-col text-white">
             <span class="font-semibold"><%= product.name %></span>

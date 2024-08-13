@@ -22,6 +22,12 @@ router.get("/", isUserLoggedIn, async(req, res) => {
 
 });
 
+// Rendering the Product Only
+router.get("/productonly" , (req,res)=>{
+  res.render("productonly")
+})
+
+
 // showing women products
 router.get("/women", isUserLoggedIn, (req,res)=>{
   res.render("womenproducts")
