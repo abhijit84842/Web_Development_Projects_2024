@@ -13,59 +13,66 @@
       >
         <img
           class="w-[22rem] h-[30rem] mt-2 object-cover rounded-lg"
-          src="../images/bag pic/women/women 2.jpg"
+          src="data:image/jpeg;base64,<%=singleProduct.image.toString('base64') %>"
           alt=""
         />
         <div class="small-images w-full my-9 p-2 flex justify-between">
           <img
             class="w-[8rem] h-[9rem] bg-gray-500 p-2 object-cover rounded-lg"
-            src="/images/bag pic/women/women 2.jpg"
+            src="data:image/jpeg;base64,<%=singleProduct.image.toString('base64') %>"
             alt=""
           />
           <img
             class="w-[8rem] h-[9rem] bg-gray-500 p-2 object-cover rounded-lg"
-            src="/images/bag pic/women/women 2.jpg"
+            src="data:image/jpeg;base64,<%=singleProduct.image.toString('base64') %>"
             alt=""
           />
           <img
             class="w-[8rem] h-[9rem] bg-gray-500 p-2 object-cover rounded-lg"
-            src="/images/bag pic/women/women 2.jpg"
+            src="data:image/jpeg;base64,<%=singleProduct.image.toString('base64') %>"
             alt=""
           />
         </div>
       </div>
       <div class="details w-[50%] text-white">
-        <p class="text-5xl font-bold">Men bag for Office</p>
-        <p class="text-2xl font-semibold my-4">CitySling best office Bag</p>
+        <p class="text-5xl font-bold"><%=singleProduct.name %></p>
+        <p class="text-2xl font-semibold my-4"><%=singleProduct.subtitle %></p>
         <p class="text-xl font-bold my-8">
-          Price :- <span class="text-red-500 text-lg font-normal">3000</span>
+          Price :-
+          <span class="text-red-500 text-lg font-normal"
+            ><%=singleProduct.price %></span
+          >
         </p>
         <p class="text-xl font-bold my-8">
-          Discount :- <span class="text-lg font-normal">10<span>%</span></span>
+          Discount :-
+          <span class="text-lg font-normal"
+            ><%=singleProduct.discount %><span>%</span></span
+          >
         </p>
         <p class="text-xl font-bold my-8">
           Company :-
-          <span class="text-lg font-normal">CitySling Assured</span>
+          <span class="text-lg font-normal"><%=singleProduct.company %></span>
         </p>
         <p class="text-xl font-bold my-8">
-          Size:-<span class="text-lg font-normal">Ragular</span>
+          Size :-
+          <span class="text-lg font-normal"><%=singleProduct.size %></span>
         </p>
         <p class="text-xl font-bold my-8">
-          Color:-<span class="text-lg font-normal">Orginal color</span>
+          Color :-
+          <span class="text-lg font-normal"><%=singleProduct.color %></span>
         </p>
         <p class="text-xl font-bold my-8">
-          Material:-<span class="text-lg font-normal">Leather</span>
+          Material :-
+          <span class="text-lg font-normal"><%=singleProduct.material %></span>
         </p>
         <p class="text-xl font-bold my-8">
-          Features:-<span class="text-lg font-normal">Anti Lock</span>
+          Features :-
+          <span class="text-lg font-normal"><%=singleProduct.features %></span>
         </p>
         <p class="text-xl font-bold my-8">
-          Details:-<span class="text-lg font-normal text-wrap"
-            >This stylish women's shoulder bag is perfect for everyday use.
-            Crafted from high-quality leather, it features multiple compartments
-            to keep your essentials organized. The bag's elegant design,
-            combined with its practical functionality, makes it a versatile
-            accessory for any outfit.
+          Details :-
+          <span class="text-lg font-normal text-wrap"
+            ><%=singleProduct.description %>
           </span>
         </p>
         <div class="mt-20 flex justify-start gap-10">
