@@ -16,7 +16,7 @@ const ProductModel= require("../models/productModel")
 router.get("/", isUserLoggedIn, async(req, res) => {
 
   let products= await ProductModel.find()
-  console.log(products)
+  // console.log(products)
   
   res.render("allproducts",{products})
 

@@ -4,10 +4,10 @@ const router = express.Router()
 
 router.get("/" , (req,res)=>{
 
-    // Flash msg for  logIsLoggedIn Error..
+    // Flash msg for  IsLoggedIn Error..
     let flashmsg= req.flash("userIsLoginError" )
 
-    // Flash msg for userLogin Error..
+    // Flash msg for userLogin success..
     let successLoginMsg = req.flash("userLoginSuccess")
 
     // Flash msg for user Logout...
