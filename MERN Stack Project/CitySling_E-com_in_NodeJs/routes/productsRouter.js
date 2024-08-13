@@ -23,8 +23,15 @@ router.get("/", isUserLoggedIn, async(req, res) => {
 });
 
 // Rendering the Product Only
-router.get("/productonly" , (req,res)=>{
-  res.render("productonly")
+router.get("/productonly/:id" ,async(req,res)=>{
+  // console.log(req.params.id)
+  try{
+   let product= await ProductModel.findOne({_id:req.params.id})
+  //  console.log(product)
+  }catch(err){
+    console.log(err.message)
+  }
+  res.render("productonly" ,{product})
 })
 
 
