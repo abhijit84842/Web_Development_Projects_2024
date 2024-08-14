@@ -1,28 +1,33 @@
-const express= require("express")
+const express = require("express");
 
-const isLoggedIn =require("../middlewares/isLogin")
+const isLoggedIn = require("../middlewares/isLogin");
 
-let ProductModel = require("../models/productModel")
-let UserModel= require("../models/userModel")
-const router= express.Router()
+let ProductModel = require("../models/productModel");
+let UserModel = require("../models/userModel");
+const router = express.Router();
 
-router.get("/:id" , isLoggedIn, async(req,res)=>{
-    // console.log(req.user1.email)
+// Rendering the Cart page
+router.get("/", isLoggedIn, async (req, res) => {
+  res.render("cart");
+});
 
-    try{
-        let cartProduct= await ProductModel.findOne({_id:req.params.id})
-        // console.log(cartProduct)
+// Add to Cart
+router.get("/:id", isLoggedIn, async (req, res) => {
+  // console.log(req.user1.email)
 
-        let user = await UserModel.findOne({email:req.user1.email})
-        user.cart.push(cartProduct._id)
-        await user.save()
+  try {
+    let cartProduct = await ProductModel.findOne({ _id: req.params.id });
+    // console.log(cartProduct)
 
-        res.render("cart")
-    }catch(err){
-        console.log(err.message)
-    }
+    let user = await UserModel.findOne({ email: req.user1.email });
+    user.cart.push(cartProduct._id);
+    await user.save();
 
- 
-})
+    req.flash("successCart" , "Added to Cart")
+    res.redirect("/products");
+  } catch (err) {
+    console.log(err.message);
+  }
+});
 
-module.exports=router
+module.exports = router;

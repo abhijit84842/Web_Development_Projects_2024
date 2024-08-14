@@ -13,7 +13,7 @@ router.get("/" , (req,res)=>{
     // Flash msg for user Logout...
     let userLogOutMsg= req.flash("userLogOutMsg")
 
-    res.render("index" ,{flashmsg , successLoginMsg , userLogOutMsg})
+    res.render("index" ,{navBar:true, footer:true , flashmsg , successLoginMsg , userLogOutMsg})
 })
 
 
