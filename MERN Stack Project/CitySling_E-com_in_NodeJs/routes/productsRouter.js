@@ -18,7 +18,7 @@ router.get("/", isUserLoggedIn, async(req, res) => {
   let products= await ProductModel.find()
   // console.log(products)
   
-  res.render("allproducts",{products})
+  res.render("allproducts",{navBar:true, products})
 
 });
 
