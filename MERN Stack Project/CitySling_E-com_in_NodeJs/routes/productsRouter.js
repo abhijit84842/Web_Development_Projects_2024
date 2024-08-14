@@ -17,8 +17,11 @@ router.get("/", isUserLoggedIn, async(req, res) => {
 
   let products= await ProductModel.find()
   // console.log(products)
+
+  // flash msg
+  let cartMsg=req.flash("successCart")
   
-  res.render("allproducts",{navBar:true, products})
+  res.render("allproducts",{navBar:true, products , cartMsg})
 
 });
 

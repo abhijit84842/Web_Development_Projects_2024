@@ -13,6 +13,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="w-full h-screen bg-zinc-900 text-white">
+    <!-----------------------------------------------------------------------------Flash Messages--------------->
+    <% if(cartMsg.length > 0){ %>
+    <div
+      class="absolute top-5 left-1/2 -translate-x-1/2 -translate-y-1/2 p-2 mt-1 rounded-md bg-green-500"
+    >
+      <span class="initial-block mt-1 mb-1 text-white"> <%= cartMsg %> </span>
+    </div>
+    <% } %>
     <!----------------------------------------------------------------------------------------------Nav Bar----------------->
 
     <% if(navBar){ %>
