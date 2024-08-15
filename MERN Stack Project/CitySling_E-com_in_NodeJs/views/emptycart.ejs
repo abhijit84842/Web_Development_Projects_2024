@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CART</title>
+    <title>EMPTY CART</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-zinc-900 w-full h-screen">
     <h1
-      class="text-white text-5xl font-bold flex justify-center items-center my-20"
+      class="text-red-500 text-5xl font-bold flex justify-center items-center my-20"
     >
-      Your Cart
+      Your Cart Is Empty
     </h1>
     <div class="bg-gray-900 flex justify-center flex-col mx-5">
       <div
@@ -30,29 +30,6 @@
       <div class="flex justify-between">
         <div class="flex flex-col">
           <!---------------------------------------------------------------------------------Cart Items Start---------->
-
-          <% cartProducts.forEach(function(items){ %>
-          <div class="cart-items">
-            <div class="flex justify-center items-center">
-              <img
-                class="w-[15rem] h-[20rem] object-cover rounded-md"
-                src="data:image/jpeg;base64,<%=items.image.toString('base64') %>"
-                alt=""
-              />
-              <div class="w-[40%] text-xs flex flex-col text-white ml-5">
-                <span class="font-semibold"><%=items.name %></span>
-                <span class="text-[10px] text-green-500 tracking-wider"
-                  ><p><%=items.subtitle %></p>
-                </span>
-
-                <span class="text-lg font-semibold"
-                  >$ <span class="text-red-500"><%=items.price %></span></span
-                >
-              </div>
-            </div>
-            <div class="w-[90%] bg-red-300 p-[1px] my-4 ml-10"></div>
-          </div>
-          <% }) %>
         </div>
 
         <!-- <div class="mr-[24rem]">
@@ -72,25 +49,20 @@
               </p>
             </div>
             <div class="right flex items-center flex-col">
+              <p class="text-white text-lg font-semibold my-5">₹ 0</p>
               <p class="text-white text-lg font-semibold my-5">
-                ₹ <%=totalMRP %>
+                <span class="text-red-500 mr-2">-</span> ₹ 0
               </p>
-              <p class="text-white text-lg font-semibold my-5">
-                <span class="text-red-500 mr-2">-</span> ₹ <%= totalDiscountMRP
-                %>
-              </p>
-              <p class="text-white text-lg font-semibold my-5">
-                ₹ <%= shippingCharge %>
-              </p>
+              <p class="text-white text-lg font-semibold my-5">₹ 0</p>
             </div>
           </div>
           <div class="bg-slate-200 p-[1px] mt-15"></div>
           <div class="total flex justify-between mx-5">
             <div class="total-left">
-              <P class="text-red-600 text-2xl font-bold">TOTAL</P>
+              <P class="text-red-600 text-2xl">TOTAL</P>
             </div>
-            <div class="total-right text-2xl font-semibold text-red-600">
-              <P>₹ <%=totalBill %></P>
+            <div class="total-right text-2xl text-red-600">
+              <P>₹ 0</P>
             </div>
           </div>
         </div>

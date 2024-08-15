@@ -6,6 +6,8 @@ let ProductModel = require("../models/productModel");
 let UserModel = require("../models/userModel");
 const router = express.Router();
 
+
+
 // Rendering the Cart page
 router.get("/", isLoggedIn, async (req, res) => {
   let user = await UserModel.findOne({email: req.user1.email}).populate("cart")
@@ -13,8 +15,8 @@ router.get("/", isLoggedIn, async (req, res) => {
   let cartProducts= user.cart
   // console.log(cartProducts[0].price)
 
-  // bill Calculate
-  
+  if(cartProducts.length >0){
+    // bill Calculate
   // Product Price
   let price =cartProducts.map((items)=>{
     return items.price
@@ -45,6 +47,11 @@ router.get("/", isLoggedIn, async (req, res) => {
   let totalBill= (totalMRP - totalDiscountMRP )+ shippingCharge
   // console.log(totalBill)
   res.render("cart" , {cartProducts , totalMRP , totalDiscountMRP , shippingCharge , totalBill});
+  }else{
+    res.render("emptycart")
+  }
+  
+ 
 });
 
 // Add to Cart
