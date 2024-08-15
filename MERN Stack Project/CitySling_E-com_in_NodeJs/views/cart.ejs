@@ -58,22 +58,39 @@
         </div> -->
         <!----------------------------------------Price section-->
 
-        <div class="w-[15%]">
-          <p class="text-red-600 py-5">
-            MRP:-
-            <span class="text-white font-semibold ml-24">₹ <%=totalMRP %></span>
-          </p>
-          <p class="text-green-600 py-5">
-            Discount:- <span class="text-white font-semibold ml-20">₹ 500</span>
-          </p>
-          <p class="text-red-600 py-5">
-            Delivery Charges:-
-            <span class="text-white font-semibold ml-9">₹ 50</span>
-          </p>
+        <div class="w-[20%]">
+          <div class="flex justify-between">
+            <div class="left w-[60%] flex items-center flex-col">
+              <P class="text-indigo-500 text-lg font-semibold my-5">MRP :- </P>
+              <P class="text-red-400 text-lg font-semibold my-5"
+                >Discount :-
+              </P>
+              <p class="text-lime-400 text-lg font-semibold my-5">
+                Shipping Charges :-
+              </p>
+            </div>
+            <div class="right flex items-center flex-col">
+              <p class="text-white text-lg font-semibold my-5">
+                ₹ <%=totalMRP %>
+              </p>
+              <p class="text-white text-lg font-semibold my-5">
+                <span class="text-red-500 mr-2">-</span> ₹ <%= totalDiscountMRP
+                %>
+              </p>
+              <p class="text-white text-lg font-semibold my-5">
+                ₹ <%= shippingCharge %>
+              </p>
+            </div>
+          </div>
           <div class="bg-slate-200 p-[1px] mt-15"></div>
-          <p class="text-white font-bold text-lg">
-            TOTAL <span class="text-red-500 ml-20">₹ 3050</span>
-          </p>
+          <div class="total flex justify-between mx-5">
+            <div class="total-left">
+              <P class="text-red-600 text-2xl">TOTAL</P>
+            </div>
+            <div class="total-right text-2xl text-red-600">
+              <P>₹ <%=totalBill %></P>
+            </div>
+          </div>
         </div>
       </div>
 

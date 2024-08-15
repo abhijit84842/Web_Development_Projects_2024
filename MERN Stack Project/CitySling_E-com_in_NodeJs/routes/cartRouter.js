@@ -14,15 +14,37 @@ router.get("/", isLoggedIn, async (req, res) => {
   // console.log(cartProducts[0].price)
 
   // bill Calculate
-  let price=cartProducts.map((items)=>(
-    items.price
-  ))
+  
+  // Product Price
+  let price =cartProducts.map((items)=>{
+    return items.price
+})
+// Product Discount
+  let discount = cartProducts.map((item)=>{
+    return item.discount
+  })
+  // console.log(discount)
 
-  let totalMRP =price.reduce((a,b)=>{
+  // Total MRP
+  let totalMRP = price.reduce((a,b)=>{
     return a+b
   })
+  // Total Discount
+  let totalDiscount = discount.reduce((a,b)=>{
+      return a+b
+  })
+
+  // shipping charges
+  let shippingCharge= 0
+
+
+  // discount MRP Calculate
+  let totalDiscountMRP= (totalMRP * totalDiscount)/100
+ 
+  // Total Bill Amount
+  let totalBill= (totalMRP - totalDiscountMRP )+ shippingCharge
   // console.log(totalBill)
-  res.render("cart" , {cartProducts , totalMRP});
+  res.render("cart" , {cartProducts , totalMRP , totalDiscountMRP , shippingCharge , totalBill});
 });
 
 // Add to Cart
