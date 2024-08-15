@@ -8,7 +8,11 @@ const router = express.Router();
 
 // Rendering the Cart page
 router.get("/", isLoggedIn, async (req, res) => {
-  res.render("cart");
+  let user = await UserModel.findOne({email: req.user1.email}).populate("cart")
+  // console.log(user)
+  let cartProducts= user.cart
+  // console.log(cartProducts)
+  res.render("cart" , {cartProducts});
 });
 
 // Add to Cart
