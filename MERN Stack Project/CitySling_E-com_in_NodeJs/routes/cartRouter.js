@@ -11,8 +11,18 @@ router.get("/", isLoggedIn, async (req, res) => {
   let user = await UserModel.findOne({email: req.user1.email}).populate("cart")
   // console.log(user)
   let cartProducts= user.cart
-  // console.log(cartProducts)
-  res.render("cart" , {cartProducts});
+  // console.log(cartProducts[0].price)
+
+  // bill Calculate
+  let price=cartProducts.map((items)=>(
+    items.price
+  ))
+
+  let totalMRP =price.reduce((a,b)=>{
+    return a+b
+  })
+  // console.log(totalBill)
+  res.render("cart" , {cartProducts , totalMRP});
 });
 
 // Add to Cart
