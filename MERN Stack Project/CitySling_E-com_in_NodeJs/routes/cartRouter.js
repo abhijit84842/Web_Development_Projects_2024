@@ -4,6 +4,7 @@ const isLoggedIn = require("../middlewares/isLogin");
 
 let ProductModel = require("../models/productModel");
 let UserModel = require("../models/userModel");
+const { set } = require("mongoose");
 const router = express.Router();
 
 // Rendering the Cart page
@@ -13,16 +14,21 @@ router.get("/", isLoggedIn, async (req, res) => {
   );
   // console.log(user)
   let cartProducts = user.cart;
-  // console.log(cartProducts[0].price)
+
+  let unicCartProducts = cartProducts.filter(
+    (product, index, self) =>
+      index === self.findIndex((p) => p._id === product._id)
+  );
+  // console.log(unicCartProducts);
 
   if (cartProducts.length > 0) {
     // bill Calculate
     // Product Price
-    let price = cartProducts.map((items) => {
+    let price = unicCartProducts.map((items) => {
       return items.price;
     });
     // Product Discount
-    let discount = cartProducts.map((item) => {
+    let discount = unicCartProducts.map((item) => {
       return item.discount;
     });
     // console.log(discount)
@@ -46,7 +52,7 @@ router.get("/", isLoggedIn, async (req, res) => {
     let totalBill = totalMRP - totalDiscountMRP + shippingCharge;
     // console.log(totalBill)
     res.render("cart", {
-      cartProducts,
+      unicCartProducts,
       totalMRP,
       totalDiscountMRP,
       shippingCharge,
