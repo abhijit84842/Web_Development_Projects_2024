@@ -17,7 +17,6 @@
         class="flex justify-between mx-20 p-2 text-white text-xl font-semibold"
       >
         <div><a href="">PRODUCT</a></div>
-        <div><a href="">QUANTITY</a></div>
         <div><a href="">PRICE DETAILS</a></div>
       </div>
       <div class="w-[100%] bg-red-600 p-[1px]"></div>
@@ -32,13 +31,18 @@
           <!---------------------------------------------------------------------------------Cart Items Start---------->
 
           <% unicCartProducts.forEach(function(items){ %>
-          <div class="cart-items">
+          <div
+            class="cart-items w-[50rem] border-black border-2 mb-5 rounded-lg"
+          >
             <div class="flex justify-center items-center">
-              <img
-                class="w-[15rem] h-[20rem] object-cover rounded-md"
-                src="data:image/jpeg;base64,<%=items.image.toString('base64') %>"
-                alt=""
-              />
+              <div class="bg-slate-600 mt-5 rounded-lg">
+                <img
+                  class="w-[15rem] h-[20rem] object-cover p-5"
+                  src="data:image/jpeg;base64,<%=items.image.toString('base64') %>"
+                  alt=""
+                />
+              </div>
+
               <div class="w-[40%] text-xs flex flex-col text-white ml-5">
                 <span class="font-semibold"><%=items.name %></span>
                 <span class="text-[10px] text-green-500 tracking-wider"
@@ -48,17 +52,20 @@
                 <span class="text-lg font-semibold"
                   >$ <span class="text-red-500"><%=items.price %></span></span
                 >
+
+                <input
+                  class="bg-transparent border-black border-2 p-2 w-[4rem] rounded-lg outline-none mt-10 font-semibold"
+                  type="number"
+                  name="quantity"
+                  min="1"
+                  max="5"
+                />
               </div>
             </div>
             <div class="w-[90%] bg-red-300 p-[1px] my-4 ml-10"></div>
           </div>
           <% }) %>
         </div>
-
-        <!-- <div class="mr-[24rem]">
-            <input class="w-[40%]" type="number" value="1" />
-          </div> -->
-        <!----------------------------------------Price section-->
 
         <div class="w-[20%]">
           <div class="flex justify-between">
@@ -92,6 +99,11 @@
             <div class="total-right text-2xl font-semibold text-red-600">
               <P>₹ <%=totalBill %></P>
             </div>
+          </div>
+          <div
+            class="bg-amber-300 mt-20 rounded-lg flex justify-center items-center"
+          >
+            <a class="font-semibold text-3xl" href="#">Place Order</a>
           </div>
         </div>
       </div>
