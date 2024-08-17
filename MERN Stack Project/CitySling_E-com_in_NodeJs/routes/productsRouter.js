@@ -57,8 +57,18 @@ router.get("/women", isUserLoggedIn, async(req,res)=>{
 })
 
 // Showing Men products
-router.get("/men",isUserLoggedIn , (req,res)=>{
-  res.render("menproducts")
+router.get("/men",isUserLoggedIn , async(req,res)=>{
+  try{
+    const products= await ProductModel.find()
+
+    let menProducts = products.filter((items)=>{
+      return items.category ==="men"
+    })
+    res.render("menproducts", {men:menProducts})
+  }catch(err){
+    console.log(err.message)
+  }
+ 
 })
 
 // Showing kids products
