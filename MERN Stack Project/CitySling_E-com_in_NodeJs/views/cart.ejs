@@ -30,7 +30,7 @@
         <div class="flex flex-col">
           <!---------------------------------------------------------------------------------Cart Items Start---------->
 
-          <% unicCartProducts.forEach(function(items){ %>
+          <% cartProducts.forEach(function(items){ %>
           <div
             class="cart-items w-[50rem] border-black border-2 mb-5 rounded-lg"
           >
@@ -57,6 +57,7 @@
                   class="bg-transparent border-black border-2 p-2 w-[4rem] rounded-lg outline-none mt-10 font-semibold"
                   type="number"
                   name="quantity"
+                  value="1"
                   min="1"
                   max="5"
                 />

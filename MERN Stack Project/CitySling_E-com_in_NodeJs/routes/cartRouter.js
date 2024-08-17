@@ -15,20 +15,20 @@ router.get("/", isLoggedIn, async (req, res) => {
   // console.log(user)
   let cartProducts = user.cart;
 
-  let unicCartProducts = cartProducts.filter(
-    (product, index, self) =>
-      index === self.findIndex((p) => p._id === product._id)
-  );
+  // let unicCartProducts = cartProducts.filter(
+  //   (product, index, self) =>
+  //     index === self.findIndex((p) => p._id === product._id)
+  // );
   // console.log(unicCartProducts);
 
   if (cartProducts.length > 0) {
     // bill Calculate
     // Product Price
-    let price = unicCartProducts.map((items) => {
+    let price = cartProducts.map((items) => {
       return items.price;
     });
     // Product Discount
-    let discount = unicCartProducts.map((item) => {
+    let discount = cartProducts.map((item) => {
       return item.discount;
     });
     // console.log(discount)
@@ -52,7 +52,8 @@ router.get("/", isLoggedIn, async (req, res) => {
     let totalBill = totalMRP - totalDiscountMRP + shippingCharge;
     // console.log(totalBill)
     res.render("cart", {
-      unicCartProducts,
+      // unicCartProducts,
+      cartProducts,
       totalMRP,
       totalDiscountMRP,
       shippingCharge,
