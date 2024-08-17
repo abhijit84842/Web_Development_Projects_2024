@@ -56,8 +56,21 @@ router.get("/kids" , isUserLoggedIn ,(req,res)=>{
   res.render("kidsproducts")
 })
 // showing trolley products.
-router.get("/trolley",isUserLoggedIn, (req,res)=>{
-  res.render("trolleyproducts")
+router.get("/trolley",isUserLoggedIn, async(req,res)=>{
+  try{
+    const trolleyProduct= await ProductModel.find()
+
+    // find only which category is trolley
+   let trolleyBags = trolleyProduct.filter((items)=>{
+    return items.category==="trolley"
+   })
+
+    // console.log(trolleyBags)
+    res.render("trolleyproducts" ,{trolley: trolleyBags})
+  }catch(err){
+    console.log(err.message)
+  }
+ 
 })
 
 //Rendering the  Add your product by Owner
