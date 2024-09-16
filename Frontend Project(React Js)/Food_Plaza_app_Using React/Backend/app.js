@@ -1,27 +1,31 @@
-const express = require('express')
-const path = require('path')
+const express = require("express");
+const path = require("path");
 
-const cors = require('cors')
+const cors = require("cors");
 
-const FoodData= require("../Backend/lib/dummydata")
+const app = express();
 
-const app = express()
+//json data
+app.use(express.json())
 
-app.use(express.static(path.join(__dirname,"public")))
+// url data
+app.use(express.urlencoded({extended:true}))
+
+// for static file
+app.use(express.static(path.join(__dirname, "public")));
 
 // Enable CORS for all routes
-app.use(cors())
+app.use(cors());
 
 
 
-app.get("/", (req,res)=>{
-    res.send("food plaza server")
-})
+// Routing API
+app.post("/api/addfood", (req, res) => {
+  console.log(req.body);
+});
 
-app.get("/fooddata" ,(req,res)=>{
-    res.send(FoodData)
-})
+app.get("/api/fooddata", (req, res) => {});
 
-app.listen(3000 , ()=>{
-    console.log(`Port number is => 3000`)
-})
+app.listen(3000, () => {
+  console.log(`Port number is => 3000`);
+});
