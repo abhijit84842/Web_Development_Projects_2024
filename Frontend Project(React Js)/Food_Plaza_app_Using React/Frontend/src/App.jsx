@@ -1,4 +1,5 @@
-import style from "./page.module.css";
+import style from "../src/CssModule/page.module.css";
+import Card from "./components/Card";
 function App() {
   return (
     <div className={style.mainContainer}>
@@ -20,6 +21,7 @@ function App() {
         </nav>
 
         <div className={style.subContainer}>
+          <Card />
           <img src="/bg.png" alt="loadng..." />
         </div>
       </div>
