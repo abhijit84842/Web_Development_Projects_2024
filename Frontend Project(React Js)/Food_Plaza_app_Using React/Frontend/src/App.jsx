@@ -14,17 +14,13 @@ function App() {
           </div>
         </div>
         <nav>
-          <a href="">All</a>
-          <a href="">Breakfast</a>
-          <a href="">Lunch</a>
-          <a href="">Dinner</a>
+          <button>All</button>
+          <button>Breakfast</button>
+          <button>Lunch</button>
+          <button>Dinner</button>
         </nav>
-
-        <div className={style.subContainer}>
-          <Card />
-          <img src="/bg.png" alt="loadng..." />
-        </div>
       </div>
+      <Card />
     </div>
   );
 }

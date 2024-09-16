@@ -11,58 +11,39 @@
   color: white;
   font-size: 50px;
 }
-.logoAndSearch{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 4rem;
+.logoAndSearch {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
 }
-.logo img{
-    width: 10rem;
-    margin-left: 20px;
-   
-
+.logo img {
+  width: 10rem;
+  margin-left: 20px;
 }
 
-.search{
-    margin-right: 5rem;
+.search {
+  margin-right: 5rem;
 }
-.search input{
-    background: transparent;
-    outline: none;
-    padding: 10px;
-    width: 20rem;
-    border: solid 1px red;
-    color: white;
-}
-.subContainer{
-  
-    margin-left: 10px;
-    margin-right: 10px;
+.search input {
+  background: transparent;
+  outline: none;
+  padding: 10px;
+  width: 20rem;
+  border: solid 1px red;
+  color: white;
 }
 
-nav{
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
-    margin-bottom: 5rem;
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin-bottom: 5rem;
 }
-nav a{
-    width: 5%;
-    height: 5%;
-    border-radius: 10px;
-
-    text-decoration: none;
-    padding: 10px;
-    background-color: #FF4343;
-    color: white;
-    font-size: 25px;
+nav button {
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #ff4343;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
 }
-
-.subContainer img{
-    width: 100%;
-    height: 100%;
-   
-   
-}
-/*--------------------------------CARD Component--------------------------*/
-
