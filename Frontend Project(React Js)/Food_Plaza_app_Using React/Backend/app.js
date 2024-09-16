@@ -2,8 +2,13 @@ const express = require("express");
 const path = require("path");
 
 const cors = require("cors");
+const { default: mongoose } = require("mongoose");
+
+const FoodModel = require("../Backend/models/foodModel")
 
 const app = express();
+
+const URL=  "mongodb+srv://foodPlaza:admin@cluster0.l4vqt9f.mongodb.net/Food_Plaza_App_Using_React?retryWrites=true&w=majority&appName=Cluster0"
 
 //json data
 app.use(express.json())
@@ -20,8 +25,19 @@ app.use(cors());
 
 
 // Routing API
-app.post("/api/addfood", (req, res) => {
-  console.log(req.body);
+app.post("/api/addfood", async(req, res) => {
+//   console.log(req.body);
+  let data = req.body
+
+try{
+    await mongoose.connect(URL)
+    console.log("DB connected successfully..")
+    let result = await FoodModel.create(data) 
+    res.send("data added successfully")
+
+}catch(err){
+    console.log(err.message)
+}
 });
 
 app.get("/api/fooddata", (req, res) => {});
