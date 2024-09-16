@@ -1,17 +1,17 @@
-import Header from "./Components/Header";
-import axios from "axios";
-
+import style from "./page.module.css";
 function App() {
-  const handleApi = async () => {
-    let res = await axios.get("http://localhost:3000/fooddata");
-
-    console.log(res);
-  };
   return (
-    <>
-      <Header />
-      <button onClick={() => handleApi()}>Api Fetch</button>
-    </>
+    <div className={style.mainContainer}>
+      <div className={style.topContainer}>
+        <h1 className={style.h1Tag}>Welcome To Food Plaza</h1>
+        <logo className={style.logo}>
+          <img src="/Food Plaza.png" alt="loading.." />
+        </logo>
+        <div className={style.subContainer}>
+          <img src="/bg.png" alt="loadng..." />
+        </div>
+      </div>
+    </div>
   );
 }
 

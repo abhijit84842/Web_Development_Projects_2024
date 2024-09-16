@@ -2,7 +2,7 @@ const express = require('express')
 
 const cors = require('cors')
 
-const FoodData = require("../Backend/lib/dummydata")
+const FoodData= require("../Backend/lib/dummydata")
 
 const app = express()
 

@@ -1,4 +1,4 @@
-export const foodData = [
+module.exports= [
     {
         name: "Boilded Egg",
         price: 10,

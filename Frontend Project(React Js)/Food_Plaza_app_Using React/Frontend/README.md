@@ -1,5 +1,5 @@
-<h1> Food Plaza Food Ordering APP Using React</h1>
-<h2>Teachnlogy Use In This App</h2>
-<p> Frontend => React Js </p>
-<p>Backend => Node js </p>
-<p>Database =>  MongoDB </p>
+<h1>Food Plaza Food Ordering App </h1>
+
+<h2>Technology Use</h2>
+<p>Frontend => React Js</p>
+<p>Styling => CSS Module</p>
