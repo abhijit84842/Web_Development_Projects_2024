@@ -9,9 +9,15 @@ function App() {
             <img src="/Food Plaza.png" alt="loading.." />
           </logo>
           <div className={style.search}>
-            <input type="text" placeholder="Seacrch.." />
+            <input type="text" placeholder="Search food.." />
           </div>
         </div>
+        <nav>
+          <a href="">All</a>
+          <a href="">Breakfast</a>
+          <a href="">Lunch</a>
+          <a href="">Dinner</a>
+        </nav>
 
         <div className={style.subContainer}>
           <img src="/bg.png" alt="loadng..." />
