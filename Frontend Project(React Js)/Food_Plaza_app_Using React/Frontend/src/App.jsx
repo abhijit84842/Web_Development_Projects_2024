@@ -1,49 +1,49 @@
-import { useEffect, useState } from "react";
-import style from "../src/CssModule/page.module.css";
-import Card from "./components/Card";
+// import { useEffect, useState } from "react";
+
+// Page import
+import HomePage from "./pages/HomePage";
+import AdminPage from "./pages/AdminPage";
+import AdminLoginPage from "./pages/AdminLoginPage";
+
+// Routing
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 function App() {
-  const [foodList, setFoodList] = useState(null);
-  const handleCallApi = async () => {
-    try {
-      let res = await fetch("http://localhost:3000/fooddata");
-      let data = await res.json();
-      // console.log(data);
-      setFoodList(data);
-    } catch (err) {
-      console.log("cant not get data");
-    }
-  };
+  // Routing in react
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <HomePage />,
+    },
+    {
+      path: "/admin",
+      element: <AdminPage />,
+    },
+    {
+      path: "/admin/adminlogin",
+      element: <AdminLoginPage />,
+    },
+  ]);
 
-  useEffect(() => {
-    handleCallApi();
-  }, []);
-  // console.log(foodList);
+  // const [foodList, setFoodList] = useState(null);
+  // const handleCallApi = async () => {
+  //   try {
+  //     let res = await fetch("http://localhost:3000/fooddata");
+  //     let data = await res.json();
+  //     // console.log(data);
+  //     setFoodList(data);
+  //   } catch (err) {
+  //     console.log("cant not get data");
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   handleCallApi();
+  // }, []);
+  // // console.log(foodList);
   return (
-    <div className={style.mainContainer}>
-      <div className={style.topContainer}>
-        <div className={style.headingAndAdmin}>
-          <h1 className={style.h1Tag}>Welcome To Food Plaza</h1>
-          <div className={style.adminlogin}>
-            <a href="#">Admin Login</a>
-          </div>
-        </div>
-
-        <div className={style.logoAndSearch}>
-          <div className={style.logo}>
-            <img src="/Food Plaza.png" alt="loading.." />
-          </div>
-          <div className={style.search}>
-            <input type="text" placeholder="Search food.." />
-          </div>
-        </div>
-        <nav>
-          <button>All</button>
-          <button>Breakfast</button>
-          <button>Lunch</button>
-          <button>Dinner</button>
-        </nav>
-      </div>
-      <Card food={foodList} />
+    <div>
+      <RouterProvider router={router} />
     </div>
   );
 }
