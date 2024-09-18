@@ -13,7 +13,12 @@ const AdminLoginPage = () => {
   } = useForm();
 
   // to get the form data
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    let res = await fetch("http://localhost:3000/api/login", {
+      method: "POST",
+      body: JSON.stringify(data),
+    });
+  };
 
   return (
     <div className="loginMainContainer">
