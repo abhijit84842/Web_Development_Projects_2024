@@ -25,13 +25,18 @@ app.use(cors());
 
 
 // Routing API
+
+app.get("/api/fooddata", (req, res) => {});
+
+
+// POST API FOR ADD FOODS
 app.post("/api/addfood", async(req, res) => {
 //   console.log(req.body);
   let data = req.body
 
 try{
     await mongoose.connect(URL)
-    console.log("DB connected successfully..")
+    // console.log("DB connected successfully..")
     let result = await FoodModel.create(data) 
     res.send("data added successfully")
 
@@ -40,7 +45,7 @@ try{
 }
 });
 
-app.get("/api/fooddata", (req, res) => {});
+
 
 app.listen(3000, () => {
   console.log(`Port number is => 3000`);
