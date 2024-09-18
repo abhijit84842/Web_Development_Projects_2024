@@ -3,10 +3,33 @@
 .topContainer {
 }
 
-.h1Tag {
-  display: flex;
+.headingAndAdmin{
+  display: flex; 
   justify-content: center;
   align-items: center;
+  position: relative;
+  
+}
+
+.adminlogin{
+  position: absolute;
+  top: 3rem;
+  right: 10rem;
+ 
+}
+.adminlogin a{
+  padding:3px;
+  background-color: #ff4343;
+  border-radius: 5px;
+  font-size: 17px;
+ text-decoration: none;
+ color: #ffffff;
+}
+
+.h1Tag {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 
   color: white;
   font-size: 50px;

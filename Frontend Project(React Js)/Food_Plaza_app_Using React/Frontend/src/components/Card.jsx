@@ -1,105 +1,15 @@
 import React from "react";
 import style from "../CssModule/card.module.css";
+import CardList from "./CardList";
 
-const Card = () => {
+const Card = ({ food }) => {
+  // console.log(food);
   return (
     <div className={style.subContainer}>
       <div className={style.mainContainer}>
-        <div className={style.cardContainer}>
-          <div className={style.card}>
-            <img src="/egg.png" alt="" />
-            <div>
-              <p>Boil Egg</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, voluptatum.
-              </p>
-            </div>
-          </div>
-          <div className={style.price}>
-            <span>$100</span>
-          </div>
-        </div>
-
-        <div className={style.cardContainer}>
-          <div className={style.card}>
-            <img src="/egg.png" alt="" />
-            <div>
-              <p>Boil Egg</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, voluptatum.
-              </p>
-            </div>
-          </div>
-          <div className={style.price}>
-            <span>$100</span>
-          </div>
-        </div>
-
-        <div className={style.cardContainer}>
-          <div className={style.card}>
-            <img src="/egg.png" alt="" />
-            <div>
-              <p>Boil Egg</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, voluptatum.
-              </p>
-            </div>
-          </div>
-          <div className={style.price}>
-            <span>$100</span>
-          </div>
-        </div>
-
-        <div className={style.cardContainer}>
-          <div className={style.card}>
-            <img src="/egg.png" alt="" />
-            <div>
-              <p>Boil Egg</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, voluptatum.
-              </p>
-            </div>
-          </div>
-          <div className={style.price}>
-            <span>$100</span>
-          </div>
-        </div>
-
-        <div className={style.cardContainer}>
-          <div className={style.card}>
-            <img src="/egg.png" alt="" />
-            <div>
-              <p>Boil Egg</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, voluptatum.
-              </p>
-            </div>
-          </div>
-          <div className={style.price}>
-            <span>$100</span>
-          </div>
-        </div>
-
-        <div className={style.cardContainer}>
-          <div className={style.card}>
-            <img src="/egg.png" alt="" />
-            <div>
-              <p>Boil Egg</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, voluptatum.
-              </p>
-            </div>
-          </div>
-          <div className={style.price}>
-            <span>$100</span>
-          </div>
-        </div>
+        {food?.map((list) => (
+          <CardList key={list.name} foodList={list} />
+        ))}
       </div>
     </div>
   );
