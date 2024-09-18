@@ -46,3 +46,10 @@ h1{
     cursor: pointer;
 
 }
+
+/* FORM Validation Error Message */
+.errorMsgForm{
+   
+    color: rgb(250, 13, 13);
+    font-size: 15px;
+}
