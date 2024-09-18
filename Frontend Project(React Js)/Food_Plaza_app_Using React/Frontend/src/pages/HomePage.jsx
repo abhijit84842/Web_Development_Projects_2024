@@ -1,4 +1,4 @@
-import "../CssModule/page.css";
+import "../Css/page.css";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {

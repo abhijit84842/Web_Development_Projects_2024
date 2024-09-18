@@ -1,10 +1,19 @@
+import "../Css/admin.css";
+import { Link } from "react-router-dom";
 const AdminPage = () => {
   return (
-    <div>
+    <div className="adminMainContainer">
       <h1>Welcome to Admin Panel</h1>
-      <div>
-        <a href="">Admin Login </a>
-        <a href="">Add Foods</a>
+      <div className="actionLink">
+        <Link className="createAc" to="/createac">
+          Create Account
+        </Link>
+        <Link className="adminLogin" to="/adminlogin">
+          Admin Login
+        </Link>
+        <Link className="addFoods" to="/addfoods">
+          Add Foods
+        </Link>
       </div>
     </div>
   );
