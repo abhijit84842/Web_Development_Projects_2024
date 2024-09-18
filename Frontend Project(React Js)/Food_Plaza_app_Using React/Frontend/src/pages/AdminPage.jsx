@@ -8,7 +8,7 @@ const AdminPage = () => {
         <Link className="createAc" to="/createac">
           Create Account
         </Link>
-        <Link className="adminLogin" to="/adminlogin">
+        <Link className="adminLogin" to="/admin/adminlogin">
           Admin Login
         </Link>
         <Link className="addFoods" to="/addfoods">
