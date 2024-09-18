@@ -1,11 +1,11 @@
-.subContainer {
+.CardSubContainer{
   /* display: flex;
   justify-content: center;
   align-items: center; */
   position: relative;
   border: solid 1px red;
   height: 100vh;
-  background-image: url("/bg.png");
+  background-image: url("/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }

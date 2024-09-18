@@ -5,13 +5,13 @@ const AdminPage = () => {
     <div className="adminMainContainer">
       <h1>Welcome to Admin Panel</h1>
       <div className="actionLink">
-        <Link className="createAc" to="/createac">
+        <Link className="createAc" to="/admin/createac">
           Create Account
         </Link>
         <Link className="adminLogin" to="/admin/adminlogin">
           Admin Login
         </Link>
-        <Link className="addFoods" to="/addfoods">
+        <Link className="addFoods" to="/admin/addfoods">
           Add Foods
         </Link>
       </div>

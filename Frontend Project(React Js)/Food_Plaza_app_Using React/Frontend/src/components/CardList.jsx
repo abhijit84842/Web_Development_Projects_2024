@@ -1,16 +1,16 @@
 import React from "react";
-import style from "../CssModule/card.module.css";
+import "../Css/card.css";
 
 const CardList = ({ foodList }) => {
   return (
-    <div className={style.cardContainer}>
-      <div className={style.card}>
+    <div className="cardContainer">
+      <div className="card">
         <div>
           <p>{foodList.name}</p>
           <p>{foodList.text}</p>
         </div>
       </div>
-      <div className={style.price}>
+      <div className="price">
         <span>${foodList.price}</span>
       </div>
     </div>

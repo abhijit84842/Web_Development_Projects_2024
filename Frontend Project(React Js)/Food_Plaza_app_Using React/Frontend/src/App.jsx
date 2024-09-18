@@ -4,6 +4,8 @@
 import HomePage from "./pages/HomePage";
 import AdminPage from "./pages/AdminPage";
 import AdminLoginPage from "./pages/AdminLoginPage";
+import CreateAc from "./pages/CreateAc";
+import AddFoodsPage from "./pages/AddFoodsPage";
 
 // Routing
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -22,6 +24,14 @@ function App() {
     {
       path: "/admin/adminlogin",
       element: <AdminLoginPage />,
+    },
+    {
+      path: "/admin/createac",
+      element: <CreateAc />,
+    },
+    {
+      path: "/admin/addfoods",
+      element: <AddFoodsPage />,
     },
   ]);
 

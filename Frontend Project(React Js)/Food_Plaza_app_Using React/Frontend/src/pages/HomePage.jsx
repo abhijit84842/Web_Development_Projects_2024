@@ -1,3 +1,4 @@
+import Card from "../components/Card";
 import "../Css/page.css";
 import { Link } from "react-router-dom";
 
@@ -25,6 +26,7 @@ const HomePage = () => {
         <button>Lunch</button>
         <button>Dinner</button>
       </nav>
+      <Card />
     </div>
   );
 };
