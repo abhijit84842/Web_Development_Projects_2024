@@ -1,36 +1,42 @@
-import React from "react";
 import "../Css/login.css";
-const AdminLoginPage = () => {
-  // api call method
-  const handleForm = async (e) => {
-    e.preventDefault();
-    console.log(e.target.value);
 
-    try {
-      let res = await fetch("http://localhost:3000/api/login", {
-        method: "POST",
-        body: JSON.stringify({}),
-      });
-    } catch (err) {
-      console.log(err.message);
-    }
-  };
+// import useForm hook
+import { useForm } from "react-hook-form";
+
+const AdminLoginPage = () => {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    setValue,
+    formState: { errors },
+  } = useForm();
+
+  // to get the form data
+  const onSubmit = (data) => console.log(data);
+
   return (
     <div className="loginMainContainer">
       <h1>Login Your Account</h1>
       <div className="loginContainer">
-        <form className="subContainer" onSubmit={handleForm}>
+        <form className="subContainer" onSubmit={handleSubmit(onSubmit)}>
           <input
             type="text"
-            name="email"
+            {...register("email", {
+              required: "required field needed",
+              pattern: {
+                // use email pattert type
+                value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+                message: "Invalid email address",
+              },
+              onChange: (e) => setValue("email", e.target.value.toLowerCase()), // convert the email in lower case
+            })}
             placeholder="Enter your email.."
-            required
           />
           <input
             type="text"
-            name="password"
+            {...register("password")}
             placeholder="Enter your password"
-            required
           />
           <button className="loginButton" type="submit">
             Login
