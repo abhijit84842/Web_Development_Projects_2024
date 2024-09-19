@@ -11,7 +11,15 @@ const CreateAc = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    let res = await fetch("http://localhost:3000/api/owner/createac", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+  };
   return (
     <div className="acMainContainer">
       <h1>Create Your Ac</h1>

@@ -29,6 +29,12 @@ app.use(cors());
 app.get("/api/fooddata", (req, res) => {});
 
 
+// POST API for create Owner AC
+app.post("/api/owner/createac" , (req,res)=>{
+  console.log(req.body)
+})
+
+
 // POST API FOR ADD FOODS
 app.post("/api/addfood", async(req, res) => {
 //   console.log(req.body);
