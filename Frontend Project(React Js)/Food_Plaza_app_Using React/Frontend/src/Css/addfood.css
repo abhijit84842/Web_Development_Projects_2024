@@ -1,0 +1,66 @@
+.addFoodMainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.addFoodMainContainer h1 {
+}
+
+.addSubContainer {
+  border: solid 2px greenyellow;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.inputContainer {
+  border: solid 1px red;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.inputContainer input {
+  width: 18rem;
+  outline: none;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.fileInput {
+  color: white;
+}
+
+.radioInput {
+  width: 18rem;
+}
+.radioInput input {
+  width: 2rem;
+  
+}
+label {
+
+  color: white;
+}
+textarea{
+    border-radius: 10px;
+    outline: none;
+   
+    
+}
+
+.submitButton{
+    width: 50%;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: greenyellow;
+    color: rgb(229, 27, 27);
+    font-size: 20px;
+    font-weight: 700;
+}
