@@ -4,4 +4,6 @@
 
 <p>Database => MongoDB</p>
 
-<p>Use Multer</p>
+<p>Use Multer for store the image</p>
+
+<p>Password Encrypted => bcrypt</p>

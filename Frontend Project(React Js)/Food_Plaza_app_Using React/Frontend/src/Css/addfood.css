@@ -63,4 +63,5 @@ textarea{
     color: rgb(229, 27, 27);
     font-size: 20px;
     font-weight: 700;
+    cursor: pointer;
 }

@@ -3,8 +3,11 @@ const path = require("path");
 
 const cors = require("cors");
 const { default: mongoose } = require("mongoose");
+const bcrypt = require("bcrypt")
 
+// Model import
 const FoodModel = require("../Backend/models/foodModel")
+const OwnerModel = require("../Backend/models/ownerModel")
 
 const app = express();
 
@@ -30,8 +33,45 @@ app.get("/api/fooddata", (req, res) => {});
 
 
 // POST API for create Owner AC
-app.post("/api/owner/createac" , (req,res)=>{
-  console.log(req.body)
+app.post("/api/owner/createac" , async(req,res)=>{
+  // console.log(req.body)
+
+let {name , age , email , password } = req.body
+try{
+  await mongoose.connect(URL)
+  // console.log("connected")
+  let owner = await OwnerModel.find()
+  
+  if(owner.length > 0){
+    res.status(400).json({msg:"owner already exists" , success:false})
+  }
+  else{
+    bcrypt.genSalt(10,  function(err, salt) {
+      bcrypt.hash(password, salt, async function(err, hash) {
+          // Store hash in your password DB.
+          try{
+            await mongoose.connect(URL)
+            let result = await OwnerModel.create({
+              name,
+              age,
+              email,
+              password:hash
+            })
+
+            res.status(200).json({ result, success:true})
+          }catch(err){
+            console.log(err.message)
+          }
+      });
+  });
+  }
+
+
+}catch(err){
+  console.log(err.message)
+}
+
+  
 })
 
 
@@ -55,7 +95,7 @@ try{
 // POST login
 
 app.post("/api/login" , (req, res)=>{
-    console.log(req.body)
+    // console.log(req.body)
 })
 
 

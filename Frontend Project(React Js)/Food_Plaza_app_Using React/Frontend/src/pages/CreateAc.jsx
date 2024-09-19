@@ -19,6 +19,13 @@ const CreateAc = () => {
       },
       body: JSON.stringify(data),
     });
+
+    let rslt = await res.json();
+    if (rslt.success) {
+      alert("Owner Created Successfully...");
+    } else {
+      alert("Owner Already Exists..");
+    }
   };
   return (
     <div className="acMainContainer">
