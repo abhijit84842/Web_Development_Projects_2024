@@ -94,8 +94,24 @@ try{
 
 // POST login
 
-app.post("/api/login" , (req, res)=>{
+app.post("/api/login" ,async (req, res)=>{
     // console.log(req.body)
+    let {email , password} = req.body
+    try{
+      await mongoose.connect(URL)
+      let owner = await OwnerModel.findOne({email})
+      if(!owner){
+        res.status(401).json({msg:"Owner not found.." , success:false})
+      }else{
+        // compare the password
+        bcrypt.compare(myPlaintextPassword, hash, function(err, result) {
+          // result == true
+      });
+      }
+    }catch(err){
+      console.log(err.message)
+    }
+
 })
 
 
