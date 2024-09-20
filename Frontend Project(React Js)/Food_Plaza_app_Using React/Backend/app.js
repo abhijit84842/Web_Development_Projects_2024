@@ -4,6 +4,8 @@ const path = require("path");
 const cors = require("cors");
 const { default: mongoose } = require("mongoose");
 const bcrypt = require("bcrypt")
+const JWT = require("jsonwebtoken")
+const cookieParser = require("cookie-parser")
 
 // Model import
 const FoodModel = require("../Backend/models/foodModel")
@@ -25,6 +27,8 @@ app.use(express.static(path.join(__dirname, "public")));
 // Enable CORS for all routes
 app.use(cors());
 
+// Use cookie-parser to access and parse cookies in requests
+app.use(cookieParser())
 
 
 // Routing API
@@ -101,11 +105,25 @@ app.post("/api/login" ,async (req, res)=>{
       await mongoose.connect(URL)
       let owner = await OwnerModel.findOne({email})
       if(!owner){
-        res.status(401).json({msg:"Owner not found.." , success:false})
+        res.status(401).json({msg:"Owner does not exists.." , success:false})
       }else{
         // compare the password
-        bcrypt.compare(myPlaintextPassword, hash, function(err, result) {
+        bcrypt.compare(password, owner.password, function(err, result) {
           // result == true
+          if(result == false){
+            res.status(401).json({msg:"incorrect password" , success: false})
+          }else{
+            // JWT Token set
+              let token =JWT.sign({email: owner.email , id: owner._id} ,"secrect" , {expiresIn: '4h'})
+              console.log(token)
+              // set cookie
+              res.cookie("key" , token ,{
+                // httpOnly:false ,    // Ensures the cookie is only accessible by the server
+                secure:true,          // Set to true if using HTTPS
+                sameSite:'Strict'         // Prevents CSRF attacks
+              })
+              res.status(302).json({msg:"successfully login"  , success:true})
+          }
       });
       }
     }catch(err){

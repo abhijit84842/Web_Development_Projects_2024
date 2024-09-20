@@ -7,3 +7,5 @@
 <p>Use Multer for store the image</p>
 
 <p>Password Encrypted => bcrypt</p>
+
+<p>Cookie Set = > JWT </p>

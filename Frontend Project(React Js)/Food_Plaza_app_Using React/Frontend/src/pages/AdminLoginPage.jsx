@@ -14,7 +14,7 @@ const AdminLoginPage = () => {
 
   // to get the form data
   const onSubmit = async (data) => {
-    console.log(data);
+    // console.log(data);
     try {
       let res = await fetch("http://localhost:3000/api/login", {
         method: "POST",
@@ -23,6 +23,14 @@ const AdminLoginPage = () => {
         },
         body: JSON.stringify(data),
       });
+
+      let rslt = await res.json();
+      console.log(rslt);
+      if (rslt.success) {
+        alert("You are successfully login..");
+      } else {
+        alert(rslt.msg);
+      }
     } catch (err) {
       alert("Error submiting form");
     }
@@ -36,7 +44,7 @@ const AdminLoginPage = () => {
           <input /* Email section validation  */
             type="text"
             {...register("email", {
-              required: "field is required...",
+              required: "Email is required...",
               pattern: {
                 // use email pattert type
                 value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
@@ -51,7 +59,7 @@ const AdminLoginPage = () => {
           )}
           <input /* Password section validation  */
             type="text"
-            {...register("password", { required: "field is required.." })}
+            {...register("password", { required: "Password is required.." })}
             placeholder="Enter your password"
           />
           {errors.password && (
