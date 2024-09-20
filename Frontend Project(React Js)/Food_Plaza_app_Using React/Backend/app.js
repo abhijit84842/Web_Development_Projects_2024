@@ -7,6 +7,9 @@ const bcrypt = require("bcrypt")
 const JWT = require("jsonwebtoken")
 const cookieParser = require("cookie-parser")
 
+//Middleware import
+const IsLoggedIn = require("./middleware/isLoggedIn")
+
 // Model import
 const FoodModel = require("../Backend/models/foodModel")
 const OwnerModel = require("../Backend/models/ownerModel")
@@ -25,7 +28,10 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.static(path.join(__dirname, "public")));
 
 // Enable CORS for all routes
-app.use(cors());
+app.use(cors({
+  origin: "http://localhost:5173",    // Replace with my frontend's origin
+  credentials:true    // Allow credentials (cookies) to be sent with requests
+}));
 
 // Use cookie-parser to access and parse cookies in requests
 app.use(cookieParser())
@@ -80,8 +86,8 @@ try{
 
 
 // POST API FOR ADD FOODS
-app.post("/api/addfood", async(req, res) => {
-//   console.log(req.body);
+app.post("/api/addfood", IsLoggedIn, async(req, res) => {
+  console.log(req.body);
   let data = req.body
 
 try{
@@ -115,12 +121,13 @@ app.post("/api/login" ,async (req, res)=>{
           }else{
             // JWT Token set
               let token =JWT.sign({email: owner.email , id: owner._id} ,"secrect" , {expiresIn: '4h'})
-              console.log(token)
+              // console.log(token)
               // set cookie
-              res.cookie("key" , token ,{
-                // httpOnly:false ,    // Ensures the cookie is only accessible by the server
+              res.cookie("token" , token ,{
+                httpOnly:false ,    // Ensures the cookie is only accessible by the server
                 secure:true,          // Set to true if using HTTPS
-                sameSite:'Strict'         // Prevents CSRF attacks
+                sameSite:'Strict',         // Prevents CSRF attacks
+                // maxAge: 60 * 60 * 1000 // 1 hour
               })
               res.status(302).json({msg:"successfully login"  , success:true})
           }

@@ -21,11 +21,14 @@ const AdminLoginPage = () => {
         headers: {
           "Content-Type": "application/json",
         },
+
+        credentials: "include", // Include cookies in the request
+
         body: JSON.stringify(data),
       });
 
       let rslt = await res.json();
-      console.log(rslt);
+      // console.log(rslt);
       if (rslt.success) {
         alert("You are successfully login..");
       } else {
