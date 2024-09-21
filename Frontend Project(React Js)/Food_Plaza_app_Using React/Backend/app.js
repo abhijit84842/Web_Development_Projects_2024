@@ -10,6 +10,9 @@ const cookieParser = require("cookie-parser")
 //Middleware import
 const IsLoggedIn = require("./middleware/isLoggedIn")
 
+// multer 
+const upload = require("./config/multerConfig")
+
 // Model import
 const FoodModel = require("../Backend/models/foodModel")
 const OwnerModel = require("../Backend/models/ownerModel")
@@ -86,15 +89,23 @@ try{
 
 
 // POST API FOR ADD FOODS
-app.post("/api/addfood", IsLoggedIn, async(req, res) => {
-  console.log(req.body);
-  let data = req.body
+app.post("/api/addfood", IsLoggedIn, upload.single("image") ,  async(req, res) => {
+  // console.log(req.file);
+  // console.log(req.body)
+  let {name , price , type , description} = req.body
 
 try{
     await mongoose.connect(URL)
     // console.log("DB connected successfully..")
-    let result = await FoodModel.create(data) 
-    res.send("data added successfully")
+    let result = await FoodModel.create({
+      image:req.file.buffer,
+      name,
+      price,
+      type,
+      description
+
+    }) 
+    res.status(201).json({data: result ,msg:"Food added successfully.." , success: true})
 
 }catch(err){
     console.log(err.message)
