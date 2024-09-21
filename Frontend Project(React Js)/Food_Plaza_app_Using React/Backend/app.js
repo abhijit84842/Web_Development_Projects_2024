@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Enable CORS for all routes
 app.use(cors({
-  origin: "http://localhost:5173",    // Replace with my frontend's origin
+  origin: "http://localhost:5173",    // my frontend's origin
   credentials:true    // Allow credentials (cookies) to be sent with requests
 }));
 
@@ -120,13 +120,16 @@ app.post("/api/login" ,async (req, res)=>{
             res.status(401).json({msg:"incorrect password" , success: false})
           }else{
             // JWT Token set
-              let token =JWT.sign({email: owner.email , id: owner._id} ,"secrect" , {expiresIn: '4h'})
+              let token =JWT.sign({email: owner.email , id: owner._id} ,"secrect" , {expiresIn: '10h'})
               // console.log(token)
               // set cookie
               res.cookie("token" , token ,{
-                httpOnly:false ,    // Ensures the cookie is only accessible by the server
-                secure:true,          // Set to true if using HTTPS
-                sameSite:'Strict',         // Prevents CSRF attacks
+                httpOnly:false ,   
+                // httpOnly:true,        // Ensures the cookie is only accessible by the server
+                secure:false,                 // Set to true if using HTTPS or set it false
+                // sameSite:'Strict',             // Prevents CSRF attacks
+                sameSite:"none"                        // Allows the cookie to be sent in cross-site requests
+
                 // maxAge: 60 * 60 * 1000 // 1 hour
               })
               res.status(302).json({msg:"successfully login"  , success:true})
