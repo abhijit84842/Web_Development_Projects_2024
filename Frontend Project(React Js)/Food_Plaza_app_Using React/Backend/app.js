@@ -103,7 +103,6 @@ try{
 
 
 // POST login
-
 app.post("/api/login" ,async (req, res)=>{
     // console.log(req.body)
     let {email , password} = req.body
@@ -120,13 +119,15 @@ app.post("/api/login" ,async (req, res)=>{
             res.status(401).json({msg:"incorrect password" , success: false})
           }else{
             // JWT Token set
-              let token =JWT.sign({email: owner.email , id: owner._id} ,"secrect" , {expiresIn: '10h'})
+              let token =JWT.sign({email: owner.email , id: owner._id} ,"secrect" )
               // console.log(token)
               // set cookie
               res.cookie("token" , token ,{
                 httpOnly:false ,   
                 // httpOnly:true,        // Ensures the cookie is only accessible by the server
-                secure:false,                 // Set to true if using HTTPS or set it false
+
+                secure:true,                 // Set to true if using HTTPS or set it false
+                
                 // sameSite:'Strict',             // Prevents CSRF attacks
                 sameSite:"none"                        // Allows the cookie to be sent in cross-site requests
 
@@ -140,6 +141,13 @@ app.post("/api/login" ,async (req, res)=>{
       console.log(err.message)
     }
 
+})
+
+// logout Route
+app.get("/api/logout" , (req,res)=>{
+
+  res.cookie("token" ,"")
+  res.json({msg:"logout" , success:true})
 })
 
 

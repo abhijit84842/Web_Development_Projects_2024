@@ -1,9 +1,23 @@
 import "../Css/admin.css";
 import { Link } from "react-router-dom";
 const AdminPage = () => {
+  const handleLogout = async () => {
+    let res = await fetch("http://localhost:3000/api/logout", {
+      credentials: "include", // include cookies in the request
+    });
+    let data = await res.json();
+    if (data.success) {
+      alert("logout successfully..");
+    } else {
+      alert("logout is not successfull");
+    }
+  };
   return (
     <div className="adminMainContainer">
       <h1>Welcome to Admin Panel</h1>
+      <div>
+        <button onClick={() => handleLogout()}>Logout</button>
+      </div>
       <div className="actionLink">
         <Link className="createAc" to="/admin/createac">
           Create Account
