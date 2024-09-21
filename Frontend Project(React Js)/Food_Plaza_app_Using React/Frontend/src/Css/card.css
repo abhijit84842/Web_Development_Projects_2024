@@ -37,7 +37,7 @@
 }
 
 .card {
-  /* border: solid 1px white; */
+  border: solid 1px white;
   display: flex;
   align-items: center;
   gap: 20px;

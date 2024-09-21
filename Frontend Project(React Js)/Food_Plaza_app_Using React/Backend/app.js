@@ -50,7 +50,7 @@ app.get("/api/fooddata", async(req, res) => {
     if(!data){
       res.json({mgs: "data not found.." , success: false})
     }else{
-      res.json({rslt:data , success : true})
+      res.json({data , success : true})
     }
   }catch(err){
     console.log(err.message)

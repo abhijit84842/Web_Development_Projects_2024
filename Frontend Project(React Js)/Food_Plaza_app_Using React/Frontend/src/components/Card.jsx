@@ -9,7 +9,7 @@ const Card = ({ food }) => {
     <div className="CardSubContainer">
       <div className="mainContainer">
         {food?.map((list) => (
-          <CardList key={list.name} foodList={list} />
+          <CardList key={list._id} foodList={list} />
         ))}
       </div>
     </div>
