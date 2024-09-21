@@ -13,30 +13,54 @@ const AddFoodsPage = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
+    // Create a new FormData object
+    const formData = new FormData();
+
+    // Append the image file to the FormData object
+    formData.append("image", data.image[0]); // Get the first file in case multiple files are selected
+
+    // Append other fields in formData
+    formData.append("name", data.name);
+    formData.append("price", data.price);
+    formData.append("type", data.type);
+    formData.append("description", data.description);
+
+    // console.log(formData);       // The FormData object is not a plain JavaScript object, and its data is not immediately visible when you log it.
+
+    // to see the formData object
+    // for (let [key, value] of formData.entries()) {
+    //   console.log(key, value);
+    // }
+
     let res = await fetch("http://localhost:3000/api/addfood", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      // headers: {
+      //   "Content-Type": "application/json",
+      // },
       credentials: "include", // Include cookies in the request
-      body: JSON.stringify(data),
+      body: formData, // send formData to backend
     });
 
     let result = await res.json();
+    console.log(result);
     if (result.success == false) {
+      alert(result.msg);
+    } else {
       alert(result.msg);
     }
   };
   return (
-    <div className="addFoodMainContainer" onSubmit={handleSubmit(onSubmit)}>
+    <div className="addFoodMainContainer">
       <h1>Add A NEW FOOD </h1>
       <div className="addSubContainer">
-        <form>
+        <form onSubmit={handleSubmit(onSubmit)} encType="multipart/form-data">
           <div className="inputContainer">
-            <input
+            <input // file input for image
               className="fileInput"
               type="file"
-              {...register("image", { required: "image is required" })}
+              id="image"
+              accept="image/*" // Accept only image files
+              {...register("image", { required: "plz upload an image" })}
             />
             {errors.image && (
               <p className="errorMsgForm">{errors.image.message}</p>
