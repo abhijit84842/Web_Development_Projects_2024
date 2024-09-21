@@ -15,7 +15,7 @@ const AdminPage = () => {
   return (
     <div className="adminMainContainer">
       <h1>Welcome to Admin Panel</h1>
-      <div>
+      <div className="logoutButton">
         <button onClick={() => handleLogout()}>Logout</button>
       </div>
       <div className="actionLink">

@@ -1,14 +1,37 @@
-.adminMainContainer{
+/* .adminMainContainer{
 display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
 margin-top: 3rem;
-}
+} */
 
 .adminMainContainer h1{
     color: white;
     font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoutButton{
+    /* border: solid 1px red; */
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 6rem;
+    margin-bottom: 4rem;
+  
+}
+
+.logoutButton button{
+    background-color: yellow;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
 }
 
 .actionLink{
