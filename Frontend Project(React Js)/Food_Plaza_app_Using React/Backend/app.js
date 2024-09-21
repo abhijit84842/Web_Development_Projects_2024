@@ -119,7 +119,7 @@ app.post("/api/login" ,async (req, res)=>{
             res.status(401).json({msg:"incorrect password" , success: false})
           }else{
             // JWT Token set
-              let token =JWT.sign({email: owner.email , id: owner._id} ,"secrect" )
+              let token =JWT.sign({email: owner.email , id: owner._id} ,"secrect" , {expiresIn: "4h"})
               // console.log(token)
               // set cookie
               res.cookie("token" , token ,{

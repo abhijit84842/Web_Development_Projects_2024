@@ -21,6 +21,11 @@ const AddFoodsPage = () => {
       credentials: "include", // Include cookies in the request
       body: JSON.stringify(data),
     });
+
+    let result = await res.json();
+    if (result.success == false) {
+      alert(result.msg);
+    }
   };
   return (
     <div className="addFoodMainContainer" onSubmit={handleSubmit(onSubmit)}>
