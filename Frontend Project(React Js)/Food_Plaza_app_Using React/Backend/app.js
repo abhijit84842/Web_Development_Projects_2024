@@ -42,7 +42,20 @@ app.use(cookieParser())
 
 // Routing API
 
-app.get("/api/fooddata", (req, res) => {});
+app.get("/api/fooddata", async(req, res) => {
+
+  try{
+    await mongoose.connect(URL)
+    let data = await FoodModel.find()
+    if(!data){
+      res.json({mgs: "data not found.." , success: false})
+    }else{
+      res.json({rslt:data , success : true})
+    }
+  }catch(err){
+    console.log(err.message)
+  }
+});
 
 
 // POST API for create Owner AC
