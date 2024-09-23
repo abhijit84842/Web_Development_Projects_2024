@@ -7,8 +7,7 @@ const foodSchema = mongoose.Schema({
     type:String,
     price:String,
     image:{
-        type:String,
-        default:"default.png"
+        type:Buffer,
     }
 })
 

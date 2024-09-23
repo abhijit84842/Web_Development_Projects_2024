@@ -1,21 +1,8 @@
-import { useEffect, useState } from "react";
 import Card from "../components/Card";
 import "../Css/page.css";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
-  const [foodData, setFoodData] = useState(null);
-
-  // fetch food api
-  const fetchFood = async () => {
-    let res = await fetch("http://localhost:3000/api/fooddata");
-    let result = await res.json();
-    setFoodData(result.data);
-  };
-  useEffect(() => {
-    fetchFood();
-  }, []);
-
   return (
     <div className="stopContainer">
       <div className="headingAndAdmin">
@@ -39,7 +26,7 @@ const HomePage = () => {
         <button>Lunch</button>
         <button>Dinner</button>
       </nav>
-      <Card food={foodData} />
+      <Card />
     </div>
   );
 };
