@@ -4,14 +4,29 @@ import "../Css/page.css";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
-  const [foodData, setFoodData] = useState();
+  const [foodType, setFoodType] = useState();
 
-  const [Breakfast, setBreakfast] = useState();
-  const [Lunch, setLunch] = useState();
-  const [Dinner, setDinner] = useState();
-
-  // // fetch food api
+  // Fetch All Foods
   const fetchFood = async () => {
+    let res = await fetch("http://localhost:3000/api/fooddata");
+    let result = await res.json();
+
+    const foodWithImages = result.data.map((food) => {
+      if (food.image) {
+        const base64Image = arrayBufferToBase64(food.image.data);
+        // console.log(base64Image);
+        return { ...food, imageSrc: `data:image/jpeg;base64,${base64Image}` };
+      }
+      return food;
+    });
+
+    // Store in State
+    setFoodType(foodWithImages);
+  };
+
+  // Fetch BreakFast
+
+  const fetchBreakFast = async () => {
     let res = await fetch("http://localhost:3000/api/fooddata");
     let result = await res.json();
 
@@ -28,18 +43,50 @@ const HomePage = () => {
     let breakfastItems = foodWithImages.filter(
       (item) => item.type === "breakfast"
     );
-    setBreakfast(breakfastItems);
+
+    setFoodType(breakfastItems);
+  };
+
+  // Fetch Lunch Food
+  const fetchLunch = async () => {
+    let res = await fetch("http://localhost:3000/api/fooddata");
+    let result = await res.json();
+
+    const foodWithImages = result.data.map((food) => {
+      if (food.image) {
+        const base64Image = arrayBufferToBase64(food.image.data);
+        // console.log(base64Image);
+        return { ...food, imageSrc: `data:image/jpeg;base64,${base64Image}` };
+      }
+      return food;
+    });
 
     // filtering lunch
     let lunchItems = foodWithImages.filter((item) => {
       return item.type === "lunch";
     });
-    setLunch(lunchItems);
+
+    setFoodType(lunchItems);
+  };
+
+  // Fetch Dinner Items
+  const fetchDinner = async () => {
+    let res = await fetch("http://localhost:3000/api/fooddata");
+    let result = await res.json();
+
+    const foodWithImages = result.data.map((food) => {
+      if (food.image) {
+        const base64Image = arrayBufferToBase64(food.image.data);
+        // console.log(base64Image);
+        return { ...food, imageSrc: `data:image/jpeg;base64,${base64Image}` };
+      }
+      return food;
+    });
 
     // filtering dinner
     let dinnerItems = foodWithImages.filter((item) => item.type === "dinner");
 
-    setDinner(dinnerItems);
+    setFoodType(dinnerItems);
   };
 
   // Helper function to convert buffer data to Base64 string
@@ -53,9 +100,9 @@ const HomePage = () => {
     }
     return window.btoa(binary); // Convert binary string to Base64
   };
-  useEffect(() => {
-    fetchFood();
-  }, []);
+  // useEffect(() => {
+  //   fetchFood();
+  // }, []);
 
   return (
     <div className="stopContainer">
@@ -75,12 +122,12 @@ const HomePage = () => {
         </div>
       </div>
       <nav>
-        <button>All</button>
-        <button>Breakfast</button>
-        <button>Lunch</button>
-        <button>Dinner</button>
+        <button onClick={() => fetchFood()}>All</button>
+        <button onClick={() => fetchBreakFast()}>Breakfast</button>
+        <button onClick={() => fetchLunch()}>Lunch</button>
+        <button onClick={() => fetchDinner()}>Dinner</button>
       </nav>
-      <Card />
+      <Card foodtype={foodType} />
     </div>
   );
 };
