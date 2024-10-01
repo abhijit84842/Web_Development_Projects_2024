@@ -34,9 +34,9 @@ const Card = () => {
     }
     return window.btoa(binary); // Convert binary string to Base64
   };
-  useEffect(() => {
-    fetchFood();
-  }, []);
+  // useEffect(() => {
+  //   fetchFood();
+  // }, []);
   // console.log(foodData);
 
   return (
