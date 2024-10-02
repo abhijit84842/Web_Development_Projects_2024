@@ -1,12 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Card from "../components/Card";
 import "../Css/page.css";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
+  const [foodData, setFoodData] = useState();
   const [foodType, setFoodType] = useState();
+  // console.log(foodData);
 
-  // Fetch All Foods
+  // console.log(foodType);
+
+  // Fetch Foods API
   const fetchFood = async () => {
     let res = await fetch("http://localhost:3000/api/fooddata");
     let result = await res.json();
@@ -21,70 +25,37 @@ const HomePage = () => {
     });
 
     // Store in State
+    setFoodData(foodWithImages);
     setFoodType(foodWithImages);
   };
 
-  // Fetch BreakFast
+  // Filter all food
+  const filterAll = () => {
+    setFoodType(foodData);
+  };
 
-  const fetchBreakFast = async () => {
-    let res = await fetch("http://localhost:3000/api/fooddata");
-    let result = await res.json();
-
-    const foodWithImages = result.data.map((food) => {
-      if (food.image) {
-        const base64Image = arrayBufferToBase64(food.image.data);
-        // console.log(base64Image);
-        return { ...food, imageSrc: `data:image/jpeg;base64,${base64Image}` };
-      }
-      return food;
-    });
-
+  // Filter BreakFast
+  const filterBreakFast = () => {
     // filtering breakfast
-    let breakfastItems = foodWithImages.filter(
-      (item) => item.type === "breakfast"
-    );
+    let breakfastItems = foodData?.filter((item) => item.type === "breakfast");
 
     setFoodType(breakfastItems);
   };
 
-  // Fetch Lunch Food
-  const fetchLunch = async () => {
-    let res = await fetch("http://localhost:3000/api/fooddata");
-    let result = await res.json();
-
-    const foodWithImages = result.data.map((food) => {
-      if (food.image) {
-        const base64Image = arrayBufferToBase64(food.image.data);
-        // console.log(base64Image);
-        return { ...food, imageSrc: `data:image/jpeg;base64,${base64Image}` };
-      }
-      return food;
-    });
-
+  // Filter Lunch Food
+  const filterLunch = () => {
     // filtering lunch
-    let lunchItems = foodWithImages.filter((item) => {
+    let lunchItems = foodData?.filter((item) => {
       return item.type === "lunch";
     });
 
     setFoodType(lunchItems);
   };
 
-  // Fetch Dinner Items
-  const fetchDinner = async () => {
-    let res = await fetch("http://localhost:3000/api/fooddata");
-    let result = await res.json();
-
-    const foodWithImages = result.data.map((food) => {
-      if (food.image) {
-        const base64Image = arrayBufferToBase64(food.image.data);
-        // console.log(base64Image);
-        return { ...food, imageSrc: `data:image/jpeg;base64,${base64Image}` };
-      }
-      return food;
-    });
-
+  // Filter Dinner Items
+  const filterDinner = () => {
     // filtering dinner
-    let dinnerItems = foodWithImages.filter((item) => item.type === "dinner");
+    let dinnerItems = foodData?.filter((item) => item.type === "dinner");
 
     setFoodType(dinnerItems);
   };
@@ -100,9 +71,10 @@ const HomePage = () => {
     }
     return window.btoa(binary); // Convert binary string to Base64
   };
-  // useEffect(() => {
-  //   fetchFood();
-  // }, []);
+
+  useEffect(() => {
+    fetchFood();
+  }, []);
 
   return (
     <div className="stopContainer">
@@ -122,10 +94,10 @@ const HomePage = () => {
         </div>
       </div>
       <nav>
-        <button onClick={() => fetchFood()}>All</button>
-        <button onClick={() => fetchBreakFast()}>Breakfast</button>
-        <button onClick={() => fetchLunch()}>Lunch</button>
-        <button onClick={() => fetchDinner()}>Dinner</button>
+        <button onClick={() => filterAll()}>All</button>
+        <button onClick={() => filterBreakFast()}>Breakfast</button>
+        <button onClick={() => filterLunch()}>Lunch</button>
+        <button onClick={() => filterDinner()}>Dinner</button>
       </nav>
       <Card foodtype={foodType} />
     </div>
