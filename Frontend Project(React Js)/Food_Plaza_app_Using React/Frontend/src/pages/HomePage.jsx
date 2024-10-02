@@ -6,9 +6,7 @@ import { Link } from "react-router-dom";
 const HomePage = () => {
   const [foodData, setFoodData] = useState();
   const [foodType, setFoodType] = useState();
-  // console.log(foodData);
-
-  // console.log(foodType);
+  // const [loadBar, setLoadBar] = useState(false);
 
   // Fetch Foods API
   const fetchFood = async () => {
@@ -60,6 +58,15 @@ const HomePage = () => {
     setFoodType(dinnerItems);
   };
 
+  // Search Food
+  const searchFood = (e) => {
+    let inputName = e.target.value.toLowerCase();
+    let searchItem = foodData?.filter((items) =>
+      items.name.toLowerCase().includes(inputName)
+    );
+    setFoodType(searchItem);
+  };
+
   // Helper function to convert buffer data to Base64 string
   // Explanation: -> This function takes the buffer array from the JSON (e.g., food.image.data) and converts it to a Base64 string using Uint8Array and btoa().
   const arrayBufferToBase64 = (buffer) => {
@@ -90,7 +97,11 @@ const HomePage = () => {
           <img src="/Food Plaza.png" alt="loading.." />
         </div>
         <div className="search">
-          <input type="text" placeholder="Search food.." />
+          <input
+            onChange={searchFood}
+            type="text"
+            placeholder="Search food.."
+          />
         </div>
       </div>
       <nav>
