@@ -1,0 +1,48 @@
+/* Container for the loading bar */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  height: 20px;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+/* Loading bar itself */
+.loading-bar {
+  width: 0;
+  height: 100%;
+  background-color: #17e44a;
+  border-radius: 5px;
+  animation: loading-animation 4s ease-in-out infinite;
+}
+
+/* Animation for the loading bar */
+@keyframes loading-animation {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+/* Loading percentage text inside the container */
+.loading-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #e74343;
+  font-weight: bold;
+}

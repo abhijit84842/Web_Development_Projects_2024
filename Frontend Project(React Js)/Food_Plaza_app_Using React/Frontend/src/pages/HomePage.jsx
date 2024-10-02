@@ -1,15 +1,19 @@
+import "../Css/page.css";
 import { useEffect, useState } from "react";
 import Card from "../components/Card";
-import "../Css/page.css";
+
 import { Link } from "react-router-dom";
+
+import LoadingBar from "../components/LoadingBar";
 
 const HomePage = () => {
   const [foodData, setFoodData] = useState();
   const [foodType, setFoodType] = useState();
-  // const [loadBar, setLoadBar] = useState(false);
+  const [loadBar, setLoadBar] = useState(false);
 
   // Fetch Foods API
   const fetchFood = async () => {
+    setLoadBar(true); // show loadbar
     let res = await fetch("http://localhost:3000/api/fooddata");
     let result = await res.json();
 
@@ -25,6 +29,7 @@ const HomePage = () => {
     // Store in State
     setFoodData(foodWithImages);
     setFoodType(foodWithImages);
+    setLoadBar(false);
   };
 
   // Filter all food
@@ -110,7 +115,16 @@ const HomePage = () => {
         <button onClick={() => filterLunch()}>Lunch</button>
         <button onClick={() => filterDinner()}>Dinner</button>
       </nav>
-      <Card foodtype={foodType} />
+
+      <div className="CardSubContainer">
+        {loadBar ? (
+          <div className="load">
+            <LoadingBar />
+          </div>
+        ) : (
+          <Card foodtype={foodType} />
+        )}
+      </div>
     </div>
   );
 };

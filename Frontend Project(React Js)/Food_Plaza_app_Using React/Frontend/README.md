@@ -9,10 +9,11 @@
 * Search Feature -> to get food by search food name
 * Filter -> to get breakfast , lunch , dinner foods
 * Admin Panel -> can add food , can login and create Ac
+* Loading Bar -> Show Loading Bar
 
 <h2>Technology Use</h2>
 <p>Frontend => React Js</p>
-<p>Styling => CSS Module</p>
+<p>Styling => CSS </p>
 <p>Routing => react-router-dom =>   <span>Link => https://reactrouter.com/en/main/start/tutorial</span></p>
 
 <h2> Form Validation</h2>
