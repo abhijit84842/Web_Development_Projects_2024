@@ -116,7 +116,7 @@ const HomePage = () => {
         <button onClick={() => filterDinner()}>Dinner</button>
       </nav>
 
-      <div className="CardSubContainer">
+      <div className="homesubContainer">
         {loadBar ? (
           <div className="load">
             <LoadingBar />

@@ -1,7 +1,4 @@
-.CardSubContainer{
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
+.homesubContainer {
   position: relative;
   border: solid 1px red;
   height: 100vh;
@@ -10,38 +7,33 @@
   background-size: cover;
 }
 
-.load{
+.load {
   display: flex;
   justify-content: center;
 }
 
-.headingAndAdmin{
-  display: flex; 
+.headingAndAdmin {
+  display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  
 }
 
-.adminlogin{
+.adminlogin {
   position: absolute;
   top: 3rem;
   right: 10rem;
- 
 }
-.adminlogin a{
-  padding:3px;
+.adminlogin a {
+  padding: 3px;
   background-color: #ff4343;
   border-radius: 5px;
   font-size: 17px;
- text-decoration: none;
- color: #ffffff;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .h1Tag {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 
   color: white;
   font-size: 50px;
@@ -81,4 +73,47 @@ nav button {
   color: white;
   font-size: 20px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .h1Tag {
+    font-size: 30px;
+  }
+  .logo img {
+    width: 5rem;
+  }
+  .search input {
+    background: transparent;
+    outline: none;
+    padding: 5px;
+    width: 9rem;
+    border: solid 1px red;
+    color: white;
+  }
+  .logoAndSearch {
+    margin-top: 25px;
+    gap: 6rem;
+  }
+
+  .adminlogin {
+    right: 1rem;
+    margin-top: 30px;
+  }
+
+  .adminlogin a {
+    font-size: 15px;
+  }
+
+  nav {
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  nav button {
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 15px;
+  }
+
+  
 }

@@ -11,12 +11,14 @@ const Card = ({ foodtype }) => {
             <div className="card">
               <img src={list.imageSrc} alt="loading" />
               <div>
-                <p>{list.name}</p>
+                <p>
+                  <span className="foodname">{list.name}</span>
+                </p>
                 <p>{list.description}</p>
               </div>
             </div>
             <div className="price">
-              <span>${list.price}</span>
+              <span>$ {list.price}</span>
             </div>
           </div>
         ))}

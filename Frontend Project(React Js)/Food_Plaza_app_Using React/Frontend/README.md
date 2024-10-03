@@ -14,6 +14,7 @@
 <h2>Technology Use</h2>
 <p>Frontend => React Js</p>
 <p>Styling => CSS </p>
+<p>@media quary => Make page responsive for Mobile => iphone 12 Pro , Samsung Galaxy S8+ etc. </p>
 <p>Routing => react-router-dom =>   <span>Link => https://reactrouter.com/en/main/start/tutorial</span></p>
 
 <h2> Form Validation</h2>
