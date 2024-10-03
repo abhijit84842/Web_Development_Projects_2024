@@ -65,3 +65,29 @@ textarea{
     font-weight: 700;
     cursor: pointer;
 }
+
+@media only screen and (max-width:600px){
+  .addSubContainer {
+    width: 80%;
+  
+  }
+  .inputContainer input {
+    width: 15rem;
+
+  }
+  .radioInput {
+   
+    width: 15rem;
+  }
+  .radioInput input {
+    width: 3rem;
+    
+  }
+  textarea{
+    width: 15rem;
+    border-radius: 10px;
+    outline: none; 
+    
+}
+  
+}
