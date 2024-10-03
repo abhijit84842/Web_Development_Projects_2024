@@ -5,9 +5,6 @@
   flex-direction: column;
 }
 
-.addFoodMainContainer h1 {
-}
-
 .addSubContainer {
   border: solid 2px greenyellow;
   padding: 20px;
