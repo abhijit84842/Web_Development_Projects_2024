@@ -1,69 +1,80 @@
-/* .adminMainContainer{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-margin-top: 3rem;
-} */
+.adminMainContainer h1 {
+  color: white;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-.adminMainContainer h1{
-    color: white;
-    font-size: 50px;
+.logoutButton {
+  /* border: solid 1px red; */
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 6rem;
+  margin-bottom: 4rem;
+}
+
+.logoutButton button {
+  background-color: yellow;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.actionLink {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 50px;
+}
+
+.createAc {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: red;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+.adminLogin {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(24, 88, 224);
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+
+.addFoods {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(31, 224, 24);
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .adminMainContainer h1 {
+    font-size: 30px;
+  }
+  .logoutButton {
+    padding-right: 2rem;
+  }
+
+  .logoutButton button {
+    padding: 5px;
+    border-radius: 10px;
+  }
+  .actionLink {
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-
-.logoutButton{
-    /* border: solid 1px red; */
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    padding-right: 6rem;
-    margin-bottom: 4rem;
-  
-}
-
-.logoutButton button{
-    background-color: yellow;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 15px;
-    font-weight: 600;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-}
-
-.actionLink{
-    display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
     gap: 50px;
-
-}
-
-.createAc{
-    padding: 5px;
-    border-radius: 5px;
-    background-color: red;
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-}
-.adminLogin{
-    padding: 5px;
-    border-radius: 5px;
-    background-color: rgb(24, 88, 224);
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-}
-
-.addFoods{
-    padding: 5px;
-    border-radius: 5px;
-    background-color: rgb(31, 224, 24);
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
+  }
 }
