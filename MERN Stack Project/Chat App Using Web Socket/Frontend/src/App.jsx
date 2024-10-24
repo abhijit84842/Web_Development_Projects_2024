@@ -1,16 +1,12 @@
-import { useEffect } from "react";
 import "./App.css";
+import SocketComp from "./components/SocketComp";
 
-async function App() {
-  const fetchApi = async () => {
-    let res = await fetch("http://localhost:3000/api/name");
-    let name = await res.json();
-    return name;
-  };
-  let data = await fetchApi();
-  console.log(data);
-
-  return <div></div>;
+function App() {
+  return (
+    <div>
+      <SocketComp />
+    </div>
+  );
 }
 
 export default App;
