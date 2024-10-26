@@ -27,14 +27,18 @@ const io = new Server(server , {
 
 // Handle new client connections
 io.on("connection" , (socket)=>{        // here socket is basically a client
-    console.log("A new user connected")
-    console.log("id",socket.id)       // client id
+    console.log(`A new user connected => ${socket.id}`)
+    // console.log("id",socket.id)       // client id
 
-    // send a welcome sms to client
-    socket.emit("welcome", `welcome to the server ${socket.id}`)
+    // // send a welcome msg to the client
+    // socket.emit("welcome", `welcome to the server and id is => ${socket.id}`)
+
+    // // broadcast the sms 
+    // socket.broadcast.emit("broadwelcome" , `${socket.id} joind the server`)
 
     // Listen for 'send_message' from client
     socket.on('send_message' , (message)=>{
+      console.log(`new sms is -> ${message} and id is => ${socket.id}`)
    
       io.emit('receive_message', message)   // Broadcast the message to all clients
 

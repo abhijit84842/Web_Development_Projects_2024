@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { io } from "socket.io-client"; // Importing Socket.IO client
 
 const SocketComp = () => {
@@ -14,10 +14,15 @@ const SocketComp = () => {
       console.log("Connected to the server", socket.id);
     });
 
-    // welcome message
-    socket.on("welcome", (msg) => {
-      console.log(msg);
-    });
+    // // welcome message
+    // socket.on("welcome", (msg) => {
+    //   console.log(msg);
+    // });
+
+    // // broadcast msg
+    // socket.on("broadwelcome", (msg) => {
+    //   console.log(msg);
+    // });
 
     // Listen for 'receive_message' event from the server
     socket.on("receive_message", (data) => {
