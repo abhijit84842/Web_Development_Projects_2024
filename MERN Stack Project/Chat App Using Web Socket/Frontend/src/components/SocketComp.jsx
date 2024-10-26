@@ -10,6 +10,15 @@ const SocketComp = () => {
   useEffect(() => {
     const socket = io(SOCKET_SERVER_URL); // Connect to the Socket.IO server
 
+    socket.on("connect", () => {
+      console.log("Connected to the server", socket.id);
+    });
+
+    // welcome message
+    socket.on("welcome", (msg) => {
+      console.log(msg);
+    });
+
     // Listen for 'receive_message' event from the server
     socket.on("receive_message", (data) => {
       setReceivedMessages((prevMessages) => [...prevMessages, data]); // Add new message to list
