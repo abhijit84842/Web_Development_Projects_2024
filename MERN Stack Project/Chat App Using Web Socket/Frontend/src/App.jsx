@@ -44,7 +44,6 @@ function App() {
     // const socket = io("http://localhost:3000"); // Reconnect to the server
     socket.emit("send_message", { message, roomId }); // Emit 'send_message' event , to send message to the server.
     setMessage(""); // Clear input after sending
-    setRoomdId("");
   };
   return (
     <div className="main-container">
