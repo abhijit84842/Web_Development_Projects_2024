@@ -33,10 +33,12 @@ io.on("connection", (socket) => {
   // socket.broadcast.emit("broadwelcome" , `${socket.id} joind the server`)
 
   // Listen for 'send_message' from client
-  socket.on("send_message", (message) => {
-    console.log(`new sms is -> ${message} and id is => ${socket.id}`);
+  socket.on("send_message", (data) => {
+    // send sms to the particular room
+    socket.to(data.roomId).emit("receive_message", data.message);
 
-    io.emit("receive_message", message); // Broadcast the message to all clients
+    // socket.broadcast.emit("receive_message", message) // except the sender sms will be send the all socket or client
+    // io.emit("receive_message", message); // Broadcast the message to all clients(send sms to full curcit)
   });
 
   // Handle client disconnection
