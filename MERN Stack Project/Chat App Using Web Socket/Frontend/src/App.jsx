@@ -3,6 +3,7 @@ import "./App.css";
 import { useEffect, useMemo, useState } from "react";
 
 function App() {
+  // useMemo -> it prevent unnecessay rendering , so that io("http://localhost:3000") it not connecte with socket server again and again.(and also prevent new socket id generate)
   const socket = useMemo(() => io("http://localhost:3000"), []); // connected to the socket server
 
   const [message, setMessage] = useState(); // store the user input
