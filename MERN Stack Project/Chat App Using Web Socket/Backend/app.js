@@ -41,6 +41,12 @@ io.on("connection", (socket) => {
     // io.emit("receive_message", message); // Broadcast the message to all clients(send sms to full curcit)
   });
 
+  // listen group message event..
+  socket.on("send_groupname" , (grpName)=>{
+    // console.log(grpName)
+    socket.join(grpName)
+  })
+
   // Handle client disconnection
   socket.on("disconnect", () => {
     console.log("USER DISCONNECTED => ", socket.id);

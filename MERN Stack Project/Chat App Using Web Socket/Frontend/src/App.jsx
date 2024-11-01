@@ -10,6 +10,7 @@ function App() {
   const [receivedMessages, setReceivedMessages] = useState([]); // to store the messages coming from server
   const [room, setRoom] = useState(); // to store the my room id
   const [roomId, setRoomdId] = useState(); // to store the destination room id
+  const [groupName, setGroupName] = useState();
 
   useEffect(() => {
     socket.on("connect", () => {
@@ -45,11 +46,26 @@ function App() {
     socket.emit("send_message", { message, roomId }); // Emit 'send_message' event , to send message to the server.
     setMessage(""); // Clear input after sending
   };
+
+  // Funtion to create Group
+  const handleGroup = () => {
+    socket.emit("send_groupname", groupName);
+    setGroupName("");
+  };
   return (
     <div className="main-container">
       <h1>Simple Chat Application Using Web Socket</h1>
       <div>
         <p>My Room id is = {room}</p>
+      </div>
+      <div className="create-group">
+        <input
+          type="text"
+          value={groupName}
+          onChange={(e) => setGroupName(e.target.value)}
+          placeholder="Group Name"
+        />
+        <button onClick={() => handleGroup()}>Join Group</button>
       </div>
       <div className="input-container">
         <input
