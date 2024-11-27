@@ -3,17 +3,34 @@ const NavBar = () => {
   return (
     <div className="nav-main-container">
       <div className="nav-sub-container">
+        <div className="nav-logo">
+          <img src="logo.png" alt="loading.." />
+        </div>
         <div className="nav-left-container">
-          <div>Home</div>
-          <div>Book</div>
-          <div>Packages</div>
-          <div>Services</div>
-          <div>Gallery</div>
-          <div>Review</div>
-          <div>Contact</div>
+          <div>
+            <a href="#">Home</a>
+          </div>
+          <div>
+            <a href="#">Book</a>
+          </div>
+          <div>
+            <a href="#">Packages</a>
+          </div>
+          <div>
+            <a href="#">Services</a>
+          </div>
+          <div>
+            <a href="#">Gallery</a>
+          </div>
+          <div>
+            <a href="#">Review</a>
+          </div>
+          <div>
+            <a href="#">Contact</a>
+          </div>
         </div>
         <div className="nav-right-container">
-          <div>Login</div>
+          <div className="login">Login</div>
           <div className="input-box">
             <input type="text" placeholder="search the palce" />
             <button>Search</button>

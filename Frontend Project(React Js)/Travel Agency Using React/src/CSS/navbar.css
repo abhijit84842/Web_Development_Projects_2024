@@ -1,20 +1,28 @@
 .nav-main-container{
-    background-color: #d4d4d8;
+    background-color: #18181b;
 }
 
 .nav-sub-container{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
    align-items: center;
    padding: 10px;
 }
-
+.nav-logo{
+    margin-left: 10px;
+  
+}
+.nav-logo img{
+ height: 50px;
+ background: transparent;
+}
 .nav-left-container{
     display: flex;
     justify-content: center;
     gap: 30px;
     font-size: 20px;
     font-weight: 500;
+    color:#ffff;
 }
 .nav-right-container{
     display: flex;
@@ -22,6 +30,13 @@
     gap: 50px;
     font-size: 20px;
     font-weight: 500;
+    color:#ffff;
+    margin-right: 10px;
+
+}
+
+.login{
+    color: red;
 }
 
 .input-box{
@@ -34,10 +49,17 @@
     padding: 5px;
     outline: none;
     border-radius: 10px;
+    border: none;
 }
 
 .input-box button{
     padding: 5px;
     font-size: 15px;
     border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: #22c55e;
+    cursor: pointer;
+    color: #ffff;
+    font-weight: 500;
 }
