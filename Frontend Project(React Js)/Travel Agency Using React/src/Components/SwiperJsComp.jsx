@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 import "../CSS/swiperjscomp.css";
 
 // import required modules
-import { Parallax, Pagination, Navigation } from "swiper/modules";
+import { Parallax, Pagination, Navigation, Autoplay } from "swiper/modules";
 
 const SwiperJsComp = () => {
   return (
@@ -24,7 +24,12 @@ const SwiperJsComp = () => {
           clickable: true,
         }}
         navigation={true}
-        modules={[Parallax, Pagination, Navigation]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        modules={[Parallax, Pagination, Navigation, Autoplay]}
         className="mySwiper"
       >
         <SwiperSlide>
