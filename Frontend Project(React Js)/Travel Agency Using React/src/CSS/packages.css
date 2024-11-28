@@ -1,0 +1,70 @@
+.package-container{
+    /* background-color: aqua; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.package-container h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.card-container{
+    background-color: rgb(123, 126, 126);
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    padding: 50px;
+    margin: 30px;
+    border-radius: 20px;
+}
+
+.card{
+    background-color: #ebeef1;
+    padding: 10px;
+}
+.card img{
+    height: 15rem;
+    width: 20rem;
+    border-radius: 10px;
+}
+
+.city-name{
+   
+    font-size: 30px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+.subtitle{
+    font-size: 20px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.rating-box{
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+}
+
+.price-box{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.button-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.book-button{
+ padding: 5px;
+ font-size: 20px;
+ font-weight: 540;
+ border-radius: 10px;
+
+}
