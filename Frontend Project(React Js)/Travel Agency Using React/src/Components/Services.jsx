@@ -12,7 +12,7 @@ const Services = () => {
   return (
     <div className="services-main-container">
       <h1>Our Best Sevices For You</h1>
-      <div className="sub-container">
+      <div className="services-sub-container">
         <div className="service">
           <div className="icon">
             <FaHotel style={{ color: "#f97316" }} size={100} />

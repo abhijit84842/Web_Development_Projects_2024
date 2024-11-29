@@ -12,7 +12,7 @@
 }
 
 .card-container {
-  background-color: rgb(123, 126, 126);
+  /* background-color: rgb(123, 126, 126); */
   display: flex;
   justify-content: center;
   gap: 50px;

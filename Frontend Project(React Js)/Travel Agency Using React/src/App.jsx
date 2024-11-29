@@ -3,6 +3,7 @@ import NavBar from "./Components/NavBar";
 import Packages from "./Components/Packages";
 import Services from "./Components/Services";
 import SwiperJsComp from "./Components/SwiperJsComp";
+import Gallery from "./Components/Gallery";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <SwiperJsComp />
       <Packages />
       <Services />
+      <Gallery />
     </>
   );
 }

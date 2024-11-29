@@ -1,0 +1,28 @@
+.gallery-main-container{
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.gallery-sub-container{
+    /* background-color: rgb(17, 245, 169); */
+    width: 90%;
+    
+    padding: 50px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.gallery-sub-container img{
+    width: 20rem;
+    height: 22rem;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
