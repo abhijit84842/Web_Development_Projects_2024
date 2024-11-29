@@ -16,10 +16,11 @@ h1{
     margin-top: 40px;
     /* background-color: rgb(26, 223, 157); */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-evenly;
+    /* align-items: center; */
     gap: 50px;
     flex-wrap: wrap;
+   
   
 }
 
