@@ -61,29 +61,34 @@ const BookNow = () => {
                 <p className="errorMsgForm">{errors.numOfPerson.message}</p>
               )}
 
-              <div className="phno-box">
-                <div className="country-code">+91</div>
+              <div className="phno-box-main">
+                <div className="phno-box-sub">
+                  <div className="country-code">+91</div>
 
-                <input
-                  className="ph-input-field"
-                  type="tel"
-                  {...register("phno", {
-                    required: "ph no is required..",
-                    minLength: {
-                      value: 10,
-                      message: "number should be 10 digits...",
-                    },
-                    maxLength: {
-                      value: 10,
-                      message: "number should be 10 digits ",
-                    },
-                  })}
-                  placeholder="enter your ph number.."
-                />
+                  <input
+                    className="ph-input-field"
+                    type="tel"
+                    {...register("phno", {
+                      required: "ph no is required..",
+                      minLength: {
+                        value: 10,
+                        message: "number should be 10 digits...",
+                      },
+                      maxLength: {
+                        value: 10,
+                        message: "number should be 10 digits ",
+                      },
+                    })}
+                    placeholder="enter your ph number.."
+                  />
+                </div>
+
+                <div className="ph-error-msg">
+                  {errors.phno && (
+                    <p className="errorMsgForm">{errors.phno.message}</p>
+                  )}
+                </div>
               </div>
-              {errors.phno && (
-                <p className="errorMsgForm">{errors.phno.message}</p>
-              )}
             </div>
             <div className="submit-button">
               <button type="submit">Book</button>

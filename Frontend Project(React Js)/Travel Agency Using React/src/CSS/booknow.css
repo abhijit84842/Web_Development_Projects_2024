@@ -52,7 +52,7 @@
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.phno-box {
+.phno-box-sub{
   display: flex;
   align-items: center;
   gap: 10px;
@@ -66,7 +66,7 @@
   font-weight: 600;
 }
 
-.phno-box input {
+.phno-box-sub input {
   width: 17.5rem;
 }
 .submit-button {
@@ -87,4 +87,10 @@
 
 .errorMsgForm{
     color: red;
+}
+.ph-error-msg{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
