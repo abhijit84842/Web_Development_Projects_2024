@@ -1,20 +1,76 @@
-.booknow-main-container{
-    /* background-color: aqua; */
-    padding: 50px;
+.booknow-main-container {
+  /* background-color: aqua; */
+  padding: 50px;
 }
 
-.booknow-sub-container{
-    background-color: rgb(29, 235, 166);
+.booknow-sub-container {
+  
 
-    margin-top: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+
+}
+/* .left-container{
+    background-color: blue;
+} */
+
+.left-container img {
+
+  width: 25rem;
+  height: 35rem;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.right-container {
+  
+  background-color: rgb(238, 231, 231);
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+ 
+}
+.formTag{
+    padding: 10px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 50px;
+    flex-direction: column;
+    gap: 20px;
+}
+.inputfiled{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.inputfiled input{
+padding: 7px;
+width: 20rem;
+border-radius: 20px;
+outline: none;
+border: none;
+font-size: 15px;
+
+box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.left-container img{
-width: 25rem;
-height: 35rem;
-object-fit: cover;
+.submit-button{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.submit-button button{
+    padding: 9px;
+    width: 50%;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+
 }
