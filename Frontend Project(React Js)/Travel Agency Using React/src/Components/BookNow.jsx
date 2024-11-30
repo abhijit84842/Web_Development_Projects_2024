@@ -30,6 +30,16 @@ const BookNow = () => {
             <div className="inputfiled">
               <input
                 type="text"
+                {...register("name", {
+                  required: "this filed is required..",
+                })}
+                placeholder="Enter your name.."
+              />
+              {errors.name && (
+                <p className="errorMsgForm">{errors.name.message}</p>
+              )}
+              <input
+                type="text"
                 {...register("where", {
                   required: "this field is required..",
                 })}
@@ -88,6 +98,35 @@ const BookNow = () => {
                     <p className="errorMsgForm">{errors.phno.message}</p>
                   )}
                 </div>
+              </div>
+              <div className="arrivals-box">
+                <label htmlFor="Arrivals" className="arrivals">
+                  Arrivals
+                </label>
+                <input
+                  type="date"
+                  {...register("arrivalsDate", {
+                    required: "plz enter the date..",
+                  })}
+                />
+                {errors.arrivalsDate && (
+                  <p className="errorMsgForm">{errors.arrivalsDate.message}</p>
+                )}
+              </div>
+
+              <div className="leaving-box">
+                <label htmlFor="leaving" className="leaving">
+                  Leaving
+                </label>
+                <input
+                  type="date"
+                  {...register("leavingDate", {
+                    required: "plz enter the date..",
+                  })}
+                />
+                {errors.leavingDate && (
+                  <p className="errorMsgForm">{errors.leavingDate.message}</p>
+                )}
               </div>
             </div>
             <div className="submit-button">

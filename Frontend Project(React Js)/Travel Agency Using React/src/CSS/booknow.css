@@ -94,3 +94,24 @@
     justify-content: center;
     align-items: center;
 }
+.arrivals-box{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.arrivals{
+   
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.leaving-box{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+.leaving{
+    font-size: 20px;
+    font-weight: 600;  
+}
