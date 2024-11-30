@@ -37,7 +37,7 @@ const SwiperJsComp = () => {
             className="parallax-bg"
             slot="container-start"
             style={{
-              "background-image": "url(tokyo.jpg)",
+              backgroundImage: "url(tokyo.jpg)",
             }}
             data-swiper-parallax="-23%"
           ></div>
@@ -64,7 +64,7 @@ const SwiperJsComp = () => {
             className="parallax-bg"
             slot="container-start"
             style={{
-              "background-image": "url(malaysia.jpg)",
+              backgroundImage: "url(malaysia.jpg)",
             }}
             data-swiper-parallax="-23%"
           ></div>
@@ -91,7 +91,7 @@ const SwiperJsComp = () => {
             className="parallax-bg"
             slot="container-start"
             style={{
-              "background-image": "url(egypt.png)",
+              backgroundImage: "url(egypt.png)",
             }}
             data-swiper-parallax="-23%"
           ></div>
@@ -118,7 +118,7 @@ const SwiperJsComp = () => {
             className="parallax-bg"
             slot="container-start"
             style={{
-              "background-image": "url(thailand.jpg)",
+              backgroundImage: "url(thailand.jpg)",
             }}
             data-swiper-parallax="-23%"
           ></div>
@@ -145,7 +145,7 @@ const SwiperJsComp = () => {
             className="parallax-bg"
             slot="container-start"
             style={{
-              "background-image": "url(dubai.jpg)",
+              backgroundImage: "url(dubai.jpg)",
             }}
             data-swiper-parallax="-23%"
           ></div>
