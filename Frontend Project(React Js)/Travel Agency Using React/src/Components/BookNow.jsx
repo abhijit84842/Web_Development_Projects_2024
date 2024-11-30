@@ -130,7 +130,9 @@ const BookNow = () => {
               </div>
             </div>
             <div className="submit-button">
-              <button type="submit">Book</button>
+              <button type="submit" className="book-button">
+                Book
+              </button>
             </div>
           </form>
         </div>

@@ -77,13 +77,37 @@
 
 .submit-button button {
   padding: 9px;
-  width: 50%;
+  width: 60%;
   font-size: 20px;
   font-weight: 600;
   border-radius: 20px;
   border: none;
   cursor: pointer;
 }
+
+
+.book-button {background-image: linear-gradient(to right, #FF512F 0%, #DD2476  51%, #FF512F  100%)}
+.book-button {
+   margin: 10px;
+   padding: 15px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ .book-button:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+   box-shadow: rgba(223, 24, 24, 0.25) 0px 14px 28px,
+   rgba(252, 201, 201, 0.22) 0px 10px 10px;
+ }
+
 
 .errorMsgForm{
     color: red;
