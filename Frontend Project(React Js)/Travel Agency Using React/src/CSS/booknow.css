@@ -4,7 +4,7 @@
 }
 
 .booknow-sub-container {
-  margin-top: 20px;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
 }
@@ -25,6 +25,9 @@
   padding: 20px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.right-container h1 {
+  color: #f97316;
 }
 .formTag {
   padding: 10px;
@@ -52,7 +55,7 @@
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.phno-box-sub{
+.phno-box-sub {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -85,57 +88,61 @@
   cursor: pointer;
 }
 
-
-.book-button {background-image: linear-gradient(to right, #FF512F 0%, #DD2476  51%, #FF512F  100%)}
 .book-button {
-   margin: 10px;
-   padding: 15px 45px;
-   text-align: center;
-   text-transform: uppercase;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: white;            
-   box-shadow: 0 0 20px #eee;
-   border-radius: 10px;
-   display: block;
- }
-
- .book-button:hover {
-   background-position: right center; /* change the direction of the change here */
-   color: #fff;
-   text-decoration: none;
-   box-shadow: rgba(223, 24, 24, 0.25) 0px 14px 28px,
-   rgba(252, 201, 201, 0.22) 0px 10px 10px;
- }
-
-
-.errorMsgForm{
-    color: red;
+  background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #dd2476 51%,
+    #ff512f 100%
+  );
 }
-.ph-error-msg{
-    margin-top: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.arrivals-box{
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
+.book-button {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
 }
 
-.arrivals{
-   
-    font-size: 20px;
-    font-weight: 600;
+.book-button:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+  box-shadow: rgba(223, 24, 24, 0.25) 0px 14px 28px,
+    rgba(252, 201, 201, 0.22) 0px 10px 10px;
 }
 
-.leaving-box{
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
+.errorMsgForm {
+  color: red;
 }
-.leaving{
-    font-size: 20px;
-    font-weight: 600;  
+.ph-error-msg {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrivals-box {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.arrivals {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.leaving-box {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.leaving {
+  font-size: 20px;
+  font-weight: 600;
 }
