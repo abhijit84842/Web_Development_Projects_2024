@@ -1,0 +1,20 @@
+.booknow-main-container{
+    /* background-color: aqua; */
+    padding: 50px;
+}
+
+.booknow-sub-container{
+    background-color: rgb(29, 235, 166);
+
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.left-container img{
+width: 25rem;
+height: 35rem;
+object-fit: cover;
+}

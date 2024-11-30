@@ -4,6 +4,7 @@ import Packages from "./Components/Packages";
 import Services from "./Components/Services";
 import SwiperJsComp from "./Components/SwiperJsComp";
 import Gallery from "./Components/Gallery";
+import BookNow from "./Components/BookNow";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <SwiperJsComp />
       <Packages />
       <Services />
+      <BookNow />
       <Gallery />
     </>
   );
