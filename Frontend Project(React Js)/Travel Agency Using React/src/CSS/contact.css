@@ -1,0 +1,70 @@
+.contact-main-container{
+    /* background-color: aqua; */
+    margin-top: 20px;
+}
+
+.contact-subcontainer{
+    /* background-color: rgb(25, 224, 158); */
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around; 
+    padding: 20px;
+}
+
+.contact-image-box img{
+    width: 32rem;
+    height: 28rem;
+    border-radius: 30px;
+}
+
+.contact-form{
+background-color: rgb(231, 235, 238);
+border-radius: 20px;
+box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+
+}
+
+.form-box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  
+}
+
+.form-box input{
+width: 16rem;
+padding: 8px;
+border-radius: 20px;
+border: none;
+outline: none;
+}
+.text-sms{
+    height: 10rem;
+    border-radius: 10px;
+    outline: none;
+}
+
+.contact-button {background-image: linear-gradient(to right, #FF4E50 0%, #F9D423  51%, #FF4E50  100%)}
+.contact-button {
+   margin: 5px;
+   padding: 15px 30px;
+   border: none;
+   text-align: center;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 20px;
+   display: block;
+   font-size: 17px;
+   font-weight: 600;
+ }
+
+ .contact-button:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ }

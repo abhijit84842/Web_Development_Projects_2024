@@ -6,6 +6,7 @@ import SwiperJsComp from "./Components/SwiperJsComp";
 import Gallery from "./Components/Gallery";
 import BookNow from "./Components/BookNow";
 import Review from "./Components/Review";
+import Contact from "./Components/Contact";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <BookNow />
       <Gallery />
       <Review />
+      <Contact />
     </>
   );
 }
