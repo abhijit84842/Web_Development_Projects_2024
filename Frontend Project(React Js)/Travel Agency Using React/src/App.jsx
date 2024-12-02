@@ -7,6 +7,7 @@ import Gallery from "./Components/Gallery";
 import BookNow from "./Components/BookNow";
 import Review from "./Components/Review";
 import Contact from "./Components/Contact";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Gallery />
       <Review />
       <Contact />
+      <Footer />
     </>
   );
 }
