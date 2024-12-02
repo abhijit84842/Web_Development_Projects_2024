@@ -5,7 +5,10 @@ import { IoIosStar } from "react-icons/io"; // Star Rating icon
 import { IoStarOutline } from "react-icons/io5";
 import { IoIosStarHalf } from "react-icons/io";
 
+// customer images import
 import abhijit from "../assets/images/reviewimages/abhijit.jpg";
+import ayan from "../assets/images/reviewimages/ayan.jpg";
+import rajat from "../assets/images/reviewimages/rajat.jpg";
 
 const Review = () => {
   return (
@@ -52,18 +55,17 @@ const Review = () => {
         </div>
         <div className="review-card">
           <div className="customer-img-box">
-            <img src={abhijit} alt="loading.." />
+            <img src={ayan} alt="loading.." />
           </div>
 
           <div className="customer-details">
-            <p className="customer-name">Abhijit Das</p>
+            <p className="customer-name">Ayan Munshi</p>
             <p className="customer-review">
-              I recently booked a vacation through ViewWorld Travel Agency, and
-              I couldn't be happier with their service. They handled everything
-              professionally, from ticket booking to accommodation. Their staff
-              was friendly, responsive, and always ready to help. It was a
-              stress-free experience, and I'll definitely choose them for my
-              future travels!
+              ViewWorld Travel Agency exceeded my expectations with their
+              outstanding customer service. They took the time to understand my
+              travel preferences and created a perfect itinerary. Any concerns I
+              had were promptly addressed, making my trip smooth and enjoyable.
+              Highly recommend their services!
             </p>
             <div className="review-rating">
               <div>
@@ -91,18 +93,17 @@ const Review = () => {
 
         <div className="review-card">
           <div className="customer-img-box">
-            <img src={abhijit} alt="loading.." />
+            <img src={rajat} alt="loading.." />
           </div>
 
           <div className="customer-details">
-            <p className="customer-name">Abhijit Das</p>
+            <p className="customer-name">Rajat Ghose</p>
             <p className="customer-review">
-              I recently booked a vacation through ViewWorld Travel Agency, and
-              I couldn't be happier with their service. They handled everything
-              professionally, from ticket booking to accommodation. Their staff
-              was friendly, responsive, and always ready to help. It was a
-              stress-free experience, and I'll definitely choose them for my
-              future travels!
+              Planning a trip has never been this easy, thanks to ViewWorld
+              Travel Agency. They provided great options that suited my budget
+              and needs. Everything was arranged seamlessly, allowing me to
+              focus on enjoying my vacation. I'll be recommending them to all my
+              friends and family!
             </p>
             <div className="review-rating">
               <div>
