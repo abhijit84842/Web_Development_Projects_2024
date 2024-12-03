@@ -66,6 +66,10 @@
 }
 
 .blankdiv{
-
   border: solid 1px black;
+}
+
+.city-desc{
+  line-height: 1.3;
+  letter-spacing: 1px;
 }

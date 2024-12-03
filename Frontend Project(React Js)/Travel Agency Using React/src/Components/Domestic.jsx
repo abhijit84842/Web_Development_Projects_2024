@@ -40,16 +40,16 @@ const Domestic = () => {
           </div>
           <div className="icons-activity">
             <div className="place">
-              <FaEarthAmericas />
+              <FaEarthAmericas style={{ color: "blue" }} />
               <p>1 Place</p>
             </div>
             <div className="activity-box">
-              <MdOutlineSportsVolleyball />
+              <MdOutlineSportsVolleyball style={{ color: "red" }} />
               <p>4 Activity</p>
             </div>
           </div>
           <div className="blankdiv"></div>
-          <div>
+          <div className="city-desc">
             The queen of beaches, Goa is the smallest city in India, but it
             invites most of the attractive places in its vicinity. The
             nightlife, alluring sand beaches, sacred sites and the world-class
