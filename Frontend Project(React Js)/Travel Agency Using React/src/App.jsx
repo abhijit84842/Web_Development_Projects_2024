@@ -1,4 +1,4 @@
-import "./App.css";
+// import "./App.css";
 import NavBar from "./Components/NavBar";
 import Packages from "./Components/Packages";
 import Services from "./Components/Services";
@@ -8,6 +8,7 @@ import BookNow from "./Components/BookNow";
 import Review from "./Components/Review";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
+import Domestic from "./Components/Domestic";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <NavBar />
       <SwiperJsComp />
       <Packages />
+      <Domestic />
       <Services />
       <BookNow />
       <Gallery />
