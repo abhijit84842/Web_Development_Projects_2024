@@ -5,6 +5,9 @@ import "../CSS/domestic.css";
 import dubai from "../assets/images/internationalimages/dubai.jpg";
 import egypt from "../assets/images/internationalimages/egypt.jpg";
 import singapore from "../assets/images/internationalimages/singapore.jpg";
+import thailand from "../assets/images/internationalimages/thailand.jpg";
+import malaysia from "../assets/images/internationalimages/malaysia.jpg";
+import hongkong from "../assets/images/internationalimages/hongkong.jpg";
 
 // react icons
 import { FaEarthAmericas } from "react-icons/fa6";
@@ -30,11 +33,11 @@ const International = () => {
         pagination={{
           clickable: true,
         }}
-        // autoplay={{
-        //   delay: 2500,
-        //   disableOnInteraction: false,
-        // }}
-        // loop={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        loop={true}
         modules={[Pagination, Autoplay]}
         className="swipercomp" // need unic classname to avoid css conflict
       >
@@ -157,12 +160,12 @@ const International = () => {
           {" "}
           <div className="slide-card">
             <div className="img-box">
-              <img src="" alt="loading.." />
+              <img src={thailand} alt="loading.." />
             </div>
 
-            <h2 className="domestic-name">Himachal-State Shrouded in Snow</h2>
+            <h2 className="domestic-name">Honeymoon Paradise Thailand</h2>
             <div className="activity">
-              <p>City Tours</p>
+              <p>Beach, City Tours, Family, Honeymoon</p>
             </div>
             <div className="icons-activity">
               <div className="place">
@@ -171,22 +174,23 @@ const International = () => {
               </div>
               <div className="activity-box">
                 <MdOutlineSportsVolleyball style={{ color: "red" }} />
-                <p>1 Activity</p>
+                <p>4 Activity</p>
               </div>
             </div>
             <div className="blankdiv"></div>
             <div className="city-desc">
               <p>
                 {" "}
-                Himachal Pradesh literally means ‘Land Covered in Snow’. This
-                North Indian state nestled in the Himalayas is basically divided
-                into two halves with Shimla, the capital in the centre
+                It’s good to get lost in the heart of Southeast Asia. Thailand
+                is an exotic tourist destination with lush vistas and opulent
+                ancient traditions. The country fascinates a visitor with its
+                islands, beaches, ancient monuments, temples and palaces.
               </p>
             </div>
             <div className="blankdiv-2nd"></div>
             <div className="tour-price">
               <p>
-                ₹ <span>16,500.00</span>
+                ₹ <span>25,500.00</span>
               </p>
             </div>
           </div>
@@ -195,14 +199,12 @@ const International = () => {
           {" "}
           <div className="slide-card">
             <div className="img-box">
-              <img src="" alt="loading.." />
+              <img src={malaysia} alt="loading.." />
             </div>
 
-            <h2 className="domestic-name">
-              Kashmir – The Amazing natural Beauty
-            </h2>
+            <h2 className="domestic-name">Incredible Malaysia and Bali</h2>
             <div className="activity">
-              <p>City Tours, Jungle, Mountain, Safari</p>
+              <p>Beach, City Tours, Jungle, Mountain, Safari</p>
             </div>
             <div className="icons-activity">
               <div className="place">
@@ -218,9 +220,10 @@ const International = () => {
             <div className="city-desc">
               <p>
                 {" "}
-                Kashmir is a haven of natural beauty, often called "Paradise on
-                Earth." The shimmering Dal Lake, surrounded by houseboats and
-                floating gardens, adds a magical charm.
+                Malaysia is a beautiful Southeast Asian country. Malaysia is
+                known for its magnificent beaches, rainforests. Bali is an
+                Indonesian island. Bali is known for its iconic beaches,
+                Mountains
               </p>
             </div>
             <div className="blankdiv-2nd"></div>
@@ -235,15 +238,12 @@ const International = () => {
           {" "}
           <div className="slide-card">
             <div className="img-box">
-              <img src="" alt="loading.." />
+              <img src={hongkong} alt="loading.." />
             </div>
 
-            <h2 className="domestic-name">Kerala –The Beautiful Land</h2>
+            <h2 className="domestic-name">Splendid City Hong Kong</h2>
             <div className="activity">
-              <p>
-                Beach, City Tours, Family, Hill Stations, Jungle, Mountain,
-                Safari
-              </p>
+              <p>Beach, City Tours</p>
             </div>
             <div className="icons-activity">
               <div className="place">
@@ -252,22 +252,23 @@ const International = () => {
               </div>
               <div className="activity-box">
                 <MdOutlineSportsVolleyball style={{ color: "red" }} />
-                <p>7 Activity</p>
+                <p>2 Activity</p>
               </div>
             </div>
             <div className="blankdiv"></div>
             <div className="city-desc">
               <p>
                 {" "}
-                God’s Own country, Kerala is one of the most popular tourist
-                destinations in India. Kerala is famous especially because of
-                the unmatched natural beauty.
+                HongKong is one of the most favorite tourist destinations around
+                the world because of its unique culture, skyline, beautiful
+                surroundings covered with natural flora. There many fascination
+                neighborhood places to explore during your HongKong trip.
               </p>
             </div>
             <div className="blankdiv-2nd"></div>
             <div className="tour-price">
               <p>
-                ₹ <span>32,500.00</span>
+                ₹ <span>55,500.00</span>
               </p>
             </div>
           </div>
