@@ -1,24 +1,71 @@
- .swipercomp .swiper {
-    width: 100%;
-    height: 100%;
-  }
+.domestic-main-container {
+  width: 100%;
+}
+.swipercomp {
+  margin-top: 30px;
+  background-color: #ffffff;
+  width: 90%;
+  height: 100%;
+  padding: 10px;
+  border-radius: 10px;
+}
+/* .swiper is pre define class */
+.swipercomp .swiper {
+  width: 100%;
+  height: 100%;
+}
 
-  .swipercomp .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #f83b3b;
-    color: rgb(116, 175, 38);
-  
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
-  .swipercomp .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
+/* .swiper-slide is pre define class */
+.swipercomp .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #ebeef1;
+  color: rgb(0, 0, 0);
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+  padding: 35px;
+
+}
+/*.swiper-slide img is pre define class */
+.swipercomp .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.domestic-name {
+ color: orangered;
+}
+
+.activity{
+  display: flex;
+  justify-content: start;
+}
+
+.icons-activity{
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+}
+.place{
+  display: flex;
+  gap: 5px;
+}
+.activity-box{
+  display: flex;
+  justify-content: start;
+  gap: 5px;
+}
+
+.blankdiv{
+
+  border: solid 1px black;
+}
