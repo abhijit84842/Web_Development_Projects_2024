@@ -9,6 +9,7 @@ import Review from "./Components/Review";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import Domestic from "./Components/Domestic";
+import International from "./Components/International";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <SwiperJsComp />
       <Packages />
       <Domestic />
+      <International />
       <Services />
       <BookNow />
       <Gallery />
