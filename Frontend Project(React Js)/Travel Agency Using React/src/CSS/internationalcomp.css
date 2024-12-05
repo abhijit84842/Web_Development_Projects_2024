@@ -1,0 +1,135 @@
+.international-main-container h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+  }
+  
+  .international-sub-container {
+    padding: 50px;
+  }
+  
+
+
+
+/*--------------------Swiper class css start*/
+.thirdSwiper {
+    background-color: rgb(245, 242, 242);
+    height: 110vh;
+    border-radius: 20px;
+  }
+  .thirdSwiper .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .thirdSwiper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background:  #dee1e4;
+  
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+  }
+  .thirdSwiper .swiper-slide img {
+    width: 23rem;
+    height: 18rem;
+    object-fit: cover;
+    border-radius: 10px;
+  } 
+  /* -------------------------------------Swiper class css  End*/
+
+
+  .international-slide-card{
+    /* background-color: rgb(19, 226, 157); */
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+   
+  }
+  
+
+.international-img-box{
+    display: flex;
+    justify-content: center;
+  
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  
+  .international-name{
+    width: 100%;
+    max-width: 100%;
+    height: 10%;
+    max-height: 20%;
+    /* background-color: rgb(44, 243, 200); */
+    text-align: center;
+   color: orangered;
+  }
+  
+  
+  
+  
+  .international-activity{
+    /* background-color: aqua; */
+    height: 4rem;
+    max-height: 4rem;
+    display: flex;
+    justify-content: start;
+    margin-left: 10px;
+  }
+  
+  .international-icons-activity{
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    margin-left: 10px;
+  }
+.international-place{
+    display: flex;
+    gap: 5px;
+  }
+  .international-activity-box{
+    display: flex;
+    justify-content: start;
+    gap: 5px;
+  }
+  
+  .international-blankdiv{
+    border: solid 1px black;
+  }
+  .international-blankdiv-2nd{
+    width: 100%;
+    border: solid 1px rgb(250, 47, 47);
+  }
+  
+  .international-city-desc{
+    height: 10rem;
+    min-height: 10rem;
+   
+    padding: 5px;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: 1px;
+   
+  }
+  .international-tour-price{
+  
+  display: flex;
+  justify-content: start;
+  }
+  .international-tour-price p{
+    font-size: 20px;
+  }
+  .international-tour-price span{
+  color: red;
+  font-weight: 550;
+  } 

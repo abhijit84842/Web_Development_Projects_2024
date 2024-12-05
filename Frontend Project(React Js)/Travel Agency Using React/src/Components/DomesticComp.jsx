@@ -1,5 +1,3 @@
-import "../CSS/domesticcomp.css";
-
 // images import
 import goa from "../assets/images/domesticimages/goa.jpg";
 import rajashtan from "../assets/images/domesticimages/rajashtan.jpg";

@@ -1,6 +1,4 @@
-.domestic-main-container {
-  /* background-color: aqua; */
-}
+
 .domestic-main-container h1 {
   display: flex;
   justify-content: center;
@@ -11,7 +9,7 @@
   padding: 50px;
 }
 
-
+/*--------------------Swiper class css start*/
 .secoundSwiper {
   background-color: rgb(245, 242, 242);
   height: 110vh;

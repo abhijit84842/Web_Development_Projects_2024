@@ -11,6 +11,7 @@ import Review from "../Components/Review";
 import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
 import DomesticComp from "../Components/DomesticComp";
+import InternationalComp from "../Components/InternationalComp";
 
 const HomePage = () => {
   return (
@@ -19,6 +20,7 @@ const HomePage = () => {
       <SwiperJsComp />
       <Packages />
       <DomesticComp />
+      <InternationalComp />
       <BookNow />
       <Gallery />
       <Review />
