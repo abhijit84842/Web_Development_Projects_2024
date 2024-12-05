@@ -31,7 +31,7 @@ const NavBar = () => {
             </Link>
           </div>
           <div>
-            <Link className="link" to="/book">
+            <Link className="link" to="/booknow">
               Book
             </Link>
           </div>

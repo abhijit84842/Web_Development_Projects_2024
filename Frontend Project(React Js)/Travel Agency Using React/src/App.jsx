@@ -1,12 +1,11 @@
 import BookNow from "./Components/BookNow";
 import Contact from "./Components/Contact";
-import DomesticComp from "./Components/DomesticComp";
-
 import Gallery from "./Components/Gallery";
-
-import Packages from "./Components/Packages";
 import Review from "./Components/Review";
 import HomePage from "./Pages/HomePage";
+import InternationalPage from "./Pages/InternationalPage";
+import DomesticPage from "./Pages/DomesticPage";
+import AllPackagesPage from "./Pages/AllPackagesPage";
 
 // React Router
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -19,15 +18,19 @@ function App() {
     },
     {
       path: "/packages",
-      element: <Packages />,
+      element: <AllPackagesPage />,
     },
     {
       path: "/domestic",
-      element: <DomesticComp />,
+      element: <DomesticPage />,
+    },
+    {
+      path: "/international",
+      element: <InternationalPage />,
     },
 
     {
-      path: "/Booknow",
+      path: "/booknow",
       element: <BookNow />,
     },
     {
