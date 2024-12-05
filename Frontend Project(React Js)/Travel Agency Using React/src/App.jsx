@@ -1,8 +1,9 @@
 import BookNow from "./Components/BookNow";
 import Contact from "./Components/Contact";
-import Domestic from "./Components/Domestic";
+import DomesticComp from "./Components/DomesticComp";
+
 import Gallery from "./Components/Gallery";
-import International from "./Components/International";
+
 import Packages from "./Components/Packages";
 import Review from "./Components/Review";
 import HomePage from "./Pages/HomePage";
@@ -22,12 +23,9 @@ function App() {
     },
     {
       path: "/domestic",
-      element: <Domestic />,
+      element: <DomesticComp />,
     },
-    {
-      path: "/international",
-      element: <International />,
-    },
+
     {
       path: "/Booknow",
       element: <BookNow />,

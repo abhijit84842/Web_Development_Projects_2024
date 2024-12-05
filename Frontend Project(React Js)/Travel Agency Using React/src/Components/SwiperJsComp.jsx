@@ -30,7 +30,7 @@ const SwiperJsComp = () => {
         }}
         loop={true}
         modules={[Parallax, Pagination, Navigation, Autoplay]}
-        className="mySwiper"
+        className="firstSwiper"
       >
         <SwiperSlide>
           <div
