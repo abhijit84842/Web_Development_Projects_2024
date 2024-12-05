@@ -1,4 +1,7 @@
 import "../CSS/navbar.css";
+
+import { Link } from "react-router-dom";
+
 const NavBar = () => {
   return (
     <div className="nav-main-container">
@@ -7,27 +10,14 @@ const NavBar = () => {
           <img src="logo.png" alt="loading.." />
         </div>
         <div className="nav-left-container">
-          <div>
-            <a href="#">Home</a>
-          </div>
-          <div>
-            <a href="#">Packages</a>
-          </div>
-          <div>
-            <a href="#">Services</a>
-          </div>
-          <div>
-            <a href="#">Book</a>
-          </div>
-          <div>
-            <a href="#">Gallery</a>
-          </div>
-          <div>
-            <a href="#">Review</a>
-          </div>
-          <div>
-            <a href="#">Contact</a>
-          </div>
+          <div>{/* <Link to="/">Home</Link> */}</div>
+          <div>{/* <Link to="/packages">Packages</Link> */}</div>
+          <div>{/* <Link to="/domestics">Domestics</Link> */}</div>
+          <div>{/* <Link to="/international">International</Link> */}</div>
+          <div>{/* <Link to="/book">Book</Link> */}</div>
+          <div>{/* <Link to="/gallery">Gallery</Link> */}</div>
+          <div>{/* <Link to="/review">Review</Link> */}</div>
+          <div>{/* <Link to="/contact">Contact</Link> */}</div>
         </div>
         <div className="nav-right-container">
           <div className="login">Login</div>
