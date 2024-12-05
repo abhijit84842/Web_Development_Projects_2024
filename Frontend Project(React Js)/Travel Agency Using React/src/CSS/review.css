@@ -2,6 +2,12 @@
     /* background-color: antiquewhite; */
     margin-top: 10px;
 }
+
+.review-main-container h1{
+display: flex;
+justify-content: center;
+font-size: 40px;
+}
 .review-sub-container{
     /* background-color: aqua; */
     margin-top: 20px;

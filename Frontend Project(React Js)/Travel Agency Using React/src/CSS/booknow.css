@@ -2,6 +2,11 @@
   /* background-color: aqua; */
   padding: 50px;
 }
+.booknow-main-container h1{
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+}
 
 .booknow-sub-container {
   margin-top: 40px;

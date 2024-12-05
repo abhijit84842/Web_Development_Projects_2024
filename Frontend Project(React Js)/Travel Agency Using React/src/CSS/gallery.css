@@ -6,6 +6,12 @@
     align-items: center;
 
 }
+.gallery-main-container h1{
+    display: flex;
+    justify-content: center;
+ font-size: 40px;
+
+}
 
 .gallery-sub-container{
     /* background-color: rgb(17, 245, 169); */

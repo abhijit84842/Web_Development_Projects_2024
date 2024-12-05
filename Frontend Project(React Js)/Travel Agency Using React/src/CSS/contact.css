@@ -1,8 +1,13 @@
 .contact-main-container{
     /* background-color: aqua; */
     margin-top: 20px;
+    margin-bottom: 20px;
 }
-
+.contact-main-container h1{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
 .contact-subcontainer{
     /* background-color: rgb(25, 224, 158); */
     margin-top: 10px;

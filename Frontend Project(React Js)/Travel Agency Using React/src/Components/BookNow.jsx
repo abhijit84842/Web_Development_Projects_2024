@@ -19,7 +19,7 @@ const BookNow = () => {
 
   return (
     <div className="booknow-main-container">
-      <h1>BOOK NOW</h1>
+      <h1>Book Now</h1>
       <div className="booknow-sub-container">
         <div className="left-container">
           <img src={worldtour} alt="loading..." />
