@@ -36,10 +36,10 @@ const SwiperJsComp = () => {
           clickable: true,
         }}
         navigation={true}
-        // autoplay={{
-        //   delay: 2500,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         loop={true}
         modules={[Parallax, Pagination, Navigation, Autoplay]}
         className="firstSwiper"
