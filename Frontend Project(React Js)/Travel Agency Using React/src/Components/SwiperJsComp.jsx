@@ -1,3 +1,7 @@
+// GSAP Animation
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 // Import swiper React component
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -12,6 +16,14 @@ import "../CSS/swiperjscomp.css";
 import { Parallax, Pagination, Navigation, Autoplay } from "swiper/modules";
 
 const SwiperJsComp = () => {
+  useGSAP(() => {
+    gsap.from(".gsapAnimation", {
+      y: 1000,
+      duration: 2,
+      opacity: 0,
+      stagger: 0.5,
+    });
+  });
   return (
     <>
       <Swiper
@@ -43,13 +55,15 @@ const SwiperJsComp = () => {
           >
             <div className="transparen-box">
               <div className="title" data-swiper-parallax="-300">
-                <p>Tokyo: The Heart of Japan's Vibrance</p>
+                <p className="gsapAnimation">
+                  Tokyo: The Heart of Japan's Vibrance
+                </p>
               </div>
               <div className="subtitle" data-swiper-parallax="-200">
-                <p>Where Tradition Meets Modernity</p>
+                <p className="gsapAnimation">Where Tradition Meets Modernity</p>
               </div>
               <div className="text" data-swiper-parallax="-100">
-                <p>
+                <p className="gsapAnimation">
                   Tokyo, the bustling capital of Japan, is a city that perfectly
                   blends ancient traditions with cutting-edge innovation. From
                   the serene Meiji Shrine and historic Asakusa district to the
