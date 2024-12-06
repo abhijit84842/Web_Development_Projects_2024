@@ -24,16 +24,34 @@
   background-size: 100%;
   background-position: center;
 }
-.firstSwiper .swiper-slide .title {
+.firstSwiper .transparen-box{
+  width: 100%;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+margin-top: 4rem;
+padding: 20px;
+padding-left: 60px;
+ 
+}
+
+
+.firstSwiper .swiper-slide .title p{
   font-size: 41px;
-  font-weight: 300;
+  font-weight: bold;
+  /* color: #FFD700; */
+  color:  #FF6347;
+ 
 }
 .firstSwiper .swiper-slide .subtitle {
-  font-size: 21px;
+  font-size: 30px;
+  margin-top: 15px;
+ 
 }
 
 .firstSwiper .swiper-slide .text {
-  font-size: 14px;
-  max-width: 400px;
+
+  width: 50%;
+  margin-top: 30px;
+  font-size: 20px;
   line-height: 1.3;
 }
