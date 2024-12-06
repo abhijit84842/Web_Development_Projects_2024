@@ -1,33 +1,22 @@
-import { useRef, useEffect } from "react";
-
-import { gsap } from "gsap";
+// useGSAP Hooks
+import { useGSAP } from "@gsap/react";
+// import GSAP
+import gsap from "gsap";
 
 import "../CSS/navbar.css";
 
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
-  // Create a ref for the element to be animated
-  // const boxRef = useRef(null);
-
-  useEffect(() => {
-    // // initial to final position
-    // gsap.to(boxRef.current, {
-    //   y: 20,
-    //   duration: 3,
-    //   backgroundColor: "red",
-    // });
-
+  useGSAP(() => {
     // final to initial position
     gsap.from(".linkAnimation", {
       x: 100,
-
-      duration: 1,
+      duration: 2,
       opacity: 0,
       stagger: 0.5,
     });
-  }, []);
-
+  });
   return (
     <div className="nav-main-container">
       <div className="nav-sub-container">
