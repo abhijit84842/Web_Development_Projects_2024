@@ -8,14 +8,23 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   // Create a ref for the element to be animated
-  const boxRef = useRef(null);
+  // const boxRef = useRef(null);
 
   useEffect(() => {
-    // initial to final position
-    gsap.to(boxRef.current, {
-      y: 20,
-      duration: 3,
-      backgroundColor: "red",
+    // // initial to final position
+    // gsap.to(boxRef.current, {
+    //   y: 20,
+    //   duration: 3,
+    //   backgroundColor: "red",
+    // });
+
+    // final to initial position
+    gsap.from(".linkAnimation", {
+      x: 100,
+
+      duration: 1,
+      opacity: 0,
+      stagger: 0.5,
     });
   }, []);
 
@@ -25,43 +34,43 @@ const NavBar = () => {
         <div className="nav-logo">
           <img src="logo.png" alt="loading.." />
         </div>
-        <div className="nav-left-container" ref={boxRef}>
-          <div>
+        <div className="nav-left-container">
+          <div className="linkAnimation">
             <Link className="link" to="/">
               Home
             </Link>
           </div>
-          <div>
+          <div className="linkAnimation">
             <Link className="link" to="/packages">
               Packages
             </Link>
           </div>
-          <div>
+          <div className="linkAnimation">
             <Link className="link" to="/domestic">
               Domestics
             </Link>
           </div>
-          <div>
+          <div className="linkAnimation">
             <Link className="link" to="/international">
               International
             </Link>
           </div>
-          <div>
+          <div className="linkAnimation">
             <Link className="link" to="/booknow">
               Book
             </Link>
           </div>
-          <div>
+          <div className="linkAnimation">
             <Link className="link" to="/gallery">
               Gallery
             </Link>
           </div>
-          <div>
+          <div className="linkAnimation">
             <Link className="link" to="/review">
               Review
             </Link>
           </div>
-          <div>
+          <div className="linkAnimation">
             <Link className="link" to="/contact">
               Contact
             </Link>
