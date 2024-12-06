@@ -12,9 +12,16 @@ const NavBar = () => {
     // final to initial position
     gsap.from(".linkAnimation", {
       x: 100,
-      duration: 2,
+      duration: 1,
       opacity: 0,
       stagger: 0.5,
+    });
+
+    gsap.from(".nav-right-container", {
+      y: 10,
+      delay: 1,
+      duration: 1.5,
+      opacity: 0,
     });
   });
   return (
@@ -67,6 +74,7 @@ const NavBar = () => {
         </div>
         <div className="nav-right-container">
           <div className="login">Login</div>
+
           <div className="input-box">
             <input type="text" placeholder="search the palce" />
             <button>Search</button>
