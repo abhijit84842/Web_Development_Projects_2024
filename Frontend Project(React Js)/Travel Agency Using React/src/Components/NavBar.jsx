@@ -1,15 +1,31 @@
+import { useRef, useEffect } from "react";
+
+import { gsap } from "gsap";
+
 import "../CSS/navbar.css";
 
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
+  // Create a ref for the element to be animated
+  const boxRef = useRef(null);
+
+  useEffect(() => {
+    // initial to final position
+    gsap.to(boxRef.current, {
+      y: 20,
+      duration: 3,
+      backgroundColor: "red",
+    });
+  }, []);
+
   return (
     <div className="nav-main-container">
       <div className="nav-sub-container">
         <div className="nav-logo">
           <img src="logo.png" alt="loading.." />
         </div>
-        <div className="nav-left-container">
+        <div className="nav-left-container" ref={boxRef}>
           <div>
             <Link className="link" to="/">
               Home
