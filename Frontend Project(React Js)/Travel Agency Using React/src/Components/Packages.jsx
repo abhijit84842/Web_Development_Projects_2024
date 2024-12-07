@@ -1,6 +1,11 @@
 import React from "react";
 import "../CSS/packages.css";
 
+// GSAP Animation
+import gsap from "gsap";
+// react GSAP Hooks
+import { useGSAP } from "@gsap/react";
+
 // images import
 import mumbai from "../assets/images/mumbai.jpg";
 
@@ -10,6 +15,13 @@ import { IoIosStar } from "react-icons/io"; // Star Rating icon
 import { IoStarOutline } from "react-icons/io5"; //  Star Rating icon
 
 const Packages = () => {
+  useGSAP(() => {
+    gsap.from(".card", {
+      scale: 0,
+      duration: 3,
+      opacity: 0,
+    });
+  });
   return (
     <div className="package-container">
       <h1>Packages</h1>
