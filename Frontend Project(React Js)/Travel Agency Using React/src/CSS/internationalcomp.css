@@ -62,8 +62,11 @@
   
     padding-top: 20px;
     padding-bottom: 20px;
+    transition: transform 0.3s ease; /* Smooth transition effect */
   }
-  
+  .international-img-box:hover{
+    transform: scale(1.1); /* Scale the image on hover */
+  }
   
   .international-name{
     width: 100%;

@@ -31,7 +31,7 @@ const Gallery = () => {
         trigger: ".gallery-sub-container",
         // markers: true,
         start: "top 80%",
-        end: "top 20%",
+        end: "top 40%",
         scrub: 5,
       },
     });

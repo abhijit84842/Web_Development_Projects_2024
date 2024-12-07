@@ -33,6 +33,7 @@ font-size: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .review-card img{
@@ -41,6 +42,10 @@ font-size: 40px;
    object-fit: cover;
    object-position: top;
     border-radius: 50%;
+    transition: transform 0.3 ease; /* Smooth transition effect */
+}
+.review-card img:hover{
+    transform: scale(1.1);      /* Scale the image on hover */
 }
 
 
