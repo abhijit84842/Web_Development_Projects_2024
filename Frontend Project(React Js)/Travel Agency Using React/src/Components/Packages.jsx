@@ -10,7 +10,12 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 // images import
-import mumbai from "../assets/images/mumbai.jpg";
+import mumbai from "../assets/images/packageimages/mumbai.jpg";
+import sikkim from "../assets/images/packageimages/sikkim.jpg";
+import kedarnath from "../assets/images/packageimages/kedarnath.jpg";
+import rameswaram from "../assets/images/packageimages/rameswaram.jpg";
+import darjeeling from "../assets/images/packageimages/darjeeling.jpg";
+import dawki from "../assets/images/packageimages/dawki.jpg";
 
 // React icons
 import { ImLocation } from "react-icons/im"; // location icon
@@ -48,10 +53,7 @@ const Packages = () => {
               <p>Mumbai</p>
             </div>
             <div id="sub-card">
-              <p className="subtitle">
-                A Vibrant Tapestry of Culture, Ambition, and Endless
-                Possibilities
-              </p>
+              <p className="subtitle">The City That Never Sleeps</p>
 
               <div className="rating-box">
                 <div>
@@ -72,7 +74,7 @@ const Packages = () => {
               </div>
               <div className="price-box">
                 <p>
-                  $<span> 90</span>
+                  ₹ <span>10,500</span>
                 </p>
               </div>
               <div className="button-box">
@@ -83,16 +85,15 @@ const Packages = () => {
         </div>
 
         <div className="card">
-          <img src={mumbai} alt="loading.." />
+          <img src={sikkim} alt="loading.." />
           <div className="sub-card">
             <div className="city-name">
               <ImLocation style={{ color: "red" }} />
-              <p>Mumbai</p>
+              <p>Sikkim</p>
             </div>
             <div id="sub-card">
               <p className="subtitle">
-                A Vibrant Tapestry of Culture, Ambition, and Endless
-                Possibilities
+                The Land of Pristine Glaciers and Monasteries
               </p>
 
               <div className="rating-box">
@@ -114,7 +115,7 @@ const Packages = () => {
               </div>
               <div className="price-box">
                 <p>
-                  $<span> 90</span>
+                  ₹ <span>11,500</span>
                 </p>
               </div>
               <div className="button-box">
@@ -125,16 +126,15 @@ const Packages = () => {
         </div>
 
         <div className="card">
-          <img src={mumbai} alt="loading.." />
+          <img src={kedarnath} alt="loading.." />
           <div className="sub-card">
             <div className="city-name">
               <ImLocation style={{ color: "red" }} />
-              <p>Mumbai</p>
+              <p>Kedarnath</p>
             </div>
             <div id="sub-card">
               <p className="subtitle">
-                A Vibrant Tapestry of Culture, Ambition, and Endless
-                Possibilities
+                Where Devotion Meets the Serenity of Nature
               </p>
 
               <div className="rating-box">
@@ -156,7 +156,7 @@ const Packages = () => {
               </div>
               <div className="price-box">
                 <p>
-                  $<span> 90</span>
+                  ₹ <span> 21,000</span>
                 </p>
               </div>
               <div className="button-box">
@@ -167,16 +167,15 @@ const Packages = () => {
         </div>
 
         <div className="card">
-          <img src={mumbai} alt="loading.." />
+          <img src={rameswaram} alt="loading.." />
           <div className="sub-card">
             <div className="city-name">
               <ImLocation style={{ color: "red" }} />
-              <p>Mumbai</p>
+              <p>Rameswaram</p>
             </div>
             <div id="sub-card">
               <p className="subtitle">
-                A Vibrant Tapestry of Culture, Ambition, and Endless
-                Possibilities
+                The Sacred Land of Ramanathaswamy Temple
               </p>
 
               <div className="rating-box">
@@ -198,7 +197,7 @@ const Packages = () => {
               </div>
               <div className="price-box">
                 <p>
-                  $<span> 90</span>
+                  ₹ <span> 15,000</span>
                 </p>
               </div>
               <div className="button-box">
@@ -209,17 +208,14 @@ const Packages = () => {
         </div>
 
         <div className="card">
-          <img src={mumbai} alt="loading.." />
+          <img src={dawki} alt="loading.." />
           <div className="sub-card">
             <div className="city-name">
               <ImLocation style={{ color: "red" }} />
-              <p>Mumbai</p>
+              <p>Dawki Meghalaya</p>
             </div>
             <div id="sub-card">
-              <p className="subtitle">
-                A Vibrant Tapestry of Culture, Ambition, and Endless
-                Possibilities
-              </p>
+              <p className="subtitle">The Crystal Clear Waters of Meghalaya</p>
 
               <div className="rating-box">
                 <div>
@@ -240,7 +236,7 @@ const Packages = () => {
               </div>
               <div className="price-box">
                 <p>
-                  $<span> 90</span>
+                  ₹ <span> 20,000</span>
                 </p>
               </div>
               <div className="button-box">
@@ -250,17 +246,14 @@ const Packages = () => {
           </div>
         </div>
         <div className="card">
-          <img src={mumbai} alt="loading.." />
+          <img src={darjeeling} alt="loading.." />
           <div className="sub-card">
             <div className="city-name">
               <ImLocation style={{ color: "red" }} />
-              <p>Mumbai</p>
+              <p>Darjeeling</p>
             </div>
             <div id="sub-card">
-              <p className="subtitle">
-                A Vibrant Tapestry of Culture, Ambition, and Endless
-                Possibilities
-              </p>
+              <p className="subtitle">The Queen of the Hills</p>
 
               <div className="rating-box">
                 <div>
@@ -281,7 +274,7 @@ const Packages = () => {
               </div>
               <div className="price-box">
                 <p>
-                  $<span> 90</span>
+                  ₹ <span>8,500</span>
                 </p>
               </div>
               <div className="button-box">
