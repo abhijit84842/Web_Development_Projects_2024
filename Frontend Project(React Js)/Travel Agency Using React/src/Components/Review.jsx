@@ -10,7 +10,21 @@ import abhijit from "../assets/images/reviewimages/abhijit.jpg";
 import ayan from "../assets/images/reviewimages/ayan.jpg";
 import rajat from "../assets/images/reviewimages/rajat.jpg";
 
+import gsap from "gsap";
+
+import { useGSAP } from "@gsap/react";
+
 const Review = () => {
+  useGSAP(() => {
+    // final to initial position
+    gsap.from(".review-sub-container", {
+      scale: 0,
+      opacity: 0,
+      duration: 2,
+      width: "5%",
+      rotate: 360,
+    });
+  });
   return (
     <div className="review-main-container">
       <h1>REVIEW</h1>
