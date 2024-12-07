@@ -29,7 +29,7 @@ const Packages = () => {
       opacity: 0,
       scrollTrigger: {
         trigger: ".card-container",
-        markers: true,
+        // markers: true,
         start: "top 90%",
         end: "top 20%",
         scrub: 2,
