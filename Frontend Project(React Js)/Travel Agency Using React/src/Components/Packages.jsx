@@ -24,6 +24,7 @@ const Packages = () => {
   useGSAP(() => {
     gsap.from(".card", {
       scale: 0,
+      delay: 3,
       duration: 5,
       opacity: 0,
       scrollTrigger: {
