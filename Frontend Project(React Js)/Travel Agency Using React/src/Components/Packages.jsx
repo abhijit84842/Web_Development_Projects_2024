@@ -28,10 +28,10 @@ const Packages = () => {
       duration: 5,
       opacity: 0,
       scrollTrigger: {
-        trigger: ".card-container",
+        trigger: ".card",
         // markers: true,
-        start: "top 90%",
-        end: "top 20%",
+        start: "top 100%",
+        end: "top 10%",
         scrub: 2,
       },
     });

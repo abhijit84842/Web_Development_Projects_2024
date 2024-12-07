@@ -1,3 +1,4 @@
+// Importing all components
 import BookNow from "./Components/BookNow";
 import Contact from "./Components/Contact";
 import Gallery from "./Components/Gallery";
