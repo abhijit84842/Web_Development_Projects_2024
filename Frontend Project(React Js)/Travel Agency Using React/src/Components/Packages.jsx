@@ -31,7 +31,7 @@ const Packages = () => {
         trigger: ".card",
         // markers: true,
         start: "top 100%",
-        end: "top 10%",
+        end: "top 50%",
         scrub: 2,
       },
     });
