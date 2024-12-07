@@ -6,6 +6,9 @@ import gsap from "gsap";
 // react GSAP Hooks
 import { useGSAP } from "@gsap/react";
 
+// ScrollTrigger Plugin
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 // images import
 import mumbai from "../assets/images/mumbai.jpg";
 
@@ -15,11 +18,21 @@ import { IoIosStar } from "react-icons/io"; // Star Rating icon
 import { IoStarOutline } from "react-icons/io5"; //  Star Rating icon
 
 const Packages = () => {
+  // Register the gsap ScrollTrigger plugin
+  gsap.registerPlugin(ScrollTrigger);
+
   useGSAP(() => {
     gsap.from(".card", {
       scale: 0,
-      duration: 3,
+      duration: 5,
       opacity: 0,
+      scrollTrigger: {
+        trigger: ".card-container",
+        markers: true,
+        start: "top 90%",
+        end: "top 20%",
+        scrub: 2,
+      },
     });
   });
   return (
