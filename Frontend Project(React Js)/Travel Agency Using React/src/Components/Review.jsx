@@ -10,11 +10,17 @@ import abhijit from "../assets/images/reviewimages/abhijit.jpg";
 import ayan from "../assets/images/reviewimages/ayan.jpg";
 import rajat from "../assets/images/reviewimages/rajat.jpg";
 
+// GSAP Animation
 import gsap from "gsap";
 
+// react GSAP hook
 import { useGSAP } from "@gsap/react";
+// ScrollTrigger Plugin
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Review = () => {
+  //registerd the plugin
+  gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
     // final to initial position
     gsap.from(".review-sub-container", {
@@ -22,7 +28,14 @@ const Review = () => {
       opacity: 0,
       duration: 2,
       width: "5%",
-      rotate: 360,
+
+      scrollTrigger: {
+        trigger: ".review-main-container",
+        // markers: true,
+        start: "top 100%",
+        end: "top 30%",
+        scrub: 5,
+      },
     });
   });
   return (
