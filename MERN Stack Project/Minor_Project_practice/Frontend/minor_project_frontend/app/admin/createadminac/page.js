@@ -23,7 +23,7 @@ const page = () => {
       </h1>
       <div className="sub-container  p-5 flex justify-center">
         <form
-          className="w-[40rem] flex justify-center flex-col gap-10 bg-zinc-500 mt-10 rounded-md p-5"
+          className="w-[40rem] flex justify-center flex-col gap-10 bg-zinc-800 mt-10 rounded-md p-5"
           onSubmit={handleSubmit(onSubmit)}
         >
           <input
@@ -39,19 +39,6 @@ const page = () => {
             placeholder="full name"
           />
           {errors.name && <p>{errors.name.message}</p>}
-          <input
-            className="p-2 text-black outline-none rounded-md"
-            type="number"
-            {...register("age", {
-              required: "age is required..",
-              min: {
-                value: 18,
-                message: "You must be at least 18 years old..",
-              },
-            })}
-            placeholder="age"
-          />
-          {errors.age && <p>{errors.age.message}</p>}
           <input
             className="p-2 text-black outline-none rounded-md"
             type="text"
