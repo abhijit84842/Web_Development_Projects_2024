@@ -12,8 +12,14 @@ const page = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit =async(data) => {
+    const res = await fetch("http://localhost:3000/admin/createac" ,{
+      method: "POST",
+      headers:{
+        "Content-Type" : "application/json"
+      },
+      body:JSON.stringify(data)
+    } )
     setSubmitBtn(false);
   };
   return (
