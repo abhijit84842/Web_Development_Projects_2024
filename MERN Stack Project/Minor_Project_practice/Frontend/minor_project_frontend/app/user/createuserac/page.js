@@ -1,8 +1,11 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 const page = () => {
+
+  const [submitBtn , setSubmitBtn]=useState(true)
+
   const {
     register,
     handleSubmit,
@@ -10,7 +13,11 @@ const page = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) =>{
+    console.log(data)
+    setSubmitBtn(false)
+
+  };
   return (
     <div>
       <h1 className="flex justify-center mt-10 text-5xl">
@@ -78,12 +85,22 @@ const page = () => {
             placeholder="ph no"
           />
           {errors.phno && <p>{errors.phno.message}</p>}
-          <button
+          {
+            submitBtn ?  (<button
             className="bg-green-500 p-2 text-2xl rounded-md"
             type="submit"
           >
             Submit
-          </button>
+          </button>):(<button
+            className="bg-red-500 p-2 text-2xl rounded-md blur-[1px]"
+            type="submit"
+            disabled={true}
+          >
+            Submited
+          </button>)
+          }
+
+         
         </form>
       </div>
     </div>
