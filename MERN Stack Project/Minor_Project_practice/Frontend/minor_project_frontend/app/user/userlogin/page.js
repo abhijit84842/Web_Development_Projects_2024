@@ -18,7 +18,7 @@ const page = () => {
       <div className="sub-container flex justify-center mt-20">
         <form className="flex justify-center flex-col gap-5 w-[25rem] bg-zinc-500 p-5" onSubmit={handleSubmit(onSubmit)}>
           <input
-            className="p-2 rounded-md outline-none"
+            className="p-2 rounded-md outline-none text-black"
             type="text"
             {...register("email", {
               required:"email is required..."
@@ -27,8 +27,8 @@ const page = () => {
           />
           {errors.email && <p>{errors.email.message}</p>}
           <input
-            className="p-2 rounded-md outline-none"
-            type="text"
+            className="p-2 rounded-md outline-none text-black"
+            type="password"
             {...register("password" , {
               required:"password is required.."
             })}
