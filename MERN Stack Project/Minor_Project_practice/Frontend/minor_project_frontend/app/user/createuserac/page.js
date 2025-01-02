@@ -3,8 +3,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 const page = () => {
-
-  const [submitBtn , setSubmitBtn]=useState(true)
+  const [submitBtn, setSubmitBtn] = useState(true);
 
   const {
     register,
@@ -13,10 +12,9 @@ const page = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) =>{
-    console.log(data)
-    setSubmitBtn(false)
-
+  const onSubmit = (data) => {
+    console.log(data);
+    setSubmitBtn(false);
   };
   return (
     <div>
@@ -31,13 +29,12 @@ const page = () => {
           <input
             className="p-2 text-black outline-none rounded-md"
             type="text"
-            {...register("name" , {
+            {...register("name", {
               required: "name is required..",
-              maxLength:{
-                value:20,
-                message:"maximum allow 20 charecter.."
-              }
-    
+              maxLength: {
+                value: 20,
+                message: "maximum allow 20 charecter..",
+              },
             })}
             placeholder="full name"
           />
@@ -45,62 +42,86 @@ const page = () => {
           <input
             className="p-2 text-black outline-none rounded-md"
             type="number"
-            {...register("age" , {
-              required:"age is required..",
-              min:{
-                value:18,
-                message:"You must be at least 18 years old.."
-              }
+            {...register("age", {
+              required: "age is required..",
+              min: {
+                value: 18,
+                message: "You must be at least 18 years old..",
+              },
             })}
             placeholder="age"
           />
           {errors.age && <p>{errors.age.message}</p>}
           <input
-           className="p-2 text-black outline-none rounded-md"
+            className="p-2 text-black outline-none rounded-md"
             type="text"
-            {...register("email" , {
+            {...register("email", {
               required: "email is required..",
-              pattern:{
+              pattern: {
                 value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-                message: "invalid email! ..plz follow the pattern => [a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
-              }
+                message:
+                  "invalid email! ..plz follow the pattern => [a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$",
+              },
             })}
             placeholder="email id"
           />
           {errors.email && <p>{errors.email.message}</p>}
+
+          <input
+             className="p-2 text-black outline-none rounded-md"
+            type="password"
+            placeholder="password"
+
+            {...register("password", {
+              required:"password is required",
+              minLength: {
+                value: 8,
+                message: "Password length must be 8 character",
+              },
+              pattern: {
+                value:
+                  /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
+                message:
+                  "Password must include at least one letter, one number, and one special character.",
+              },
+             
+            })}
+          />
+          {errors.password && <p>{errors.password.message}</p>}
+
           <input
             className="p-2 text-black outline-none rounded-md"
             type="number"
-            {...register("phno" , {
+            {...register("phno", {
               required: "ph no required..",
-              maxLength:{
-                value:10,
-                message:"only allow 10 digits.."
+              maxLength: {
+                value: 10,
+                message: "only allow 10 digits..",
               },
-              minLength:{
-                value:10,
-                message:"minimum need 10 digits.."
-              }
+              minLength: {
+                value: 10,
+                message: "minimum need 10 digits..",
+              },
             })}
             placeholder="ph no"
           />
           {errors.phno && <p>{errors.phno.message}</p>}
-          {
-            submitBtn ?  (<button
-            className="bg-green-500 p-2 text-2xl rounded-md"
-            type="submit"
-          >
-            Submit
-          </button>):(<button
-            className="bg-red-500 p-2 text-2xl rounded-md blur-[1px]"
-            type="submit"
-            disabled={true}
-          >
-            Submited
-          </button>)
-          }
-
-         
+          {submitBtn ? (
+            <button
+              className="bg-green-500 p-2 text-2xl rounded-md"
+              type="submit"
+            >
+              Submit
+            </button>
+          ) : (
+            <button
+              className="bg-red-500 p-2 text-2xl rounded-md blur-[1px]"
+              type="submit"
+              disabled={true}
+            >
+              Submited
+            </button>
+          )}
         </form>
       </div>
     </div>
