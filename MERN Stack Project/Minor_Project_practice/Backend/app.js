@@ -1,5 +1,6 @@
 const express = require('express')
 const path = require('path')
+const cors = require('cors')
 
 const app = express()
 
@@ -12,9 +13,19 @@ app.use(express.urlencoded({extended:true}))
 // static file
 app.use(express.static(path.join(__dirname , "public")))
 
-app.get("/" , (req,res)=>{
-    res.send("hi")
-})
+// cors origin setup
+app.use(cors())
+
+
+// import route
+const adminRoutes= require("./routes/adminRoutes")
+const usersRoute= require("./routes/usersRoutes")
+
+
+// route setup
+app.use("/admin" , adminRoutes)
+app.use("/users" , usersRoute)
+
 
 app.listen(3000 , ()=>{
     console.log("PORT => "+ 3000)
