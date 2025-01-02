@@ -1,14 +1,12 @@
+const express = require("express");
 
+const router = express.Router();
 
-const express = require('express')
+router.post("/createac", (req, res) => {
+    console.log(req.body)
+  res.send("hiii");
 
-
-
-const router = express.Router()
-
-router.get("/createac" , (req,res)=>{
-    res.send("hiii")
-})
+});
 
 module.exports = router;
 
