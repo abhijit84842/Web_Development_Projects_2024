@@ -1,10 +1,9 @@
 const {default:mongoose}=require('mongoose')
 const adminSchema= mongoose.Schema({
     name:String,
-    age:number,
     email:String,
     password:String,
-    phno:number,
+    phno:Number,
     image:{
         type:Buffer,
     }
