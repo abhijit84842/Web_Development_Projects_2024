@@ -12,15 +12,28 @@ const page = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit =async(data) => {
-    const res = await fetch("http://localhost:3000/admin/createac" ,{
+  const onSubmit = async (data) => {
+
+    // create a new formData
+    const formData= new FormData()
+    
+    //append image 
+    formData.append("image",data.image[0])
+    //append others
+    formData.append("name",data.name)
+    formData.append("age",data.age)
+    formData.append("email",data.email)
+    formData.append("password", data.password)
+    formData.append("phno",data.phno)
+
+    const res = await fetch("http://localhost:3001/admin/createac", {
       method: "POST",
-      headers:{
-        "Content-Type" : "application/json"
-      },
-      body:JSON.stringify(data)
-    } )
-    setSubmitBtn(false);
+      // headers: {
+      //   "Content-Type": "application/json",
+      // },
+      body: formData,
+    });
+    // setSubmitBtn(false);
   };
   return (
     <div>
@@ -31,7 +44,17 @@ const page = () => {
         <form
           className="w-[40rem] flex justify-center flex-col gap-10 bg-zinc-800 mt-10 rounded-md p-5"
           onSubmit={handleSubmit(onSubmit)}
+          encType="multipart/form-data"
         >
+          <input
+            type="file"
+            placeholder="upload profile pic"
+            accept="image/*"
+            {...register("image", {
+              required: "profile pic is required..",
+            })}
+          />
+          {errors.image && <p>{errors.image.message}</p>}
           <input
             className="p-2 text-black outline-none rounded-md"
             type="text"
@@ -61,12 +84,11 @@ const page = () => {
           {errors.email && <p>{errors.email.message}</p>}
 
           <input
-             className="p-2 text-black outline-none rounded-md"
+            className="p-2 text-black outline-none rounded-md"
             type="password"
             placeholder="password"
-
             {...register("password", {
-              required:"password is required",
+              required: "password is required",
               minLength: {
                 value: 8,
                 message: "Password length must be 8 character",
@@ -77,7 +99,6 @@ const page = () => {
                 message:
                   "Password must include at least one letter, one number, and one special character.",
               },
-             
             })}
           />
           {errors.password && <p>{errors.password.message}</p>}
