@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.post("/createac", (req, res) => {
     console.log(req.body)
-  res.send("hiii");
+    res.send("hi")
 
 });
 

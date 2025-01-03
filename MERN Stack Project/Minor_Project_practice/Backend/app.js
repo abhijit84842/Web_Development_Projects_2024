@@ -27,6 +27,6 @@ app.use("/admin" , adminRoutes)
 app.use("/users" , usersRoute)
 
 
-app.listen(3000 , ()=>{
-    console.log("PORT => "+ 3000)
+app.listen(3001 , ()=>{
+    console.log("PORT => "+ 3001)
 })
