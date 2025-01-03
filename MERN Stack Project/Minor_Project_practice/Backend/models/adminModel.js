@@ -5,7 +5,7 @@ const adminSchema= mongoose.Schema({
     email:String,
     password:String,
     phno:number,
-    img:{
+    image:{
         type:Buffer,
     }
 
