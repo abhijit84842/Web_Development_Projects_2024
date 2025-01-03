@@ -26,14 +26,21 @@ const page = () => {
     formData.append("password", data.password)
     formData.append("phno",data.phno)
 
-    const res = await fetch("http://localhost:3001/admin/createac", {
+    const result = await fetch("http://localhost:3001/admin/createac", {
       method: "POST",
       // headers: {
       //   "Content-Type": "application/json",
       // },
       body: formData,
     });
-    // setSubmitBtn(false);
+    setSubmitBtn(false);
+
+    const res = await result.json()
+    if(res.success){
+      alert(res.msg)
+    }else{
+      alert(res.msg)
+    }
   };
   return (
     <div>
