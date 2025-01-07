@@ -1,6 +1,12 @@
 const express = require('express')
 const path = require('path')
 const cors = require('cors')
+const cookieParser = require("cookie-parser")
+
+// import route
+const adminRoutes= require("./routes/adminRoutes")
+const usersRoute= require("./routes/usersRoutes")
+
 
 const app = express()
 
@@ -14,12 +20,18 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.static(path.join(__dirname , "public")))
 
 // cors origin setup
-app.use(cors())
+// const corsOptions ={
+//     origin:"" , // allow all origin
+//     methods:"GET,HEAD,PUT,PATCH,POST,DELETE",
+//     allowedHeaders:["Content-Type" , "Authorization"],
+// }
+app.use(cors({
+    origin:"http://localhost:3000",
+    credentials:true
+}))
 
-
-// import route
-const adminRoutes= require("./routes/adminRoutes")
-const usersRoute= require("./routes/usersRoutes")
+// to accept cookies in backend
+app.use(cookieParser())
 
 
 // route setup

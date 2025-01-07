@@ -7,6 +7,7 @@ const bcrypt = require("bcrypt");
 
 const { default: mongoose } = require("mongoose");
 const AdminModel = require("../models/adminModel");
+const adminModel = require("../models/adminModel");
 
 // DB URL
 const url =
@@ -54,8 +55,28 @@ router.post("/createac", upload.single("image"), async (req, res) => {
 });
 
 // Post request for admin login..
-router.post("/adminlogin" , (req,res)=>{
+router.post("/adminlogin" , async(req,res)=>{
   console.log(req.body)
+  let {email , password }= req.body
+  try{
+    await mongoose.connect(url)
+    let result = await adminModel.findOne({email:email})
+    console.log(result)
+    if(!result){
+      res.status(400).json({msg:"incorrect email id!" , success:false})
+    }else{
+      bcrypt.compare(password, result.password, function(err, result) {
+        // result == true
+        if(result){
+          res.status(200).json({msg:"successfully login" , success:true})
+        }else{
+          res.status(400).json({msg:"incorrect password! " , success:false})
+        }
+    });
+    }
+  }catch(err){
+    console.log("db not connected")
+  }
 })
 
 module.exports = router;
