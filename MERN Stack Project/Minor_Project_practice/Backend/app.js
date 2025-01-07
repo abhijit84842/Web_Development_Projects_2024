@@ -6,6 +6,7 @@ const cookieParser = require("cookie-parser")
 // import route
 const adminRoutes= require("./routes/adminRoutes")
 const usersRoute= require("./routes/usersRoutes")
+const productRoute = require("./routes/productRoutes")
 
 
 const app = express()
@@ -37,6 +38,7 @@ app.use(cookieParser())
 // route setup
 app.use("/admin" , adminRoutes)
 app.use("/users" , usersRoute)
+app.use("/products", productRoute)
 
 
 app.listen(3001 , ()=>{
