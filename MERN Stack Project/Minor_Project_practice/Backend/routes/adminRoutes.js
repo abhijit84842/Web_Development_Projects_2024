@@ -14,6 +14,7 @@ const url =
 
 const router = express.Router();
 
+// Create Admin AC
 router.post("/createac", upload.single("image"), async (req, res) => {
   // console.log(req.file.buffer)
   // console.log(req.body)
@@ -51,6 +52,11 @@ router.post("/createac", upload.single("image"), async (req, res) => {
     console.log(err.message);
   }
 });
+
+// Post request for admin login..
+router.post("/adminlogin" , (req,res)=>{
+  console.log(req.body)
+})
 
 module.exports = router;
 
