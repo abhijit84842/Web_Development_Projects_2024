@@ -61,7 +61,6 @@ router.post("/adminlogin" , async(req,res)=>{
   try{
     await mongoose.connect(url)
     let result = await adminModel.findOne({email:email})
-    console.log(result)
     if(!result){
       res.status(400).json({msg:"incorrect email id!" , success:false})
     }else{
