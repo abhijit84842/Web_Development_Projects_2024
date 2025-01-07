@@ -1,5 +1,7 @@
 <h1> CitySling E-com Website for collection of Low to Premium Bags</h1>
 
+<h2></h2>
+
 <h2> Follow Industrial Base code and Folder Structure </h2>
 <div>
 <p> Frontend -> EJS</p>
