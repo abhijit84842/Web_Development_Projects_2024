@@ -57,7 +57,6 @@ router.post("/createac", upload.single("image"), async (req, res) => {
 
 // Post request for admin login..
 router.post("/adminlogin" , async(req,res)=>{
-  console.log(req.body)
   let {email , password }= req.body
   try{
     await mongoose.connect(url)
@@ -70,14 +69,14 @@ router.post("/adminlogin" , async(req,res)=>{
         if(result){
           const token =generateToken(admin)
           // console.log(token)
-          res.cookie("AdminToken" , token , {
+          res.cookie("Atoken" , token , {
             httpOnly:false, // ensure cookie accessable by the server
             secure:true,  // set true if using http otherwish set it false
             sameSite:"none"  // Allows the cookie to be sent in cross-site requests
 
           })
 
-          res.status(200).json({msg:"successfully login" , success:true})
+          res.status(302).json({msg:"successfully login" , success:true})
         }else{
           res.status(400).json({msg:"incorrect password! " , success:false})
         }
