@@ -69,7 +69,13 @@ router.post("/adminlogin" , async(req,res)=>{
         // result == true
         if(result){
           const token =generateToken(admin)
-          console.log(token)
+          // console.log(token)
+          res.cookie("AdminToken" , token , {
+            httpOnly:false, // ensure cookie accessable by the server
+            secure:true,  // set true if using http otherwish set it false
+            sameSite:"none"  // Allows the cookie to be sent in cross-site requests
+
+          })
 
           res.status(200).json({msg:"successfully login" , success:true})
         }else{
