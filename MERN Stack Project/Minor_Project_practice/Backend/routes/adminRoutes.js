@@ -8,6 +8,7 @@ const bcrypt = require("bcrypt");
 const { default: mongoose } = require("mongoose");
 const AdminModel = require("../models/adminModel");
 const adminModel = require("../models/adminModel");
+const generateToken = require("../util/generateToken");
 
 // DB URL
 const url =
@@ -60,13 +61,16 @@ router.post("/adminlogin" , async(req,res)=>{
   let {email , password }= req.body
   try{
     await mongoose.connect(url)
-    let result = await adminModel.findOne({email:email})
-    if(!result){
+    let admin = await adminModel.findOne({email:email})
+    if(!admin){
       res.status(400).json({msg:"incorrect email id!" , success:false})
     }else{
-      bcrypt.compare(password, result.password, function(err, result) {
+      bcrypt.compare(password, admin.password, function(err, result) {
         // result == true
         if(result){
+          const token =generateToken(admin)
+          console.log(token)
+
           res.status(200).json({msg:"successfully login" , success:true})
         }else{
           res.status(400).json({msg:"incorrect password! " , success:false})
@@ -74,7 +78,7 @@ router.post("/adminlogin" , async(req,res)=>{
     });
     }
   }catch(err){
-    console.log("db not connected")
+    console.log(err.message)
   }
 })
 
