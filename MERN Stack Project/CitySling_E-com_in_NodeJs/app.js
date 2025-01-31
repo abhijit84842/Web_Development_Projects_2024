@@ -21,8 +21,6 @@ const cartRouter=require("./routes/cartRouter")
 // to use dotenv
 require('dotenv').config();
 
-// console.log(process.env)
-
 
 const app = express()
 
@@ -63,6 +61,6 @@ app.use("/logout",logoutRouter)
 
 
 
-app.listen(3000 , ()=>{
-    console.log("PORT => "+ 3000)
+app.listen(3001 , ()=>{
+    console.log("PORT => "+ 3001)
 })
