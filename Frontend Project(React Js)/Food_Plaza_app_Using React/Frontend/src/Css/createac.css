@@ -1,40 +1,73 @@
-.acMainContainer {
+.admin-container {
+  background-color: #181818;
+  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
-}
-.formTag {
-  border: solid 2px greenyellow;
-  padding: 20px;
-  border-radius: 10px;
+  justify-content: center;
 }
 
-.inputFileds {
-  border: solid 1px red;
+.admin-card {
+  background: #222;
+  padding: 30px;
+  border-radius: 10px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.admin-card h2 {
+  color: #0d6ce7;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.admin-input {
+  width: 100%;
   padding: 10px;
   border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 1rem;
+  border: none;
+  background: #333;
+  color: white;
 }
 
-.inputFileds input {
-  width: 18rem;
-  padding: 10px;
-  border-radius: 10px;
+.admin-input:focus {
   outline: none;
-  font-size: 18px;
+  border: 1px solid #4caf50;
 }
 
-@media only screen and (max-width: 600px) {
-  .formTag {
-    width: 80%;
-  }
-
-  .inputFileds input {
-    width: 15rem;
-  }
+.admin-button {
+  background: #4caf50;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+  width: 23rem;
 }
+
+.admin-button:hover {
+  background: #45a049;
+}
+
+/* @media only screen and (max-width: 600px) {
+
+} */
