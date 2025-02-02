@@ -13,21 +13,26 @@ const AdminPage = () => {
     }
   };
   return (
-    <div className="adminMainContainer">
-      <h1>Welcome to Admin Panel</h1>
-      <div className="logoutButton">
-        <button onClick={() => handleLogout()}>Logout</button>
+    <div className="admin-maincontainer">
+      <div className="logoutdiv">
+        <button className="logoutbutton" onClick={() => handleLogout()}>
+          logout
+        </button>
       </div>
-      <div className="actionLink">
-        <Link className="createAc" to="/admin/createac">
-          Create Account
-        </Link>
-        <Link className="adminLogin" to="/admin/adminlogin">
-          Admin Login
-        </Link>
-        <Link className="addFoods" to="/admin/addfoods">
-          Add Foods
-        </Link>
+      <div className="admin-container">
+        <h1>Admin Dashboard</h1>
+        <h2>Select an action to proceed</h2>
+        <div className="button-group">
+          <Link className="admin-link" to="/admin/createac">
+            Create Account
+          </Link>
+          <Link className="admin-link" to="/admin/adminlogin">
+            Admin Login
+          </Link>
+          <Link className="admin-link" to="/admin/addfoods">
+            Add Food
+          </Link>
+        </div>
       </div>
     </div>
   );

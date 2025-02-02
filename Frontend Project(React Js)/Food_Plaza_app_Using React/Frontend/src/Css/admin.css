@@ -1,69 +1,9 @@
-.adminMainContainer h1 {
-  color: white;
-  font-size: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logoutButton {
-  /* border: solid 1px red; */
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  padding-right: 6rem;
-  margin-bottom: 4rem;
-}
-
-.logoutButton button {
-  background-color: yellow;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 15px;
-  font-weight: 600;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-}
-
-.actionLink {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 50px;
-}
-
-.createAc {
-  padding: 5px;
-  border-radius: 5px;
-  background-color: red;
-  text-decoration: none;
-  font-size: 20px;
-  color: white;
-}
-.adminLogin {
-  padding: 5px;
-  border-radius: 5px;
-  background-color: rgb(24, 88, 224);
-  text-decoration: none;
-  font-size: 20px;
-  color: white;
-}
-
-.addFoods {
-  padding: 5px;
-  border-radius: 5px;
-  background-color: rgb(31, 224, 24);
-  text-decoration: none;
-  font-size: 20px;
-  color: white;
-}
-
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   .adminMainContainer h1 {
     font-size: 30px;
   }
-  .logoutButton {
-    padding-right: 2rem;
+  .logoutdiv button{
+    margin-top: 20rem;
   }
 
   .logoutButton button {
@@ -77,4 +17,73 @@
     align-items: center;
     gap: 50px;
   }
+} */
+
+.admin-maincontainer {
+  background-color: #121212;
+  height: 100vh;
+}
+
+.admin-container {
+  /* background-color: #121212; */
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.logoutdiv {
+  display: flex;
+  justify-content: end;
+}
+.logoutdiv button {
+  width: 8rem;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 5rem;
+  margin-top: 10rem;
+  border-radius: 20px;
+  background-color: yellow;
+  cursor: pointer;
+}
+.admin-container h1 {
+  margin-bottom: 20px;
+  color: rgb(241, 35, 35);
+}
+.admin-container h2 {
+  color: aliceblue;
+  font-size: 20px;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 5px;
+}
+
+.admin-link {
+  padding: 10px 20px;
+  background-color: #1f1f1f;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Select the 1st child */
+.admin-link:nth-child(1) {
+  color: rgb(22, 7, 243);
+}
+.admin-link:nth-child(2) {
+  color: rgb(95, 235, 30);
+}
+.admin-link:nth-child(3) {
+  color: aqua;
+}
+.admin-link:hover {
+  background-color: #333;
 }
