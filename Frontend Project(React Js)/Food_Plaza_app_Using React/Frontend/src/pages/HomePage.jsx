@@ -14,7 +14,7 @@ const HomePage = () => {
   // Fetch Foods API
   const fetchFood = async () => {
     setLoadBar(true); // show loadbar
-    let res = await fetch("http://localhost:3000/api/fooddata");
+    let res = await fetch("http://localhost:3002/api/fooddata");
     let result = await res.json();
 
     const foodWithImages = result.data.map((food) => {

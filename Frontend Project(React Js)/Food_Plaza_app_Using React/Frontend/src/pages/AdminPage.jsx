@@ -2,7 +2,7 @@ import "../Css/admin.css";
 import { Link } from "react-router-dom";
 const AdminPage = () => {
   const handleLogout = async () => {
-    let res = await fetch("http://localhost:3000/api/logout", {
+    let res = await fetch("http://localhost:3002/api/logout", {
       credentials: "include", // include cookies in the request
     });
     let data = await res.json();

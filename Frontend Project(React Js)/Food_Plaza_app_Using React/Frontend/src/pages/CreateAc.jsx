@@ -12,7 +12,7 @@ const CreateAc = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    let res = await fetch("http://localhost:3000/api/owner/createac", {
+    let res = await fetch("http://localhost:3002/api/owner/createac", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -65,7 +65,7 @@ const CreateAc = () => {
           )}
 
           <input
-            type="text"
+            type="password"
             {...register("password", {
               required: "password is required",
               minLength: {

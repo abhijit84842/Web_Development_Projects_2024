@@ -32,7 +32,7 @@ const AddFoodsPage = () => {
     //   console.log(key, value);
     // }
 
-    let res = await fetch("http://localhost:3000/api/addfood", {
+    let res = await fetch("http://localhost:3002/api/addfood", {
       method: "POST",
       // headers: {
       //   "Content-Type": "application/json",
