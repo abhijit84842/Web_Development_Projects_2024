@@ -51,7 +51,7 @@ const AddFoodsPage = () => {
   };
   return (
     <div className="addFoodMainContainer">
-      <h1>Add A NEW FOOD </h1>
+      <h1>ADD A NEW FOOD </h1>
       <div className="addSubContainer">
         <form onSubmit={handleSubmit(onSubmit)} encType="multipart/form-data">
           <div className="inputContainer">

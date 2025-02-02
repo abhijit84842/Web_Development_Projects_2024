@@ -5,10 +5,20 @@
   flex-direction: column;
 }
 
+.addFoodMainContainer h1 {
+  margin-top: 5rem;
+  color: rgb(241, 235, 235);
+  font-size: 3rem;
+}
 .addSubContainer {
-  border: solid 2px greenyellow;
-  padding: 20px;
+  margin-top: 2rem;
+  background: #222;
+  padding: 30px;
   border-radius: 10px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
 }
 
 .inputContainer {
@@ -36,55 +46,31 @@
 
 .radioInput {
   width: 18rem;
+  display: flex;
+  justify-content: start;
 }
 .radioInput input {
   width: 2rem;
-  
 }
 label {
-
   color: white;
 }
-textarea{
-    border-radius: 10px;
-    outline: none;
-   
-    
+textarea {
+  border-radius: 10px;
+  outline: none;
 }
 
-.submitButton{
-    width: 50%;
-    padding: 5px;
-    border-radius: 10px;
-    background-color: greenyellow;
-    color: rgb(229, 27, 27);
-    font-size: 20px;
-    font-weight: 700;
-    cursor: pointer;
+.submitButton {
+  width: 50%;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: greenyellow;
+  color: rgb(229, 27, 27);
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-@media only screen and (max-width:600px){
-  .addSubContainer {
-    width: 80%;
+/* @media only screen and (max-width:600px){
   
-  }
-  .inputContainer input {
-    width: 15rem;
-
-  }
-  .radioInput {
-   
-    width: 15rem;
-  }
-  .radioInput input {
-    width: 3rem;
-    
-  }
-  textarea{
-    width: 15rem;
-    border-radius: 10px;
-    outline: none; 
-    
-}
-  
-}
+} */

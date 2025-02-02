@@ -1,5 +1,3 @@
-
-
 .admin-maincontainer {
   background-color: #121212;
   height: 100vh;
@@ -29,6 +27,7 @@
 .admin-sub-containers h1 {
   margin-bottom: 20px;
   color: rgb(241, 35, 35);
+  font-size: 3rem;
 }
 .admin-sub-containers h2 {
   color: aliceblue;
