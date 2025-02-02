@@ -1,42 +1,21 @@
-/* @media only screen and (max-width: 600px) {
-  .adminMainContainer h1 {
-    font-size: 30px;
-  }
-  .logoutdiv button{
-    margin-top: 20rem;
-  }
 
-  .logoutButton button {
-    padding: 5px;
-    border-radius: 10px;
-  }
-  .actionLink {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
-  }
-} */
 
 .admin-maincontainer {
   background-color: #121212;
   height: 100vh;
 }
 
-.admin-container {
-  /* background-color: #121212; */
-  /* height: 100vh; */
+.admin-sub-containers {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.logoutdiv {
+.admin-logoutbox {
   display: flex;
   justify-content: end;
 }
-.logoutdiv button {
+.admin-logoutbox button {
   width: 8rem;
   padding: 10px;
   font-size: 20px;
@@ -47,11 +26,11 @@
   background-color: yellow;
   cursor: pointer;
 }
-.admin-container h1 {
+.admin-sub-containers h1 {
   margin-bottom: 20px;
   color: rgb(241, 35, 35);
 }
-.admin-container h2 {
+.admin-sub-containers h2 {
   color: aliceblue;
   font-size: 20px;
 }
@@ -87,3 +66,7 @@
 .admin-link:hover {
   background-color: #333;
 }
+
+/* @media only screen and (max-width: 600px) {
+
+} */

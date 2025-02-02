@@ -14,12 +14,12 @@ const AdminPage = () => {
   };
   return (
     <div className="admin-maincontainer">
-      <div className="logoutdiv">
-        <button className="logoutbutton" onClick={() => handleLogout()}>
+      <div className="admin-logoutbox">
+        <button className="admin-logoutbutton" onClick={() => handleLogout()}>
           logout
         </button>
       </div>
-      <div className="admin-container">
+      <div className="admin-sub-containers">
         <h1>Admin Dashboard</h1>
         <h2>Select an action to proceed</h2>
         <div className="button-group">
