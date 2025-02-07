@@ -1,7 +1,4 @@
 import { useRef } from "react";
-import "./InputSection.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-
 const InputSection = ({ onTotalBmi, onReload }) => {
   const weight = useRef();
   const height = useRef();
@@ -15,37 +12,49 @@ const InputSection = ({ onTotalBmi, onReload }) => {
     onTotalBmi(bmiWeight, bmiHeight);
   };
   return (
-    <div className="input-container">
+    <div className="input-container flex justify-center flex-col items-center">
       <form className="form-input" onSubmit={handleSubmitClick}>
-        <div className="weight">
-          <p>Weight(Kg)</p>
+        <div className="flex flex-col my-3">
+          <label htmlFor="weight" className="text-2xl">
+            Weight(kg)
+          </label>
           <input
-            type="text"
+            id="weight"
+            type="number"
             ref={weight}
             placeholder="Enter weight.."
             required
+            className="my-4 bg-white w-[30rem] p-2 text-black outline-none rounded-lg"
           />
         </div>
 
-        <div className="height">
-          <p>Height(ft)</p>
+        <div className="flex flex-col my-3">
+          <label htmlFor="height" className="text-2xl">
+            Height(ft)
+          </label>
           <input
-            type="text"
+            id=""
+            type="number"
             ref={height}
-            placeholder="Enter weight.."
+            placeholder="Enter height.."
             required
+            className="mt-2 bg-white w-[30rem] p-2 text-black outline-none rounded-lg"
           />
         </div>
-
-        <button type="submit" className="btn btn-success btn-lg adSubmit">
-          Submit
-        </button>
+        <div className="flex justify-center">
+          <button
+            type="submit"
+            className="bg-green-500 p-2 w-[15rem] rounded-full text-2xl font-semibold my-10 cursor-pointer"
+          >
+            Submit
+          </button>
+        </div>
       </form>
 
       <button
         type="button"
         onClick={onReload}
-        className="btn btn-warning btn-lg adButton"
+        className="bg-yellow-500 p-2 w-[10rem] text-2xl rounded-full cursor-pointer"
       >
         Reload
       </button>
